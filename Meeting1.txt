@@ -11,7 +11,6 @@ Siamak Samie, Roy Khoury, Josephine Ng, Ryan Nichols, Maxim Nguyen, Adam Rais
 Topics Covered:
 
 Main structure of the project 
-Discussed how the upvoting references  
 
 The site would allow users to sign up as students or as teacher/TA, and would have different privileges accordingly. Teachers/TA, would be able to create their own quizzes for their own classes and students can only take the quiz and see how they do.
 
