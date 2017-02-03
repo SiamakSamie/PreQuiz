@@ -1,0 +1,15 @@
+Front end
+
+HTML: used to place elements on webpage
+
+CSS: used to style HTML elements
+
+Bootstrap: a CSS library to allow quick, responsive styling.
+
+AngularJs: a JavaScript library to program dynamic elements on screen and to send requests to the backend.
+
+Back end
+
+Laravel: a PHP framework
+
+MySQL: database management system where we will store our site and user's information
