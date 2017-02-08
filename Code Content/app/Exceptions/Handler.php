@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Exceptions;
+namespace PreQuiz\Exceptions;
 
 use Exception;
 use Illuminate\Auth\AuthenticationException;

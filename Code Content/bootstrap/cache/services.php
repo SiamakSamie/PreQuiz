@@ -24,10 +24,10 @@
     20 => 'Illuminate\\Validation\\ValidationServiceProvider',
     21 => 'Illuminate\\View\\ViewServiceProvider',
     22 => 'Laravel\\Tinker\\TinkerServiceProvider',
-    23 => 'App\\Providers\\AppServiceProvider',
-    24 => 'App\\Providers\\AuthServiceProvider',
-    25 => 'App\\Providers\\EventServiceProvider',
-    26 => 'App\\Providers\\RouteServiceProvider',
+    23 => 'PreQuiz\\Providers\\AppServiceProvider',
+    24 => 'PreQuiz\\Providers\\AuthServiceProvider',
+    25 => 'PreQuiz\\Providers\\EventServiceProvider',
+    26 => 'PreQuiz\\Providers\\RouteServiceProvider',
   ),
   'eager' => 
   array (
@@ -41,10 +41,10 @@
     7 => 'Illuminate\\Pagination\\PaginationServiceProvider',
     8 => 'Illuminate\\Session\\SessionServiceProvider',
     9 => 'Illuminate\\View\\ViewServiceProvider',
-    10 => 'App\\Providers\\AppServiceProvider',
-    11 => 'App\\Providers\\AuthServiceProvider',
-    12 => 'App\\Providers\\EventServiceProvider',
-    13 => 'App\\Providers\\RouteServiceProvider',
+    10 => 'PreQuiz\\Providers\\AppServiceProvider',
+    11 => 'PreQuiz\\Providers\\AuthServiceProvider',
+    12 => 'PreQuiz\\Providers\\EventServiceProvider',
+    13 => 'PreQuiz\\Providers\\RouteServiceProvider',
   ),
   'deferred' => 
   array (
