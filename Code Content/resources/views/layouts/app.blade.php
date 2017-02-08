@@ -14,6 +14,7 @@
     <link href="/css/app.css" rel="stylesheet">
     <link href="/css/welcome.css" rel="stylesheet" type="text/css">
 
+
     <!-- AngularJS library -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
     
@@ -92,6 +93,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
