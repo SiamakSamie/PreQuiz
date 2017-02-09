@@ -12,7 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    
+    $universities = DB::table('courses')->pluck('university_name')->toArray();
+
+    return view('welcome', [
+         'unis' => $universities,   
+        ]);
 });
 
 Route::post('/search', 'SearchController@search');
