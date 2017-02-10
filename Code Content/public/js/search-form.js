@@ -9,10 +9,6 @@ angular.module('search-form', [])
       ];
 
       sfc.user_input = "";
-      
-      sfc.testvariable = [
-          {text:"asd"},
-        ];
 
       sfc.submitform = function() {
 
@@ -30,9 +26,6 @@ angular.module('search-form', [])
         }
       }
       
-      sfc.test1 = function(data) {
-        sfc.testvariable.push({text:sfc.inn});
-      }
   });
   
   

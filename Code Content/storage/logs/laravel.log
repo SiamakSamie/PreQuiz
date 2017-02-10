@@ -8443,282 +8443,116 @@ into your web browser: [http://prequiz-roykhoury.c9users.io/password/reset/37b91
 
 © 2017 Laravel. All rights reserved.
   
-[2017-02-09 22:48:47] local.ERROR: PDOException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
- in D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:68
-Stack trace:
-#0 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php(68): PDO->__construct('mysql:host=loca...', 'roykhoury', '', Array)
-#1 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php(43): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'roykhoury', '', Array)
-#2 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connectors\MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
-#3 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(183): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
-#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
-#5 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(882): call_user_func(Object(Closure))
-#6 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(903): Illuminate\Database\Connection->getPdo()
-#7 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(392): Illuminate\Database\Connection->getReadPdo()
-#8 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(318): Illuminate\Database\Connection->getPdoForSelect(true)
-#9 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(640): Illuminate\Database\Connection->Illuminate\Database\{closure}('select `univers...', Array)
-#10 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select `univers...', Array, Object(Closure))
-#11 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(326): Illuminate\Database\Connection->run('select `univers...', Array, Object(Closure))
-#12 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1718): Illuminate\Database\Connection->select('select `univers...', Array, true)
-#13 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1703): Illuminate\Database\Query\Builder->runSelect()
-#14 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1957): Illuminate\Database\Query\Builder->get(Array)
-#15 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\routes\web.php(16): Illuminate\Database\Query\Builder->pluck('university_name')
-#16 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Route.php(189): Illuminate\Routing\Router->{closure}()
-#17 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Route.php(163): Illuminate\Routing\Route->runCallable()
-#18 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Router.php(559): Illuminate\Routing\Route->run()
-#19 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#20 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#21 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
-#22 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#23 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken.php(65): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#24 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
-#25 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#26 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\View\Middleware\ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#27 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
-#28 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#29 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#30 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
-#31 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#32 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#33 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
-#34 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#35 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#36 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
-#37 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#38 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#39 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Router.php(561): Illuminate\Pipeline\Pipeline->then(Object(Closure))
-#40 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Router.php(520): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
-#41 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Router.php(498): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
-#42 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(174): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
-#43 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
-#44 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#45 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
-#46 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#47 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#48 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
-#49 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#50 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#51 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
-#52 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#53 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#54 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
-#55 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#56 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#57 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(149): Illuminate\Pipeline\Pipeline->then(Object(Closure))
-#58 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
-#59 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
-#60 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\server.php(21): require_once('D:\\xampp\\htdocs...')
-#61 {main}  
-[2017-02-09 22:48:47] local.ERROR: PDOException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
- in D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:68
-Stack trace:
-#0 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php(68): PDO->__construct('mysql:host=loca...', 'roykhoury', '', Array)
-#1 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php(43): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'roykhoury', '', Array)
-#2 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connectors\MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
-#3 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(183): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
-#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
-#5 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(882): call_user_func(Object(Closure))
-#6 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(903): Illuminate\Database\Connection->getPdo()
-#7 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(392): Illuminate\Database\Connection->getReadPdo()
-#8 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(318): Illuminate\Database\Connection->getPdoForSelect(true)
-#9 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(640): Illuminate\Database\Connection->Illuminate\Database\{closure}('select `univers...', Array)
-#10 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select `univers...', Array, Object(Closure))
-#11 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(326): Illuminate\Database\Connection->run('select `univers...', Array, Object(Closure))
-#12 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1718): Illuminate\Database\Connection->select('select `univers...', Array, true)
-#13 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1703): Illuminate\Database\Query\Builder->runSelect()
-#14 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1957): Illuminate\Database\Query\Builder->get(Array)
-#15 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\routes\web.php(16): Illuminate\Database\Query\Builder->pluck('university_name')
-#16 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Route.php(189): Illuminate\Routing\Router->{closure}()
-#17 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Route.php(163): Illuminate\Routing\Route->runCallable()
-#18 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Router.php(559): Illuminate\Routing\Route->run()
-#19 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#20 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#21 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
-#22 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#23 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken.php(65): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#24 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
-#25 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#26 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\View\Middleware\ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#27 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
-#28 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#29 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#30 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
-#31 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#32 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#33 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
-#34 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#35 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#36 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
-#37 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#38 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#39 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Router.php(561): Illuminate\Pipeline\Pipeline->then(Object(Closure))
-#40 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Router.php(520): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
-#41 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Router.php(498): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
-#42 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(174): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
-#43 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
-#44 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#45 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
-#46 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#47 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#48 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
-#49 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#50 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#51 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
-#52 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#53 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#54 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
-#55 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#56 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#57 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(149): Illuminate\Pipeline\Pipeline->then(Object(Closure))
-#58 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
-#59 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
-#60 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\server.php(21): require_once('D:\\xampp\\htdocs...')
-#61 {main}
+[2017-02-10 03:31:47] local.DEBUG: Message-ID: <04faf27abc39dc640ca94a4688f117a6@prequiz-roykhoury.c9users.io>
+Date: Fri, 10 Feb 2017 03:31:47 +0000
+Subject: Reset Password
+From: Password reset request <preQuiz.suuport@hotmail.com>
+To: roy_khoury12@hotmail.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_v4_1486697507_5b709e6e9f122677b52923feecdbad76_=_"
 
-Next Illuminate\Database\QueryException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
- (SQL: select `university_name` from `courses`) in D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php:647
-Stack trace:
-#0 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select `univers...', Array, Object(Closure))
-#1 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(326): Illuminate\Database\Connection->run('select `univers...', Array, Object(Closure))
-#2 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1718): Illuminate\Database\Connection->select('select `univers...', Array, true)
-#3 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1703): Illuminate\Database\Query\Builder->runSelect()
-#4 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1957): Illuminate\Database\Query\Builder->get(Array)
-#5 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\routes\web.php(16): Illuminate\Database\Query\Builder->pluck('university_name')
-#6 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Route.php(189): Illuminate\Routing\Router->{closure}()
-#7 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Route.php(163): Illuminate\Routing\Route->runCallable()
-#8 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Router.php(559): Illuminate\Routing\Route->run()
-#9 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#10 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#11 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
-#12 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#13 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken.php(65): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#14 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
-#15 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#16 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\View\Middleware\ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#17 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
-#18 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#19 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#20 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
-#21 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#22 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#23 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
-#24 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#25 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#26 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
-#27 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#28 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#29 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Router.php(561): Illuminate\Pipeline\Pipeline->then(Object(Closure))
-#30 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Router.php(520): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
-#31 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Router.php(498): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
-#32 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(174): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
-#33 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
-#34 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#35 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
-#36 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#37 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#38 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
-#39 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#40 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#41 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
-#42 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#43 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#44 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
-#45 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
-#46 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-#47 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(149): Illuminate\Pipeline\Pipeline->then(Object(Closure))
-#48 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
-#49 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
-#50 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\server.php(21): require_once('D:\\xampp\\htdocs...')
-#51 {main}  
-[2017-02-09 22:50:55] local.ERROR: PDOException: SQLSTATE[HY000] [1044] Access denied for user ''@'localhost' to database 'c9' in D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:68
-Stack trace:
-#0 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php(68): PDO->__construct('mysql:host=loca...', 'roykhoury', '', Array)
-#1 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php(43): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'roykhoury', '', Array)
-#2 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connectors\MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
-#3 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(183): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
-#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
-#5 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(882): call_user_func(Object(Closure))
-#6 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(903): Illuminate\Database\Connection->getPdo()
-#7 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(392): Illuminate\Database\Connection->getReadPdo()
-#8 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(318): Illuminate\Database\Connection->getPdoForSelect(true)
-#9 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(640): Illuminate\Database\Connection->Illuminate\Database\{closure}('select * from i...', Array)
-#10 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
-#11 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(326): Illuminate\Database\Connection->run('select * from i...', Array, Object(Closure))
-#12 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Schema\MySqlBuilder.php(18): Illuminate\Database\Connection->select('select * from i...', Array)
-#13 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Migrations\DatabaseMigrationRepository.php(154): Illuminate\Database\Schema\MySqlBuilder->hasTable('migrations')
-#14 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(530): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
-#15 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\MigrateCommand.php(96): Illuminate\Database\Migrations\Migrator->repositoryExists()
-#16 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\MigrateCommand.php(62): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
-#17 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
-#18 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(28): call_user_func_array(Array, Array)
-#19 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Support\helpers.php(912): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
-#20 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(86): value(Object(Closure))
-#21 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(30): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
-#22 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Container\Container.php(524): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
-#23 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Console\Command.php(182): Illuminate\Container\Container->call(Array)
-#24 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\symfony\console\Command\Command.php(262): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
-#25 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Console\Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
-#26 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\symfony\console\Application.php(826): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#27 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\symfony\console\Application.php(189): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#28 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\symfony\console\Application.php(120): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#29 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(123): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#30 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#31 {main}  
-[2017-02-09 22:50:55] local.ERROR: PDOException: SQLSTATE[HY000] [1044] Access denied for user ''@'localhost' to database 'c9' in D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:68
-Stack trace:
-#0 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php(68): PDO->__construct('mysql:host=loca...', 'roykhoury', '', Array)
-#1 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php(43): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'roykhoury', '', Array)
-#2 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connectors\MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
-#3 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(183): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
-#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
-#5 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(882): call_user_func(Object(Closure))
-#6 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(903): Illuminate\Database\Connection->getPdo()
-#7 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(392): Illuminate\Database\Connection->getReadPdo()
-#8 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(318): Illuminate\Database\Connection->getPdoForSelect(true)
-#9 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(640): Illuminate\Database\Connection->Illuminate\Database\{closure}('select * from i...', Array)
-#10 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
-#11 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(326): Illuminate\Database\Connection->run('select * from i...', Array, Object(Closure))
-#12 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Schema\MySqlBuilder.php(18): Illuminate\Database\Connection->select('select * from i...', Array)
-#13 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Migrations\DatabaseMigrationRepository.php(154): Illuminate\Database\Schema\MySqlBuilder->hasTable('migrations')
-#14 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(530): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
-#15 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\MigrateCommand.php(96): Illuminate\Database\Migrations\Migrator->repositoryExists()
-#16 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\MigrateCommand.php(62): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
-#17 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
-#18 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(28): call_user_func_array(Array, Array)
-#19 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Support\helpers.php(912): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
-#20 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(86): value(Object(Closure))
-#21 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(30): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
-#22 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Container\Container.php(524): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
-#23 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Console\Command.php(182): Illuminate\Container\Container->call(Array)
-#24 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\symfony\console\Command\Command.php(262): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
-#25 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Console\Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
-#26 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\symfony\console\Application.php(826): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#27 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\symfony\console\Application.php(189): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#28 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\symfony\console\Application.php(120): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#29 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(123): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#30 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#31 {main}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; background-color: #F2F4F6; color: #74787E; height: 100%; line-height: 1.4; margin: 0; width: 100% !important; -webkit-text-size-adjust: none;">
+    <style>
+        @media  only screen and (max-width: 600px) {
+            .inner-body {
+                width: 100% !important;
+            }
 
-Next Illuminate\Database\QueryException: SQLSTATE[HY000] [1044] Access denied for user ''@'localhost' to database 'c9' (SQL: select * from information_schema.tables where table_schema = c9 and table_name = migrations) in D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php:647
-Stack trace:
-#0 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
-#1 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Connection.php(326): Illuminate\Database\Connection->run('select * from i...', Array, Object(Closure))
-#2 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Schema\MySqlBuilder.php(18): Illuminate\Database\Connection->select('select * from i...', Array)
-#3 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Migrations\DatabaseMigrationRepository.php(154): Illuminate\Database\Schema\MySqlBuilder->hasTable('migrations')
-#4 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(530): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
-#5 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\MigrateCommand.php(96): Illuminate\Database\Migrations\Migrator->repositoryExists()
-#6 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\MigrateCommand.php(62): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
-#7 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
-#8 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(28): call_user_func_array(Array, Array)
-#9 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Support\helpers.php(912): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
-#10 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(86): value(Object(Closure))
-#11 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(30): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
-#12 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Container\Container.php(524): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
-#13 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Console\Command.php(182): Illuminate\Container\Container->call(Array)
-#14 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\symfony\console\Command\Command.php(262): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
-#15 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Console\Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
-#16 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\symfony\console\Application.php(826): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#17 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\symfony\console\Application.php(189): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#18 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\symfony\console\Application.php(120): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#19 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(123): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#20 D:\xampp\htdocs\SOEN341\SOEN341\Code Content\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#21 {main}  
+            .footer {
+                width: 100% !important;
+            }
+        }
+
+        @media  only screen and (max-width: 500px) {
+            .button {
+                width: 100% !important;
+            }
+        }
+    </style>
+<table class="wrapper" width="100%" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; background-color: #f5f8fa; margin: 0; padding: 0; width: 100%; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%;"><tr>
+<td align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+                <table class="content" width="100%" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; margin: 0; padding: 0; width: 100%; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%;">
+<tr>
+<td class="header" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 25px 0; text-align: center;">
+        <a href="http://localhost" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #bbbfc3; font-size: 19px; font-weight: bold; text-decoration: none; text-shadow: 0 1px 0 white;">
+            Laravel
+        </a>
+    </td>
+</tr>
+<!-- Email Body --><tr>
+<td class="body" width="100%" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; background-color: #FFFFFF; border-bottom: 1px solid #EDEFF2; border-top: 1px solid #EDEFF2; margin: 0; padding: 0; width: 100%; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%;">
+                            <table class="inner-body" align="center" width="570" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; background-color: #FFFFFF; margin: 0 auto; padding: 0; width: 570px; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 570px;">
+<!-- Body content --><tr>
+<td class="content-cell" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 35px;">
+                                        <h1 style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #2F3133; font-size: 19px; font-weight: bold; margin-top: 0; text-align: left;">Hello!</h1>
+<p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787E; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">You are receiving this email because we received a password reset request for your account.</p>
+<table class="action" align="center" width="100%" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; margin: 30px auto; padding: 0; text-align: center; width: 100%; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%;"><tr>
+<td align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;"><tr>
+<td align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+                        <table border="0" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;"><tr>
+<td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+                                    <a href="http://prequiz-roykhoury.c9users.io/password/reset/d2e939b9611a88f234c230e08480244994f7afdb44899528a1788969d9734f99" class="button button-blue" target="_blank" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border-radius: 3px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); color: #FFF; display: inline-block; text-decoration: none; -webkit-text-size-adjust: none; background-color: #3097D1; border-top: 10px solid #3097D1; border-right: 18px solid #3097D1; border-bottom: 10px solid #3097D1; border-left: 18px solid #3097D1;">Reset Password</a>
+                                </td>
+                            </tr></table>
+</td>
+                </tr></table>
+</td>
+    </tr></table>
+<p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787E; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">If you did not request a password reset, no further action is required.</p>
+<!-- Salutation -->
+<p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787E; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">Regards,<br>Laravel</p>
+<!-- Subcopy -->
+<table class="subcopy" width="100%" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border-top: 1px solid #EDEFF2; margin-top: 25px; padding-top: 25px;"><tr>
+<td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+            <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787E; line-height: 1.5em; margin-top: 0; text-align: left; font-size: 12px;">If you’re having trouble clicking the "Reset Password" button, copy and paste the URL below
+into your web browser: <a href="http://prequiz-roykhoury.c9users.io/password/reset/d2e939b9611a88f234c230e08480244994f7afdb44899528a1788969d9734f99" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #3869D4;"></a><a href="http://prequiz-roykhoury.c9users.io/password/reset/d2e939b9611a88f234c230e08480244994f7afdb44899528a1788969d9734f99" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #3869D4;">http://prequiz-roykhoury.c9users.io/password/reset/d2e939b9611a88f234c230e08480244994f7afdb44899528a1788969d9734f99</a></p>
+        </td>
+    </tr></table>
+</td>
+                                </tr>
+</table>
+</td>
+                    </tr>
+<tr>
+<td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+        <table class="footer" align="center" width="570" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; margin: 0 auto; padding: 0; text-align: center; width: 570px; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 570px;"><tr>
+<td class="content-cell" align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 35px;">
+                    <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; line-height: 1.5em; margin-top: 0; color: #AEAEAE; font-size: 12px; text-align: center;">© 2017 Laravel. All rights reserved.</p>
+                </td>
+            </tr></table>
+</td>
+</tr>
+</table>
+</td>
+        </tr></table>
+</body>
+</html>
+
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+[Laravel](http://localhost)
+
+# Hello!
+
+You are receiving this email because we received a password reset request for your account.
+
+Reset Password: http://prequiz-roykhoury.c9users.io/password/reset/d2e939b9611a88f234c230e08480244994f7afdb44899528a1788969d9734f99
+
+If you did not request a password reset, no further action is required.
+
+Regards,Laravel
+
+If you’re having trouble clicking the "Reset Password" button, copy and paste the URL below
+into your web browser: [http://prequiz-roykhoury.c9users.io/password/reset/d2e939b9611a88f234c230e08480244994f7afdb44899528a1788969d9734f99](http://prequiz-roykhoury.c9users.io/password/reset/d2e939b9611a88f234c230e08480244994f7afdb44899528a1788969d9734f99)
+
+© 2017 Laravel. All rights reserved.
+  
