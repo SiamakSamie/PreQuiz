@@ -1,0 +1,179 @@
+ryan [12:06 PM] 
+@dana.alexandra   there is now a contribution blog for everyone to document their contributions for the project. It's on the github page if u want to fill in ur part
+
+dana.alexandra [1:06 PM] 
+added and commented on this Plain Text snippet: SOEN_341_Feb_3.txt
+February 3, 2017
+12:38 pm
+- Show pull request!
+- Add project vision in README file
+- Have all members as contributors
+- Make a documentation folder
+- Add commit messages with every commit
+- Task breakdown
+- Review grading scheme!
+- User stories which map to vision? (ex: modular quiz) 
+- User story within user story, "a bit more macro"
+- User story "...on any platform": too big, don't do it. Just make a website
+- User story #3: break it down, too big 
+- User story #2: use this as a guideline 
+- Refine user stories!
+- Should be able to guide TA through our documents, he shouldn't have to browse
+- Send TA email to go through progress a day before and receive feedback on next meeting
+- Commit logs, messages, referencing, discussions, tutorial attendance
+- Divide tasks (Ex: someone can just review all commits)
+- Next week: show a user story? user stories? 
+- Everyone make a branch
+1 Comment Collapse
+Notes on today's meeting
+
+
+----- February 4th -----
+roykhoury [3:06 PM] 
+Hey guys just a reminder don't forget to make a branch on github
+
+
+----- February 5th -----
+chenjie [8:14 PM] 
+i made some directories to clean up our github page. Just need people to approve the pull request.
+
+[8:14]  
+you can take a look
+
+roykhoury [8:20 PM] 
+Umm the TA wanted us to put all sorts of documentations in one folder and the readme file was supposed to be the vision.txt basically I already did a reorganization of the folders on my branch check it out! I actually uploaded a working basic template of a Laravel/bootstrap website
+
+siamaksamie [8:35 PM] 
+working but with steps to run
+
+[8:36]  
+1) download xampp
+2) in command promt go to directory with laravel files
+3) type "php artisan serve"
+4) you can then see it on http://localhost:8000/
+
+roykhoury [8:38 PM] 
+Well you need to install Laravel first but yeah
+
+siamaksamie [8:39 PM] 
+well your file already has alravel in it
+
+[8:39]  
+laravel*
+
+roykhoury [8:40 PM] 
+Oh true true whoops u gotta change to that directory then
+
+
+----- February 6th -----
+siamaksamie [10:49 PM] 
+i think 3 people still didnt accept my invitations to the slack
+
+dana.alexandra [10:53 PM] 
+where do u check it lol
+
+siamaksamie [10:54 PM] 
+it was sent to everyone's email
+
+dana.alexandra [10:55 PM] 
+Just checked didnt get anything
+
+[10:55]  
+But someone said u have to commit something to become a contributor?
+
+[10:56]  
+Idk if i did it wrong, but i changed the Contributions file
+
+[10:56]  
+And made a pull request ?
+
+[10:56]  
+anyway if we are meeting wednesday, maybe someone can show me ._.
+
+siamaksamie [10:56 PM] 
+yeah i saw that
+
+[10:56]  
+sure if anything ill send the invite link again
+
+dana.alexandra [10:57 PM] 
+okehh
+
+siamaksamie [11:00 PM] 
+also who is Scabandari?
+
+[11:03]  
+I made a pull request editing something on Roy's branch. I left it as a pull request so two people can comment on it first  before merging. That's the best way for everyone to show contributions. Don't merge things unless there are two comments approving the request
+
+siamaksamie [11:10 PM] 
+speaking of...
+
+[11:10]  
+please go and comment on roy's pull request
+
+[11:13]  
+Dana also made pull request updating the "contributions" file (although in the future i think that file and the "slack conversation" should be only updated right before the meeting)
+
+dana.alexandra [11:21 PM] 
+Oooops okayy
+
+
+----- Yesterday February 7th, 2017 -----
+chenjie [12:15 PM] 
+Hey guys, the meeting is some time at 11am right?
+
+[12:15]  
+Tomorrow
+
+jng11232 [12:15 PM] 
+11:30
+
+roykhoury [12:17 PM] 
+Well the earlier the better
+
+ryan [12:23 PM] 
+I'm Scabandari
+
+
+----- Today February 8th, 2017 -----
+jng11232 [9:54 AM] 
+i'll b at 813 if anyone want to join
+
+ryan [10:58 AM] 
+Omw
+
+dana.alexandra [10:59 AM] 
+Ill b there for 11:30.. if u change room, lemme kno!
+
+siamaksamie [11:03 AM] 
+Gonna be a little late, can't come out of my driveway. Everything's iced over
+
+roykhoury [11:07 AM] 
+Omw!
+
+roykhoury [11:20 AM] 
+Jojo you not here?
+
+dana.alexandra [11:31 AM] 
+Where u guys?
+
+jng11232 [11:32 AM] 
+H813
+
+dana.alexandra [11:32 AM] 
+Okeh coming
+
+siamaksamie [11:34 AM] 
+There in 15, used a gardening ho and 4 cardboard boxes to get out
+
+[11:35]  
+All for this meeting so I hope we have a full turn out haha
+
+chenjie [11:35 AM] 
+Me and max are coming in 15 min
+
+dana.alexandra [11:58 AM] 
+823
+
+roykhoury [11:59 AM] 
+Did someone forget his jacketv
