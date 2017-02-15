@@ -8,26 +8,23 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title> @yield('title') </title>
+    <title>@yield('title') </title>
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
     <link href="/css/welcome.css" rel="stylesheet" type="text/css">
-
-
+    
     <!-- AngularJS library -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-    
+
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
-
-    @yield('extra_links')
-
     
+    @yield('extra_links')
 </head>
 <body>
     <div id="app">
@@ -44,17 +41,15 @@
                     </button>
 
                     <!-- Branding Image -->
-
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        PreQuiz
                     </a>
-
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                       &nbsp;
+                        &nbsp;
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -93,6 +88,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="js/app.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 </html>

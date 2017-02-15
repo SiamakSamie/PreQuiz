@@ -82,7 +82,13 @@
 
         .panel-index {
             margin-top :-150px;
-            padding-left : padding;
-            15px-right:15px;
         }
-}
+        
+        .suggestions {
+            font-size: 13px;
+        }
+        
+        .suggestion-box {
+            margin-top : -50px;
+        }
+}    
