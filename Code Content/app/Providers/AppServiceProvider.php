@@ -1,9 +1,8 @@
 <?php
 
-namespace PreQuiz\Providers;
-use Blade;
-use Illuminate\Support\ServiceProvider;
+namespace App\Providers;
 
+use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
