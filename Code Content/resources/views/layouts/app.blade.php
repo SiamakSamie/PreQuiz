@@ -39,8 +39,10 @@
     
 </head>
 <body>
+
     <div id="app" ng-app="preQuiz-module"  ng-controller="sidenav-controller" ng-cloak>
         <nav class="navbar navbar-default" style="border-width: 0 0 1px;">
+
             <div class="container">
                 <div class="navbar-header">
 
@@ -54,7 +56,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        PreQuiz
+                         <img src = "/img/LogoMakr.png">
                     </a>
                     
                 </div>
@@ -69,8 +71,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            <li><a href="{{ route('login') }}"><img src = "/img/login.png" style = "height:15px;"></a></li>
+                            <li><a href="{{ route('register') }}"><img src = "/img/register.png" style = "height:15px;"></a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
