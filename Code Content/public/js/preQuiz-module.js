@@ -1,5 +1,6 @@
-angular.module('search-form', [])
-  .controller('search-formController', function ($scope) {
+var searchform_module = angular.module('preQuiz-module', ['ngMaterial']);
+
+  searchform_module.controller('searchForm-controller', function()  {
 
       var sfc = this;           
       sfc.display = "hidden";     // to hide/show the user input feedback
@@ -27,6 +28,33 @@ angular.module('search-form', [])
       }
       
   });
+  
+  searchform_module.controller('sidenav-controller', function($scope, $mdSidenav, $mdDialog) {
+      $scope.isSidenavOpen = false;
+      
+      $scope.openLeftMenu = function() {
+        $mdSidenav('left').toggle();
+      };
+      
+      $scope.toggleLeft = function() {
+        $mdSidenav('left').toggle();
+      };
+      
+      $scope.dispErrMsg = function(ev) {
+        $mdDialog.show(
+          $mdDialog.alert()
+          .clickOutsideToClose(true)
+          .title('Feature Unavailable')
+          .textContent('Please login before using this feature')
+          .ok('Got it!')
+          .targetEvent(ev)
+        );
+      };
+      
+      
+  });
+  
+  
   
   
   

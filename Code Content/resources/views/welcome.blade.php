@@ -5,7 +5,8 @@
 @endsection
 
 @section('extra_links')
-        <script src='/js/search-form.js'> </script>
+    <script src='/js/preQuiz-module.js'> </script>
+    
 @endsection
 
 @section('content')
@@ -13,20 +14,18 @@
 <!-- @{{ }} is angularJS -->
 <!-- {{ }} is blade -->
 
-<div class="flex-center position-ref full-height">
-    <div class="content">
-        <div class="panel panel-default panel-index" ng-app="search-form"
-         ng-controller="search-formController as sfc" ng-cloak>
+    <div class="flex-center text-center">
+        <div class="panel panel-default panel-index" 
+         ng-controller="searchForm-controller as sfc">
             
             <div class="panel-body">
                 <div class="input-title"> PreQuiz </div>
                 
                 <!-- Display User Input after first submition -->
-                <div class="input-field @{{sfc.display}} extended-input" maxlength="255">
-                    @{{sfc.user_input}} 
-                </div> 
+                <input class="input-field @{{sfc.display}} extended-input" value="@{{sfc.user_input}}" 
+                maxlength="255" readonly style="text-align:center;">
                 
-                <form ng-submit="sfc.submitform()" onsubmit="return false;" 
+                <form ng-submit="sfc.submitform()" onsubmit="return false;"  
                 id="form" method="POST" action="/search">
 
                     <span ng-repeat="placeholder in sfc.placeholders">
@@ -45,6 +44,6 @@
             </div>
         </div>
     </div>
-</div>
+
 @endsection
 

@@ -14,9 +14,18 @@
     <link href="/css/app.css" rel="stylesheet">
     <link href="/css/welcome.css" rel="stylesheet" type="text/css">
     
+     <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    
     <!-- AngularJS library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
 
+     <!-- Angular Material Library -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
@@ -24,11 +33,14 @@
         ]) !!};
     </script>
     
+    
+
     @yield('extra_links')
+    
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+    <div id="app" ng-app="preQuiz-module"  ng-controller="sidenav-controller" ng-cloak>
+        <nav class="navbar navbar-default" style="border-width: 0 0 1px;">
             <div class="container">
                 <div class="navbar-header">
 
@@ -44,12 +56,13 @@
                     <a class="navbar-brand" href="{{ url('/') }}">
                         PreQuiz
                     </a>
+                    
                 </div>
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <div class="collapse navbar-collapse" id="app-navbar-collapse" >
                     <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
+                    <ul class="nav navbar-nav" >
+                        <li><a href="" class="navbar-brand" ng-click="toggleLeft()"> Menu</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -82,12 +95,43 @@
                     </ul>
                 </div>
             </div>
+            
         </nav>
+        <!-- side nav content -->
+        <md-sidenav md-component-id="left" md-is-open="isSidenavOpen" class="md-sidenav-left" >
+            
+            <md-toolbar>
+                <h1 class="md-toolbar-tools"> Menu options </h1>
+               
+                
+            </md-toolbar>
+          
+            <md-content layout-margin>
+              
+                @if (Auth::check())
+                    <a class="list-group-item" href="" ng-click="toggleLeft()"> Notifications <span class="badge badge-default badge-pill"> 3 </span> </a> 
+                    <a class="list-group-item" href="" ng-click="toggleLeft()"> Create a quiz </a> 
+                    <a class="list-group-item" href="" ng-click="toggleLeft()"> Edit a quiz </a> 
+                    <a class="list-group-item" href="" ng-click="toggleLeft()"> My profile </a>
 
+                @else
+                    <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> Notifications <span class="badge badge-default badge-pill"> 3 </span> </a> 
+                    <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> Create a quiz </a> 
+                    <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> Edit a quiz </a> 
+                    <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> My profile </a> 
+                @endif
+                
+                    <a class="list-group-item md-accent" href="" ng-click="toggleLeft()"> Close menu </a> 
+            </md-content>
+        </md-sidenav>
+        
         @yield('content')
+        
     </div>
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    <script src='/js/preQuiz-module.js'> </script>
+    
 </body>
 </html>
