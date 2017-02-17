@@ -6,32 +6,12 @@
             display : block;
         }
 
-        .full-height {
-            height: 100vh;
-        }
-
         .flex-center {
             align-items: center;
             display: flex;
             justify-content: center;
         }
-
-        .position-ref {
-            position: relative;
-        }
-      
-        .content {
-            text-align: center;
-        }
-
-        .title {
-            font-size: 84px;
-        }
-
-        .m-b-md {
-            margin-bottom: 30px;
-        }
-
+        
         .input-title {
             font-size : 55px;
         }
@@ -81,14 +61,8 @@
         }
 
         .panel-index {
-            margin-top :-150px;
+            margin-top :150px;
         }
         
-        .suggestions {
-            font-size: 13px;
-        }
         
-        .suggestion-box {
-            margin-top : -50px;
-        }
-}    
+}        
