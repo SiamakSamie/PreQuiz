@@ -32,17 +32,13 @@
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
-    
-    
 
     @yield('extra_links')
     
 </head>
 <body>
-
     <div id="app" ng-app="preQuiz-module"  ng-controller="sidenav-controller" ng-cloak>
         <nav class="navbar navbar-default" style="border-width: 0 0 1px;">
-
             <div class="container">
                 <div class="navbar-header">
 
@@ -56,7 +52,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                         <img src = "/img/LogoMakr.png">
+                        <img src = "/img/LogoMakr.png" >
                     </a>
                     
                 </div>
@@ -100,15 +96,13 @@
             
         </nav>
         <!-- side nav content -->
-        <md-sidenav md-component-id="left" md-is-open="isSidenavOpen" class="md-sidenav-left" >
+        <md-sidenav md-component-id="left" md-is-open="isSidenavOpen" class="md-sidenav-left affix" >
             
             <md-toolbar>
                 <h1 class="md-toolbar-tools"> Menu options </h1>
-               
-                
             </md-toolbar>
           
-            <md-content layout-margin>
+            <md-content layout-margin >
               
                 @if (Auth::check())
                     <a class="list-group-item" href="" ng-click="toggleLeft()"> Notifications <span class="badge badge-default badge-pill"> 3 </span> </a> 
