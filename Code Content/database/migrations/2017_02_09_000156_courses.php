@@ -19,6 +19,7 @@ class Courses extends Migration
             $table->text('course_name');
             $table->text('quiz_name');
             $table->text('quiz_creator');
+            $table->text('quiz_description');
             $table->timestamps();
         });
     }

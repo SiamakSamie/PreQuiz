@@ -1,6 +1,6 @@
-var searchform_module = angular.module('preQuiz-module', ['ngMaterial']);
+var prequiz_module = angular.module('preQuiz-module', ['ngMaterial']);
 
-  searchform_module.controller('searchForm-controller', function()  {
+  prequiz_module.controller('searchForm-controller', function()  {
 
       var sfc = this;           
       sfc.display = "hidden";     // to hide/show the user input feedback
@@ -26,10 +26,9 @@ var searchform_module = angular.module('preQuiz-module', ['ngMaterial']);
           document.getElementById("form").removeAttribute("onSubmit");
         }
       }
-      
   });
   
-  searchform_module.controller('sidenav-controller', function($scope, $mdSidenav, $mdDialog) {
+  prequiz_module.controller('sidenav-controller', function($scope, $mdSidenav, $mdDialog) {
       $scope.isSidenavOpen = false;
       
       $scope.openLeftMenu = function() {
@@ -50,9 +49,9 @@ var searchform_module = angular.module('preQuiz-module', ['ngMaterial']);
           .targetEvent(ev)
         );
       };
-      
-      
   });
+  
+  
   
   
   

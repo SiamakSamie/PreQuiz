@@ -15,7 +15,7 @@ Route::get('/', function () {
     
     $universities = DB::table('courses')->pluck('university_name')->toArray();
 
-    return view('welcome', [
+    return view('home', [
          'unis' => $universities,   
         ]);
 });

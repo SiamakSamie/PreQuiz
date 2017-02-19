@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
-    <link href="/css/welcome.css" rel="stylesheet" type="text/css">
+    <link href="/css/home.css" rel="stylesheet" type="text/css">
     
      <!-- Angular Material style sheet -->
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
@@ -109,22 +109,20 @@
                     <a class="list-group-item" href="" ng-click="toggleLeft()"> Create a quiz </a> 
                     <a class="list-group-item" href="" ng-click="toggleLeft()"> Edit a quiz </a> 
                     <a class="list-group-item" href="" ng-click="toggleLeft()"> My profile </a>
-
                 @else
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> Notifications <span class="badge badge-default badge-pill"> 3 </span> </a> 
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> Create a quiz </a> 
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> Edit a quiz </a> 
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> My profile </a> 
                 @endif
-                
+                    <a class="list-group-item" href="" ng-click="toggleLeft()"> About us </a> 
+                    <a class="list-group-item" href="" ng-click="toggleLeft()"> Contact us </a> 
                     <a class="list-group-item md-accent" href="" ng-click="toggleLeft()"> Close menu </a> 
             </md-content>
         </md-sidenav>
         
         @yield('content')
-        
     </div>
-
     <!-- Scripts -->
     <script src="/js/app.js"></script>
     <script src='/js/preQuiz-module.js'> </script>
