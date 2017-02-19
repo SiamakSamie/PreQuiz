@@ -18,7 +18,6 @@
 				</tr>	
 			</thead>
 			<tbody>
-				
 				{{$db_corr_data->count()}} entrie(s) found
 				
 				@foreach ($db_corr_data as $entry)
