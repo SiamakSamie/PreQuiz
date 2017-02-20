@@ -12,7 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    
+    $universities = DB::table('courses')->pluck('university_name')->toArray();
+
+    return view('home', [
+         'unis' => $universities,   
+        ]);
 });
 
 Route::post('/search', 'SearchController@search');
@@ -20,3 +25,5 @@ Route::post('/search', 'SearchController@search');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/profile', 'ProfileController@displayAll');

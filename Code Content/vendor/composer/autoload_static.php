@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit73e82113b02ede4c0875eea361a01ce9
+class ComposerStaticInit39c51b7f063df6aa4a03dea96e429399
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -59,7 +59,6 @@ class ComposerStaticInit73e82113b02ede4c0875eea361a01ce9
         array (
             'Psy\\' => 4,
             'Psr\\Log\\' => 8,
-            'PreQuiz\\' => 8,
             'PhpParser\\' => 10,
         ),
         'M' => 
@@ -89,6 +88,10 @@ class ComposerStaticInit73e82113b02ede4c0875eea361a01ce9
         array (
             'Cron\\' => 5,
             'Carbon\\' => 7,
+        ),
+        'A' => 
+        array (
+            'App\\' => 4,
         ),
     );
 
@@ -179,10 +182,6 @@ class ComposerStaticInit73e82113b02ede4c0875eea361a01ce9
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
-        'PreQuiz\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/app',
-        ),
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
@@ -227,6 +226,10 @@ class ComposerStaticInit73e82113b02ede4c0875eea361a01ce9
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
         ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -269,6 +272,7 @@ class ComposerStaticInit73e82113b02ede4c0875eea361a01ce9
     );
 
     public static $classMap = array (
+        'Courses' => __DIR__ . '/../..' . '/database/migrations/2017_02_09_000156_courses.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
@@ -801,16 +805,16 @@ class ComposerStaticInit73e82113b02ede4c0875eea361a01ce9
         'SebastianBergmann\\ResourceOperations\\ResourceOperations' => __DIR__ . '/..' . '/sebastian/resource-operations/src/ResourceOperations.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
-        'Universities' => __DIR__ . '/../..' . '/database/migrations/2017_02_07_055752_Universities.php',
+        'fill_courses' => __DIR__ . '/../..' . '/database/seeds/fill_courses.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit73e82113b02ede4c0875eea361a01ce9::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit73e82113b02ede4c0875eea361a01ce9::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit73e82113b02ede4c0875eea361a01ce9::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit73e82113b02ede4c0875eea361a01ce9::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit39c51b7f063df6aa4a03dea96e429399::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit39c51b7f063df6aa4a03dea96e429399::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit39c51b7f063df6aa4a03dea96e429399::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit39c51b7f063df6aa4a03dea96e429399::$classMap;
 
         }, null, ClassLoader::class);
     }
