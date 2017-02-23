@@ -108,7 +108,7 @@
                     <a class="list-group-item" href="" ng-click="toggleLeft()"> Notifications <span class="badge badge-default badge-pill"> 3 </span> </a> 
                     <a class="list-group-item" href="" ng-click="toggleLeft()"> Create a quiz </a> 
                     <a class="list-group-item" href="" ng-click="toggleLeft()"> Edit a quiz </a> 
-                    <a class="list-group-item" href="" ng-click="toggleLeft()"> My profile </a>
+                    <a class="list-group-item" href="{{ url('/profile') }}" > My profile </a>
                 @else
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> Notifications <span class="badge badge-default badge-pill"> 3 </span> </a> 
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> Create a quiz </a> 

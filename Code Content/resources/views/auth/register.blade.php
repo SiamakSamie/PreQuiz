@@ -23,7 +23,21 @@
                                 @endif
                             </div>
                         </div>
+                        
+                        <div class="form-group{{ $errors->has('university') ? ' has-error' : '' }}">
+                            <label for="university" class="col-md-4 control-label">University</label>
 
+                            <div class="col-md-6">
+                                <input id="university" type="text" class="form-control" name="university" value="{{ old('university') }}" required autofocus>
+
+                                @if ($errors->has('university'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('university') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+ 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
