@@ -1,0 +1,42 @@
+Team Contributions
+
+Week from 30-01-2017 to 03-02-2017
+------------------------------------------------------------
+
+Siamak Samie: 
+
+  Wrote draft of preliminary vision. 
+  Contributed to vision discussion and user stories during second meeting.
+  Contributed to user stories and final draft of vision.
+ 
+
+Roy Khoury: 
+
+  Recorded content of second meeting.  
+  Contributed to vision discussion and user stories during second meeting.
+  Contributed to user stories and final draft of vision.
+
+
+Josephine Ng:
+  
+  Contributed to vision discussion and user stories during second meeting.
+
+Adam Rais: 
+  Contributed to user stories.
+  Contributed to vision discussion during the second meeting.
+  
+Chenjie Lu (Roger): 
+  Designed and developped the template for our web application.
+  
+Ryan Nichols:
+  Write up of high level description of the project, the doc that Samie based his preliminary vision on. 
+  Contributed to vision discussion and user stories during second meeting.
+  Contributed to user stories and final draft of vision.
+  
+
+Dana Alexadnra Llamas:
+Took notes on first meeting with TA
+
+Maxim Nguyen: 
+ Contributed to vision discussion and user stories during second meeting.
+ Contributed to user stories and final draft of vision.
