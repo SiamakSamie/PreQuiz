@@ -15,7 +15,7 @@ Route::get('/', function () {
     
     $universities = DB::table('courses')->pluck('university_name')->toArray();
 
-    return view('welcome', [
+    return view('home', [
          'unis' => $universities,   
         ]);
 });
@@ -25,3 +25,5 @@ Route::post('/search', 'SearchController@search');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/profile', 'ProfileController@displayAll');
