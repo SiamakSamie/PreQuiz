@@ -38,7 +38,7 @@ class fill_courses extends Seeder
         ]);
         
         DB::table('courses')->insert([
-            'university_name' => 'Concordia University',
+            'university_name' => 'Stanford University',
             'course_name' => 'SOEN 331',
             'quiz_name' => 'Quiz 331',
             'quiz_creator' => 'Dr. Computer',
@@ -46,7 +46,7 @@ class fill_courses extends Seeder
         ]);
         
         DB::table('courses')->insert([
-            'university_name' => 'Concordia University',
+            'university_name' => 'University of toronto',
             'course_name' => 'SOEN 410',
             'quiz_name' => 'Quiz #1',
             'quiz_creator' => 'Dr. Software Engineering',
@@ -55,7 +55,7 @@ class fill_courses extends Seeder
         ]);
         
         DB::table('courses')->insert([
-            'university_name' => 'Concordia University',
+            'university_name' => 'University of toronto',
             'course_name' => 'SOEN 287',
             'quiz_name' => 'Quiz review',
             'quiz_creator' => 'Dr. Computer guy',
@@ -63,7 +63,7 @@ class fill_courses extends Seeder
         ]);
         
         DB::table('courses')->insert([
-            'university_name' => 'Mcgill University',
+            'university_name' => 'Harvard University',
             'course_name' => 'SOEN 287',
             'quiz_name' => 'Quiz review',
             'quiz_creator' => 'Dr. Computer guy',
@@ -104,7 +104,7 @@ class fill_courses extends Seeder
         ]);
         
         DB::table('courses')->insert([
-            'university_name' => 'Concordia University',
+            'university_name' => 'Michigan University',
             'course_name' => 'SOEN 354',
             'quiz_name' => 'Quiz review',
             'quiz_creator' => 'Dr. Mcgill guy',
