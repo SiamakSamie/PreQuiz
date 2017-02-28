@@ -6,10 +6,7 @@ php:
    - '7.1'
 
 before_script:
-  - cp .env.ci .env
-  - composer install --dev --prefer-source --no-interaction
-  - php artisan key:generate
-  - php artisan migrate --seed
+
 
 script:
   - vendor/bin/phpmd app text codesize design naming unusedcode
