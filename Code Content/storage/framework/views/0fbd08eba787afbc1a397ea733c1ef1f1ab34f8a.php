@@ -1,32 +1,30 @@
-@extends('layouts.app')
+<?php $__env->startSection('extra_links'); ?>
+<?php $__env->stopSection(); ?>
 
-@section('extra_links')
-@endsection
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 <div class="container">
 	<p>
-		From <b>{{$uni_name}}</b> searching for class <b>{{$course_id}} </b> <br />
-		{{$db_corr_data->count()}} entrie(s) found
+		From <b><?php echo e($uni_name); ?></b> searching for class <b><?php echo e($course_id); ?> </b> <br />
+		<?php echo e($db_corr_data->count()); ?> entrie(s) found
 	</p>
 	
 	<div class="row">	
-		@foreach ($db_corr_data as $entry)
+		<?php $__currentLoopData = $db_corr_data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $entry): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 			<div class="col-md-3 column">
 				<div class="panel panel-default">
 					
 					<div class="panel-heading">
-						<div class="panel-title"> {{$entry->course_name}} </div>
+						<div class="panel-title"> <?php echo e($entry->course_name); ?> </div>
 						<small> Last updated x mins ago</small>
 					</div>
 					
 					<div class="panel-body collapse in"> 
 						<div class="row clearfix">
 							<div class="col-md-12">
-								<p> {{$entry->quiz_name}}. </p>
-								<p> Description : <br /> {{$entry->quiz_description}}</p>
-								<p class="card-text"> by {{$entry->quiz_creator}}. </p>
+								<p> <?php echo e($entry->quiz_name); ?>. </p>
+								<p> Description : <br /> <?php echo e($entry->quiz_description); ?></p>
+								<p class="card-text"> by <?php echo e($entry->quiz_creator); ?>. </p>
 								<a href="#" class="btn btn-primary center-block">Take this quiz</a>
 								
 							</div>
@@ -35,7 +33,7 @@
 				</div>
 			</div>
 			
-		@endforeach
+		<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 		
 		<ul class="pagination pagination-sm col-md-12 flex-center">
 			<li class="active"><a href="#">1</a></li>
@@ -67,9 +65,11 @@
     <!--  </div>-->
     <!--</div>-->
 </div>	 	
-@endsection		
+<?php $__env->stopSection(); ?>		
 
  
 
   
 
+
+<?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

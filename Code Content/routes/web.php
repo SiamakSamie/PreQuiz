@@ -11,13 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    
-    $universities = DB::table('courses')->pluck('university_name')->toArray();
+Route::post('/getAllUnis', function() {
+    return DB::table('courses')->distinct()->pluck('university_name')->toArray();
+});
 
-    return view('home', [
-         'unis' => $universities,   
-        ]);
+Route::post('/getAllCourses', function() {
+    $uni_name = request('uni_name');
+    return DB::table('courses')->distinct()->where('university_name', $uni_name)->pluck('course_name')->toArray();
+});
+
+Route::get('/', function () {
+    return view('home');
 });
 
 Route::post('/search', 'SearchController@search');
