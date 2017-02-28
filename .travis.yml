@@ -1,14 +1,25 @@
+sudo: false
 language: php
 
 php:
-  # - '5.6'
-  #- '7.0'
-   - '7.1'
+  #- 5.6
+  #- 7.0
+  - 7.1
+env:
+  - LARAVEL_VERSION=5.1.*
+  - LARAVEL_VERSION=5.2.*
+  - LARAVEL_VERSION=5.3.*
+  - LARAVEL_VERSION=5.4.*
 
 before_script:
+  - composer self-update
+  - composer require "laravel/framework:${LARAVEL_VERSION}"
+  - mysql -e 'create database laravel;'
 
+script: phpunit --coverage-clover coverage.xml
 
-script:
-  - vendor/bin/phpmd app text codesize design naming unusedcode
-  - vendor/bin/phpunit --testdox --coverage-text tests
+after_success:
+  - php vendor/bin/coveralls
 
+matrix:
+  fast_finish: true
