@@ -1,32 +1,61 @@
-var prequiz_module = angular.module('preQuiz-module', ['ngMaterial']);
+var prequiz_module = angular.module('preQuiz-module', ['ngMaterial', 'ngAnimate']);
 
-  prequiz_module.controller('searchForm-controller', function()  {
+  prequiz_module.controller('searchForm-controller', function($scope, $http, $mdDialog)  {
 
-      var sfc = this;           
-      sfc.display = "hidden";     // to hide/show the user input feedback
-
-      sfc.placeholders = [
-        {text:'Type the name of your institution', id:'uni'},
-      ];
-
-      sfc.user_input = "";
-
-      sfc.submitform = function() {
-
-        if (sfc.placeholders[0].id === ('uni')) { // if user has entered institution name
-          
-          sfc.user_input = sfc.text;  // add input to user input final variable to submit in the form
-
-          sfc.display = "displayed";                              // show user input feedback box
-          sfc.text = '';                                          // erase old input from input field
-          sfc.placeholders.pop();                                 // erase all HTML elements of old input field
-          sfc.placeholders.push({text:'Type the course name and number', id:'course'});  // add new HTML elements as new input field for course #
-
-          // Javascript statement, removes onSubmit attribute to be able to submit
-          document.getElementById("form").removeAttribute("onSubmit");
+      $scope.allUnis = [];
+      $scope.matching = [];
+      
+      $http.post('/getAllUnis')
+        .then(function(response){
+          $scope.allUnis = response.data;
+      });
+      
+      $scope.autocomplete_unis = function(entry) {
+        $scope.matching = []; // reset results every key entered
+        for(var i = 0; i < $scope.allUnis.length; i++ ) {
+           if (($scope.allUnis[i].toLowerCase().indexOf(entry.toString().toLowerCase()) >= 0) && entry.trim() != "") 
+              $scope.matching.push($scope.allUnis[i]);
+        }
+      }
+      
+      $scope.allCourses = [];
+      
+      $scope.fetchCourses = function(uni_entry, ev) {
+        $http({
+          url: '/getAllCourses', 
+          method: "POST",
+          params: {uni_name: uni_entry.trim()}
+        })
+          .then( function(response) {
+           if(response.data != "") { // data was found!
+              $scope.allCourses = response.data;
+              
+              document.getElementById("uni_form").className = "hidden";
+              document.getElementById("course_form").className = "displayed";
+           }
+           else {                 // data was not found ...
+              $mdDialog.show(
+                $mdDialog.alert()
+                .clickOutsideToClose(true)
+                .title('No quizzes found for course ' + uni_entry +'.')
+                .textContent('Please make sure the univeristy name was chosen from the suggested list.')
+                .ok('Got it!')
+                .targetEvent(ev)
+              );
+           }
+        });
+      }
+      
+      $scope.autocomplete_courses = function(entry) {
+        
+        $scope.matching = []; // reset results every key entered
+        for(var i = 0; i < $scope.allCourses.length; i++ ) {
+           if (($scope.allCourses[i].toLowerCase().indexOf(entry.toString().toLowerCase()) >= 0) && entry.trim() != "") 
+              $scope.matching.push($scope.allCourses[i]);
         }
       }
   });
+  
   
   prequiz_module.controller('sidenav-controller', function($scope, $mdSidenav, $mdDialog) {
       $scope.isSidenavOpen = false;
