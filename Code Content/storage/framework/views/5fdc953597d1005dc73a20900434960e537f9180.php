@@ -1,17 +1,15 @@
-@extends('layouts.app')
-
-@section('title')
+<?php $__env->startSection('title'); ?>
     Welcome Page
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('extra_links')
+<?php $__env->startSection('extra_links'); ?>
     <script src='/js/preQuiz-module.js'> </script>
     
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 
-<!-- @{{ }} is angularJS -->
+<!-- {{ }} is angularJS -->
 <!-- {{ }} is blade -->
 
 <!-- parralax image before the search form -->
@@ -34,28 +32,30 @@
                     placeholder="Enter the name of your institution" ng-change="autocomplete_unis(selected_uni)" required> 
                     
                     <datalist id="uni_names">
-                        <option ng-repeat="match in matching" value="@{{match}}"></option>
+                        <option ng-repeat="match in matching" value="{{match}}"></option>
                     </datalist>
                 </form>  
                 
                 <form  id="course_form" method="POST" action="/search" class="hidden" autocomplete="off">
-                    <input type="text" class="input-field extended-input text-center" value="@{{selected_uni}}" readonly>
-                    {{ csrf_field() }}  <!-- needed for laravel security otherwise nothing works-->
+                    <input type="text" class="input-field extended-input text-center" value="{{selected_uni}}" readonly>
+                    <?php echo e(csrf_field()); ?>  <!-- needed for laravel security otherwise nothing works-->
                     <div class="form-group">
                         <input class="input-submit" type="submit" value="">
                         
-                        <input name="uni_name" type="hidden" value="@{{selected_uni}}">
+                        <input name="uni_name" type="hidden" value="{{selected_uni}}">
                         
                         <input list="course_names" name="course_id" type="text" class=" input-field" ng-model="selected_course" 
                         placeholder="Enter your course name" ng-change="autocomplete_courses(selected_course)" >
                         
                         <datalist id="course_names">
-                            <option ng-repeat="match in matching" value="@{{match}}"></option>
+                            <option ng-repeat="match in matching" value="{{match}}"></option>
                         </datalist>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
 
+
+<?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
