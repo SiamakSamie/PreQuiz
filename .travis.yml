@@ -20,8 +20,6 @@ before_script:
   - php "Code Content"/artisan migrate --seed
   
 script:
-#  - "Code Content"/vendor "Code Content"/bin/phpmd app text codesize design naming unusedcode
-#  - "Code Content"/vendor "Code Content"/bin/phpunit --testdox --coverage-text tests
 
 matrix:
   fast_finish: true
