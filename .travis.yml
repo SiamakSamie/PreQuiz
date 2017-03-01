@@ -16,12 +16,12 @@ before_script:
   - mysql -e 'create database homestead_test;'
   - composer self-update
   - composer require "laravel/framework:${LARAVEL_VERSION}"
-
+  - php "Code Content"/artisan key:generate
+  - php "Code Content"/artisan migrate --seed
+  
 script:
-#  - "Code Content"/vendor/bin/phpunit
-
-after_success:
-#  - php "Code Content"/vendor/bin/coveralls
+  - vendor "Code Content"/bin/phpmd app text codesize design naming unusedcode
+  - vendor "Code Content"/bin/phpunit --testdox --coverage-text tests
 
 matrix:
   fast_finish: true
