@@ -36,6 +36,11 @@
                     <datalist id="uni_names">
                         <option ng-repeat="match in matching" value="@{{match}}"></option>
                     </datalist>
+                    
+                    @if($errors->any())
+                        <script> alert('No entries found, please enter a correct course name');</script>
+                    @endif
+                    
                 </form>  
                 
                 <form  id="course_form" method="POST" action="/search" class="hidden" autocomplete="off">

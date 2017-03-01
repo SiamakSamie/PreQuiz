@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('extra_links')
+	<link rel="stylesheet" href="/css/comments.css" type="text/css" />
 @endsection
 
 @section('content')
@@ -37,7 +38,7 @@
 			
 		@endforeach
 		
-		<ul class="pagination pagination-sm col-md-12 flex-center">
+		<ul class="pagination pagination-sm col-md-12 flex-center" style="display : flex; ">
 			<li class="active"><a href="#">1</a></li>
 			<li><a href="#">2</a></li>
 			<li><a href="#">3</a></li>
@@ -47,25 +48,35 @@
 		
 	</div>
 	
-	<!--<div>-->
- <!--     <div class="">Comment section</div>-->
- <!--     <div class="">-->
-   <!--   	<pre class="row"> -->
-			<!--<div class="align-items-start">-->
-			<!--	<div class="col">-->
-			<!--		One of three columns-->
-			<!--	</div>-->
-			<!--	<div class="col">-->
-			<!--		One of three columns-->
-			<!--	</div>-->
-			<!--	<div class="col">-->
-			<!--		One of three columns-->
-			<!--	</div>-->
-			<!--</div>-->
-   <!--   	</pre>-->
-      	
-    <!--  </div>-->
-    <!--</div>-->
+	<div class="panel panel-primary">
+      <div class="panel-heading">Comment section</div>
+      <div class="panel-body"> 
+		  <ul class="commentList">
+		  	
+		  	@foreach($db_corr_first->Comments as $comm)
+			<li class="row">
+                <div class="col-md-2 commenterName">
+					<small> {{ $comm->User->name }} </small>
+				</div>
+                <div class="col-md-7 commentText">
+                    <p class=""> {{$comm->comment_content}}</p> <span class="date sub-text"> {{$comm->updated_at->toDayDateTimeString()}}</span>
+                </div>
+                <div class="col-md-3 pull-right">
+                	<button class="btn btn-success"> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> <small> +456</small></button>
+                	<button class="btn btn-danger"> <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> <small> -35</small></button>
+                </div>
+            </li>
+          @endforeach
+            
+	  	  </ul>
+	  	  <form id="comment_form">
+	  	  	<div class="row">
+		  	  	<div class="col-md-12"> <textarea class="form-control" form="comment_form" rows="3" placeholder="Enter a comment"></textarea> </div>
+		  	  	<div class="col-md-12"> <input type="submit" class="btn btn-primary btn-sm pull-right text-center" value="Post comment"> </div>
+	  	  	</div>
+	  	  </form>
+      </div>
+    </div>
 </div>	 	
 @endsection		
 
