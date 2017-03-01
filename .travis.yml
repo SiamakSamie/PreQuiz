@@ -19,11 +19,11 @@ before_script:
  # - composer require "laravel/framework:${LARAVEL_VERSION}"
   - php artisan key:generate
   - php artisan migrate --seed
-
-script: 
+  
+script:
   - php artisan migrate --seed
   - ./vendor/bin/phpunit --coverage-clover ./tests/logs/clover.xml
-
+  
 after_script:
   - php vendor/bin/coveralls -v
 
