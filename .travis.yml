@@ -12,14 +12,20 @@ env:
   #- LARAVEL_VERSION=5.4.*
 
 before_script:
-  - cp "Code Content"/.env.travis "Code Content"/.env
+  - cd ./"Code Content"
+  - cp .env.travis .env
   - mysql -e 'create database homestead_test;'
   - composer self-update
   - composer require "laravel/framework:${LARAVEL_VERSION}"
-  - php "Code Content"/artisan key:generate
-  - php "Code Content"/artisan migrate --seed
+  - php artisan key:generate
+  - php artisan migrate --seed
   
 script:
+  - php artisan migrate --seed
+  - ./vendor/bin/phpunit --coverage-clover ./tests/logs/clover.xml
+  
+after_script:
+  - php vendor/bin/coveralls -v
 
 matrix:
   fast_finish: true
