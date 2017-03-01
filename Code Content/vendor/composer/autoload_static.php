@@ -806,7 +806,6 @@ class ComposerStaticInit39c51b7f063df6aa4a03dea96e429399
         'SebastianBergmann\\ResourceOperations\\ResourceOperations' => __DIR__ . '/..' . '/sebastian/resource-operations/src/ResourceOperations.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
-        'fill_comments' => __DIR__ . '/../..' . '/database/seeds/fill_comments.php',
         'fill_courses' => __DIR__ . '/../..' . '/database/seeds/fill_courses.php',
     );
 

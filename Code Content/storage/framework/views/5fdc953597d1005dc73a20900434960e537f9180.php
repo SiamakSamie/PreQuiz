@@ -36,7 +36,7 @@
                     </datalist>
                     
                     <?php if($errors->any()): ?>
-                        <script> alert('No entries found, please enter a correct course name');</script>
+                         <script> alert('No entries found, please enter a correct course name');</script>
                     <?php endif; ?>
                     
                 </form>  

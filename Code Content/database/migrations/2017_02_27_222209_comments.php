@@ -19,7 +19,6 @@ class Comments extends Migration
             $table->integer('course_id')->unsigned()->nullable()->index();
             $table->text('comment_content');
             $table->timestamps();
-            
         });
     }
 
