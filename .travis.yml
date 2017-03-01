@@ -12,7 +12,7 @@ env:
   #- LARAVEL_VERSION=5.4.*
 
 before_script:
-  - cp .env.travis .env
+  - cp "Code Content"/.env.travis "Code Content"/.env
   - mysql -e 'create database homestead_test;'
   - composer self-update
   - composer require "laravel/framework:${LARAVEL_VERSION}"
@@ -20,7 +20,7 @@ before_script:
 script: phpunit --coverage-clover coverage.xml
 
 after_success:
-  - php vendor/bin/coveralls
+  - php "Code Content"/vendor/bin/coveralls
 
 matrix:
   fast_finish: true
