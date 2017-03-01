@@ -25,4 +25,3 @@ after_success:
 
 matrix:
   fast_finish: true
-  ###
