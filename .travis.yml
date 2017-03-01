@@ -19,7 +19,6 @@ before_script:
 
 script:
 #  - "Code Content"/vendor/bin/phpunit
-   - "phpunit -c 'Code Content'/vendor/bin/phpunit.xml"
 
 after_success:
 #  - php "Code Content"/vendor/bin/coveralls
