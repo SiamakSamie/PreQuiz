@@ -15,13 +15,10 @@ class Comments extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned()->nullable();
-            $table->integer('course_id')->unsigned()->nullable();
+            $table->integer('user_id')->unsigned()->nullable()->index();
+            $table->integer('course_id')->unsigned()->nullable()->index();
             $table->text('comment_content');
             $table->timestamps();
-            
-            $table->foreign('course_id')->references('id')->on('courses');
-            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
