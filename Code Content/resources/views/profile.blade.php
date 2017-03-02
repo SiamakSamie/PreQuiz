@@ -10,51 +10,37 @@
  
  @section('content')
      
-     <div class = "page-header">
-         
-         <h1 class="text-center">
-             Profile page information
+   <div class = "round-corner ">
+         <div class = "header">
+         <h1 class="text-left" style = "padding:50px 0 20px 60px;">
+             <b>Profile Information</b>
          </h1>
-         
-     </div>
+         </div>
      @foreach ( $user_info as $info )
      <div class="container flex-center">
-          <table class="table table-bordered ">
-              <thead>
-                  <tr>
-                      <th>
-                         University
-                      </th>
-                      <th>
-                          Name
-                      </th>
-                      <th>
-                          Email
-                      </th>
-                  </tr>
-              </thead>
-              <tbody>
-              <tr>
-                  <td>  {{ $info->university }} </td>
-                  <td>  {{ $info->name }} </td>
-                  <td>  {{ $info->email }} </td>
+          <table class = "no-border table-responsive"> 
+            
+                <tr>
+                    <th> <b>Name:  </b></th>
+                    <td>  {{ $info->name }} </td>
+                     
+                   
+                </tr>
+                <tr>
+                  <th> <b>Email: </b></th>
+                  <td>  {{ $info->email }}  <button type="button" class="btn btn-info btn-round" style = "margin-left:50px;"> Edit
+     </button></td>
                   
               </tr>
-              <tr>
-                  <td>  {{ $info->university }} </td>
-                  <td>  {{ $info->name }} </td>
-                  <td>  {{ $info->email }} </td>
-              </tr>
-              <tr>
-                  <td> {{ $info->email }} </td>
-                  <td> {{ $info->university }} </td>
-                  <td> {{ $info->name }} </td>
-              </tr>
-              </tbody>
+                <tr>
+                    <th><b>Password: </b></th>
+                    <td>************ <button type="button" class="btn btn-info btn-round" style = "margin-left:50px;"> Edit
+     </button></td>
+                </tr>
+             
           </table>
       </div>
       @endforeach
-     <button type="button" class="btn btn-primary btn-lg btn-block"> Edit Information
-     </button>
-           
+      
+      </div>
  @endsection

@@ -46,26 +46,6 @@
 		</ul>
 		
 	</div>
-	
-	<!--<div>-->
- <!--     <div class="">Comment section</div>-->
- <!--     <div class="">-->
-   <!--   	<pre class="row"> -->
-			<!--<div class="align-items-start">-->
-			<!--	<div class="col">-->
-			<!--		One of three columns-->
-			<!--	</div>-->
-			<!--	<div class="col">-->
-			<!--		One of three columns-->
-			<!--	</div>-->
-			<!--	<div class="col">-->
-			<!--		One of three columns-->
-			<!--	</div>-->
-			<!--</div>-->
-   <!--   	</pre>-->
-      	
-    <!--  </div>-->
-    <!--</div>-->
 </div>	 	
 @endsection		
 

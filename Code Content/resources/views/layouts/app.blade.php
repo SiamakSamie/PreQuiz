@@ -38,7 +38,7 @@
 </head>
 <body>
     <div id="app" ng-app="preQuiz-module"  ng-controller="sidenav-controller" ng-cloak>
-        <nav class="navbar navbar-default" style="border-width: 0 0 1px;">
+        <nav class="navbar navbar-default navbar-fixed-top" style="border-width: 0 0 1px;">
             <div class="container">
                 <div class="navbar-header">
 
@@ -50,6 +50,15 @@
                         <span class="icon-bar"></span>
                     </button>
 
+                       <!-- Left Side Of Navbar -->
+                    <ul class="nav navbar-nav" >
+                        <li><a href="" class="navbar-brand" ng-click="toggleLeft()"> 
+                        <div class ="bar"></div>
+                        <div class ="bar"></div>
+                        <div class ="bar"></div>
+                        </a></li>
+                    </ul>
+                    
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
                         <img src = "/img/LogoMakr.png" >
@@ -58,11 +67,7 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse" >
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav" >
-                        <li><a href="" class="navbar-brand" ng-click="toggleLeft()"> Menu</a></li>
-                    </ul>
-
+                 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
@@ -105,18 +110,20 @@
             <md-content layout-margin >
               
                 @if (Auth::check())
-                    <a class="list-group-item" href="{{ url('/notifications') }}" > Notifications <span class="badge badge-default badge-pill"> 3 </span> </a> 
-                    <a class="list-group-item" href="{{ url('/create_quiz') }}"> Create a quiz </a> 
-                    <a class="list-group-item" href="{{ url('/edit_quiz') }}"> Edit a quiz </a> 
-                    <a class="list-group-item" href="{{ url('/profile') }}" > My profile </a>
+                    <img src = "/img/profile_pic.jpg">
+                    <p>{{ Auth::user()->name }}</p>
+                    <a class="list-group-item" href="" ng-click="toggleLeft()"> Notifications <span class="badge badge-default badge-pill"> 3 </span> </a> 
+                    <a class="list-group-item" href="" ng-click="toggleLeft()"> Create a quiz </a> 
+                    <a class="list-group-item" href="" ng-click="toggleLeft()"> My Quizzes </a> 
+                    <a class="list-group-item" href="{{ url('/profile') }}" ng-click="toggleLeft()"> My Profile </a>
                 @else
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> Notifications <span class="badge badge-default badge-pill"> 3 </span> </a> 
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> Create a quiz </a> 
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> Edit a quiz </a> 
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> My profile </a> 
                 @endif
-                    <a class="list-group-item" href="aboutus"> About us </a> 
-                    <a class="list-group-item" href="contactus"> Contact us </a> 
+                    <a class="list-group-item" href="" ng-click="toggleLeft()"> About us </a> 
+                    <a class="list-group-item" href="" ng-click="toggleLeft()"> Contact us </a> 
                     <a class="list-group-item md-accent" href="" ng-click="toggleLeft()"> Close menu </a> 
             </md-content>
         </md-sidenav>
