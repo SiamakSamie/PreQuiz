@@ -22,7 +22,7 @@ before_script:
   
 script:
   - php artisan migrate --seed
-  - ./vendor/bin/phpunit --coverage-clover ./tests/logs/clover.xml
+  - vendor/bin/phpunit
   
 after_script:
   - php vendor/bin/coveralls -v
