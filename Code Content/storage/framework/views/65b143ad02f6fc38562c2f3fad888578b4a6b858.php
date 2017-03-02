@@ -14,6 +14,22 @@
     <link href="/css/app.css" rel="stylesheet">
     <link href="/css/home.css" rel="stylesheet" type="text/css">
     
+    <!-- JQuery --> 
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+     
+      <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ 
+     <!-- Optional theme -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
+     integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+ 
+     <!-- Latest compiled and minified JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+     
      <!-- Angular Material style sheet -->
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
     
@@ -106,9 +122,9 @@
             <md-content layout-margin >
               
                 <?php if(Auth::check()): ?>
-                    <a class="list-group-item" href="" ng-click="toggleLeft()"> Notifications <span class="badge badge-default badge-pill"> 3 </span> </a> 
-                    <a class="list-group-item" href="" ng-click="toggleLeft()"> Create a quiz </a> 
-                    <a class="list-group-item" href="" ng-click="toggleLeft()"> Edit a quiz </a> 
+                    <a class="list-group-item" href="<?php echo e(url('/notifications')); ?>" > Notifications <span class="badge badge-default badge-pill"> 3 </span> </a> 
+                    <a class="list-group-item" href="<?php echo e(url('/create_quiz')); ?>"> Create a quiz </a> 
+                    <a class="list-group-item" href="<?php echo e(url('/edit_quiz')); ?>"> Edit a quiz </a> 
                     <a class="list-group-item" href="<?php echo e(url('/profile')); ?>" > My profile </a>
                 <?php else: ?>
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> Notifications <span class="badge badge-default badge-pill"> 3 </span> </a> 
@@ -116,13 +132,14 @@
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> Edit a quiz </a> 
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> My profile </a> 
                 <?php endif; ?>
-                    <a class="list-group-item" href="" ng-click="toggleLeft()"> About us </a> 
-                    <a class="list-group-item" href="" ng-click="toggleLeft()"> Contact us </a> 
+                    <a class="list-group-item" href="aboutus"> About us </a> 
+                    <a class="list-group-item" href="contactus"> Contact us </a> 
                     <a class="list-group-item md-accent" href="" ng-click="toggleLeft()"> Close menu </a> 
             </md-content>
         </md-sidenav>
         
         <?php echo $__env->yieldContent('content'); ?>
+        
     </div>
     <!-- Scripts -->
     <script src="/js/app.js"></script>
