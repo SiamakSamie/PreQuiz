@@ -27,6 +27,8 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/profile', 'ProfileController@displayAll');
 
+Route::get('/contactus', 'ContactUsController@contactus');
+
 Route::get('/aboutus', function(){
     return view('aboutus');
 });
