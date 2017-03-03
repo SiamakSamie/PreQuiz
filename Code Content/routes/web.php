@@ -11,14 +11,9 @@
 |
 */
 
-Route::post('/getAllUnis', function() {
-    return DB::table('courses')->distinct()->pluck('university_name')->toArray();
-});
+Route::post('/getAllUnis', 'SearchController@getAllUnis');
 
-Route::post('/getAllCourses', function() {
-    $uni_name = request('uni_name');
-    return DB::table('courses')->distinct()->where('university_name', $uni_name)->pluck('course_name')->toArray();
-});
+Route::post('/getAllCourses', 'SearchController@getAllCourses');
 
 Route::get('/', function () {
     return view('home');
