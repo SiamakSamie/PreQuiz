@@ -1,6 +1,6 @@
 <?php
 
-namespace PreQuiz\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 

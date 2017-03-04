@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => PreQuiz\User::class,
+            'model' => App\User::class,
         ],
 
         // 'users' => [

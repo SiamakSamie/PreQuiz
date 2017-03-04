@@ -11,8 +11,12 @@
 |
 */
 
+Route::post('/getAllUnis', 'SearchController@getAllUnis');
+
+Route::post('/getAllCourses', 'SearchController@getAllCourses');
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::post('/search', 'SearchController@search');
@@ -20,3 +24,14 @@ Route::post('/search', 'SearchController@search');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/profile', 'ProfileController@displayAll');
+
+Route::resource('create_quiz','QuizController');
+Route::resource('questions','QuestionsController');
+
+Route::get('/contactus', 'ContactUsController@contactus');
+
+Route::get('/aboutus', function(){
+    return view('aboutus');
+});

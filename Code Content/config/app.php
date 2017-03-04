@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/New_York',
 
     /*
     |--------------------------------------------------------------------------
@@ -171,11 +171,11 @@ return [
         /*
          * Application Service Providers...
          */
-        PreQuiz\Providers\AppServiceProvider::class,
-        PreQuiz\Providers\AuthServiceProvider::class,
-        // PreQuiz\Providers\BroadcastServiceProvider::class,
-        PreQuiz\Providers\EventServiceProvider::class,
-        PreQuiz\Providers\RouteServiceProvider::class,
+        App\Providers\AppServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
+        // App\Providers\BroadcastServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,
 
     ],
 
