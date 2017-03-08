@@ -20,7 +20,7 @@
             
             <form method="POST" action="{{ route('questions.store') }}">
                 
-                <div ng-app="preQuiz-module" ng-controller = "add-forms">
+                <div ng-controller = "add-forms">
                     
                     <fieldset data-ng-repeat="question in questions">
                         
@@ -48,14 +48,14 @@
                         <div class="form-group">
                             <label name="answer">Wrong Answer 3:</label>
                             <input id="answer4" ng-model="question.answer4" name="answer4" rows="10" class="form-control">
-                        </div>         
-                        
-                        
+                        </div>
+                      
                     </fieldset>
-                
-                    <button ng-click="addQuestion()">Add Question</button>
+                   
+                    <button ng-click="addQuestion()" onclick="return false">Add Question</button>
                 
                 </div>
+                
                 
                 <input type="submit" value="Create Quiz" class="btn btn-success btn-lg btn-block">
                 <input type="hidden" name="_token" value="{{ Session::token() }}">
