@@ -79,6 +79,7 @@ var prequiz_module = angular.module('preQuiz-module', ['ngMaterial', 'ngAnimate'
         );
       };
   });
+
   
   
   

@@ -52,7 +52,7 @@
     @yield('extra_links')
     
 </head>
-<body>
+<body style="background-color: #f5f8fa;">
     <div id="app" ng-app="preQuiz-module"  ng-controller="sidenav-controller" ng-cloak>
         <nav class="navbar navbar-default" style="border-width: 0 0 1px;">
             <div class="container">
