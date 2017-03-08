@@ -1,0 +1,64 @@
+Meeting #1
+
+Date & Time: 
+
+Feb 1, 2017 from 11:35 to ….
+
+Team members present: 
+
+Siamak Samie, Roy Khoury, Josephine Ng, Ryan Nichols, Maxim Nguyen, Adam Rais
+
+Topics Covered:
+
+Main structure of the project 
+
+The site would allow users to sign up as students or as teacher/TA, and would have different privileges accordingly. Teachers/TA, would be able to create their own quizzes for their own classes and students can only take the quiz and see how they do.
+
+After taking the quiz a list of resources will be listed that links to separate forums where many suggested links are listed that can help polish knowledge on the topic.
+
+Quizzes can be made by Teachers/TAs. Questions can be added by the user that include text fields and/or image field as input. The question has only multiple choice answers where the correct answer would have to be indicated. Then the teacher has the option to add another question or end the quiz.
+
+Only the quiz created can add resources.
+
+These resources can be upvoted/downvoted and the listing order will be in ascending order from most upvoted to least.
+
+All quiz creators can see who did their quiz ( his account information).
+And can perhaps give extra bonus marks for people who did the quiz.
+
+Concordia e-mail ID as a username? To keep it unique
+
+The home page should look like a similar page to google, with a big input field where the university name is specified.
+Afterwards, another input for the course name
+And then list all the quizzes associated with the course 
+
+Afterwards you can take the quiz and get feedback on how well you did.
+A sign in popup shows up asking you to sign in if you want to show up in the list of participants of the quiz for the creator.
+And then a list of resources shows up.
+In the quiz, we will implement a “skip button” feature to skip to resources for whatever reason.
+When we click on course.
+We have a description of the class, maybe a personal TA message,
+And then we have “start quiz” button.
+Although at the bottom we have a collapsable menu that contains all the resources ( it would just be a frame of the resource page)
+
+User Stories discussed
+
+As a user, I want to be able to interact with the site and other people to vote on resources, comment, and reply on quizzes.
+As a user, I want to be able to register and log in to keep track of my quizzes and community interactions.
+As a user, I want to be able to search for quizzes for a specific class to test my prerequisite knowledge.
+As a quiz creator, I want to be able to create a quiz to test students on their background knowledge required for the course
+As a user, I want to receive feedback from a quiz and receive relevant resources to expand my knowledge.
+As a user, I want to be able to edit my account information as a precaution in case of a change of username, ID number, school, etc.
+As a user i want a responsive website to be able to comfortably use the application on any platform.
+As a quiz creator, i want to be able to edit my quiz content in case of errors.
+As a user, i want to be able to be to notified if someone replied to my comment or commented on my quiz
+
+
+
+
+
+
+
+
+
+
+
