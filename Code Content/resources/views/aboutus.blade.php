@@ -22,36 +22,46 @@
                 <h1 class="page-header">Our Team</h1>
             </div>
         <div class="col-xs-4">
-            <img class="img-responsive img-circle img-center" src="https://www.engr.wisc.edu/app/uploads/2015/12/Twitter-Logo-Circle-Small-300x300.png" />
-            <h4> Name of the person <small> Job function</small></h4>
-              <p>gsjsfjghjsdhgksjd;khd;kg;kdhfgkds;kgksd;gksjhfgh</p>
+            <img class="img-responsive img-circle img-center" src="http://www.freeiconspng.com/uploads/person-outline-icon-png-person-outline-icon-png-person-17.png" />
+            <h4 class = "text-center"> Dana Alexandra Llamas <small> Software Engineer</small></h4>
+              <p></p>
         </div>
         <div class="col-xs-4">
-            <img class="img-responsive img-circle img-center" src="https://www.engr.wisc.edu/app/uploads/2015/12/Twitter-Logo-Circle-Small-300x300.png" />
-            <h4> Name of the person <small> Job function</small></h4>
-              <p>gsjsfjghjsdhgksjd;khd;kg;kdhfgkds;kgksd;gksjhfgh</p>
+            <img class="img-responsive img-circle img-center" src="http://www.freeiconspng.com/uploads/person-outline-icon-png-person-outline-icon-png-person-17.png" />
+            <h4 class = "text-center"> Roy Khoury <small> Software Engineer</small></h4>
+              <p></p>
         </div>
         <div class="col-xs-4">
-            <img class="img-responsive img-circle img-center" src="https://www.engr.wisc.edu/app/uploads/2015/12/Twitter-Logo-Circle-Small-300x300.png" />
-            <h4> Name of the person <small> Job function</small></h4>
-              <p>gsjsfjghjsdhgksjd;khd;kg;kdhfgkds;kgksd;gksjhfgh</p>
+            <img class="img-responsive img-circle img-center" src="http://www.freeiconspng.com/uploads/person-outline-icon-png-person-outline-icon-png-person-17.png" />
+            <h4 class = "text-center"> Siamak Samie <small> Software Engineer</small></h4>
+              <p></p>
         </div>
         <div class="col-xs-4">
-            <img class="img-responsive img-circle img-center" src="https://www.engr.wisc.edu/app/uploads/2015/12/Twitter-Logo-Circle-Small-300x300.png" />
-            <h4> Name of the person <small> Job function</small></h4>
-              <p>gsjsfjghjsdhgksjd;khd;kg;kdhfgkds;kgksd;gksjhfgh</p>
+            <img class="img-responsive img-circle img-center" src="http://www.freeiconspng.com/uploads/person-outline-icon-png-person-outline-icon-png-person-17.png" />
+            <h4 class = "text-center"> Adam Rais <small> Computer Engineer</small></h4>
+              <p></p>
         </div>
         <div class="col-xs-4 ">
-            <img class="img-responsive img-circle img-center" src="https://www.engr.wisc.edu/app/uploads/2015/12/Twitter-Logo-Circle-Small-300x300.png" />
-            <h4> Name of the person <small> Job function</small></h4>
-              <p>gsjsfjghjsdhgksjd;khd;kg;kdhfgkds;kgksd;gksjhfgh</p>
+            <img class="img-responsive img-circle img-center" src="http://www.freeiconspng.com/uploads/person-outline-icon-png-person-outline-icon-png-person-17.png" />
+            <h4 class = "text-center"> Ryan Nichols <small> Computer Engineer</small></h4>
+              <p></p>
         </div>
         <div class="col-xs-4 text-center">
-            <img class="img-responsive img-circle img-center" src="https://www.engr.wisc.edu/app/uploads/2015/12/Twitter-Logo-Circle-Small-300x300.png" />
-            <h4> Name of the person <small> Job function</small></h4>
-              <p>gsjsfjghjsdhgksjd;khd;kg;kdhfgkds;kgksd;gksjhfgh</p>
+            <img class="img-responsive img-circle img-center" src="http://www.freeiconspng.com/uploads/person-outline-icon-png-person-outline-icon-png-person-17.png" />
+            <h4 class = "text-center"> Josephine Ng <small> Software Engineer</small></h4>
+              <p></p>
         </div>
-        
+        <div class="col-xs-6 text-center">
+            <img class="img-responsive img-circle img-center" src="http://www.freeiconspng.com/uploads/person-outline-icon-png-person-outline-icon-png-person-17.png" />
+            <h4 class = "text-center"> Chen Jie Lu <small> Software Engineer</small></h4>
+              <p></p>
+        </div>
+        <div class="col-xs-6 text-center">
+            <img class="img-responsive img-circle img-center" src="http://www.freeiconspng.com/uploads/person-outline-icon-png-person-outline-icon-png-person-17.png" />
+            <h4 class = "text-center" > Maxim Nguyen <small> Software Engineer</small></h4>
+              <p></p>
+        </div>
   </div>
 </div>
 @endsection		
+
