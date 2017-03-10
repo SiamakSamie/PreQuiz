@@ -66,19 +66,21 @@
                         <span class="icon-bar"></span>
                     </button>
 
+                        <!-- Left Side Of Navbar -->
+                    <ul class="nav navbar-nav" >
+                        <li><a href="" class="navbar-brand" ng-click="toggleLeft()"> 
+                        <div class ="bar"></div>
+                        <div class ="bar"></div>
+                        <div class ="bar"></div>
+                        </a></li>
+                    </ul>
+                    
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
                         <img src = "/img/LogoMakr.png" >
                     </a>
-                    
                 </div>
-
                 <div class="collapse navbar-collapse" id="app-navbar-collapse" >
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav" >
-                        <li><a href="" class="navbar-brand" ng-click="toggleLeft()"> Menu</a></li>
-                    </ul>
-
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
@@ -122,6 +124,8 @@
             <md-content layout-margin >
               
                 <?php if(Auth::check()): ?>
+                    <img src = "/img/profile_pic.jpg">
+                    <p id = "name"><?php echo e(Auth::user()->name); ?></p>
                     <a class="list-group-item" href="<?php echo e(url('/notifications')); ?>" > Notifications <span class="badge badge-default badge-pill"> 3 </span> </a> 
                     <a class="list-group-item" href="<?php echo e(url('/create_quiz')); ?>"> Create a quiz </a> 
                     <a class="list-group-item" href="<?php echo e(url('/edit_quiz')); ?>"> Edit a quiz </a> 
