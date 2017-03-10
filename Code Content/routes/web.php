@@ -16,6 +16,7 @@ Route::post('/getAllUnis', 'SearchController@getAllUnis');
 Route::post('/getAllCourses', 'SearchController@getAllCourses');
 
 Route::get('/', function () {
+    
     return view('home');
 });
 
@@ -39,6 +40,7 @@ Route::get('/aboutus', function(){
     return view('aboutus');
 });
 
+Route::post('/addComment', 'CommentController@addComment');
 
 Route::post('/sendContactUsMail', function() {
    $data = request("message");
