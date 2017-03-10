@@ -80,8 +80,6 @@ var prequiz_module = angular.module('preQuiz-module', ['ngMaterial', 'ngAnimate'
       };
   });
 
-  
-  
   prequiz_module.controller('add-forms', function($scope){
     
     $scope.questions = [{id: 'question1'}];

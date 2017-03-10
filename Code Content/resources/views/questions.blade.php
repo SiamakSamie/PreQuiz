@@ -10,8 +10,6 @@
 
 @section('content')
 
-    
-
      
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -24,7 +22,9 @@
                     
                     <fieldset data-ng-repeat="question in questions">
                         
-                        <button ng-show="$last" ng-click="removeQuestion()">Remove Question</button>
+                        <button class="btn btn-info btn-sm" ng-show="$last" ng-click="removeQuestion()"><span class="glyphicon glyphicon-minus" ></span></button> 
+                        <br /><br />
+                        
                         <div class="form-group">
                             <label name="question">Question:</label>
                             <input id="question" ng-model="question.question" name="question" class="form-control">
@@ -52,7 +52,8 @@
                       
                     </fieldset>
                    
-                    <button ng-click="addQuestion()" onclick="return false">Add Question</button>
+                    <button class="btn btn-info btn-sm" onclick="return false" ng-click="addQuestion()" > <span class="glyphicon glyphicon-plus" > </span> </button>
+                    <br /><br />
                 
                 </div>
                 
