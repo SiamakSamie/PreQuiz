@@ -3,7 +3,6 @@
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('extra_links'); ?>
-    <script src='/js/preQuiz-module.js'> </script>
     
 <?php $__env->stopSection(); ?>
 
