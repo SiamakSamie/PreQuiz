@@ -5,7 +5,6 @@
 @endsection
 
 @section('extra_links')
-    <script src='/js/preQuiz-module.js'> </script>
     
 @endsection
 
