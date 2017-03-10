@@ -1,0 +1,1418 @@
+----- February 18th -----
+siamaksamie [7:00 AM] 
+How about Monday. I don't mind going to school any day and make it a good study sesh
+
+roykhoury [10:23 AM] 
+I'm down
+
+ryan [10:23 AM] 
+same
+
+roykhoury [10:23 AM] 
+Also why u up so early on a Saturday wth
+
+dana.alexandra [10:24 AM] 
+Says the one who is answering
+
+[10:24]  
+Hahahah
+
+[10:24]  
+Morning guys
+
+[10:24]  
+Monday works for me too
+
+jng11232 [10:24 AM] 
+Im good for monday
+
+[10:24]  
+And morniing
+
+roykhoury [10:28 AM] 
+Hahahah
+
+[10:28]  
+Monday it is then?
+
+[10:28]  
+We'll wait for others
+
+adamrais [12:10 PM] 
+Good for Monday !
+
+roykhoury [3:13 PM] 
+Hey Adam I'll check out ur profile page soon today although whenever u upload something u should upload It on ur branch not on the master! Haha
+
+adamrais [3:14 PM] 
+perfect, im really lost with github tbh, took me time to figure out how to commit
+
+roykhoury [3:15 PM] 
+Try it out now if u want
+
+[3:15]  
+Your branch is a bit behind try to update the content of your branch
+
+[3:15]  
+From the master
+
+adamrais [3:16 PM] 
+okay will do, btw i install the C9 stuff but its kinda spooky to undertand everything, like i didnt code from c9 cause i didnt know how to
+
+[3:16]  
+it will be good if monday we can have a tuto about how to code on C9
+
+roykhoury [3:21 PM] 
+Yeah I did that last time when you had ur midterm,
+
+[3:21]  
+Although u have to use c9 and the stuff I did to create the profile page
+
+[3:21]  
+We don't use php directly that's why
+
+[3:21]  
+I'll check the file though I'll see if we can use it!
+
+adamrais [3:22 PM] 
+okay perfect! otherwise ill try to fix this on monday
+
+[3:22]  
+but ill make sure the about us page will be code on c9
+
+roykhoury [3:35 PM] 
+That's good yeah! I'll let you know
+
+roykhoury [3:52 PM] 
+Ok yeah so I checked it out, we can't really use that unfortunately, there's like a bunch of "rules" I guess that has to be followed I'll show you how to do it on Monday!
+
+[3:52]  
+You can keep it in ur branch if you want but I think we should remove it from master
+
+adamrais [3:53 PM] 
+okay perfect tho!
+
+roykhoury [3:53 PM] 
+:+1::+1:
+
+
+----- February 19th -----
+ryan [11:02 AM] 
+is it safe to merge the remaining pull request? I'm about to clone our project into a new workspace  in cloud9 and i was hoping to clone master with everything up to date
+
+roykhoury [11:03 AM] 
+Yeah go ahead
+
+[11:03]  
+It's good
+
+[11:03]  
+I've made progress from it
+
+[11:04]  
+But it'll require another 2 comments so clone it now u can still make changes and it won't conflict
+
+ryan [11:04 AM] 
+Added the menu slider on the side #37
+
+[11:05]  
+i only see this open for now and it's got 2 comments. you have another in mind?
+
+roykhoury [11:05 AM] 
+Yeah this one is safe to merge
+
+[11:05]  
+But that was done friday
+
+[11:05]  
+I've made progress since Friday locally
+
+ryan [11:05 AM] 
+kk
+
+roykhoury [11:05 AM] 
+But this works fine too!
+
+[11:06]  
+I'll upload the changes on my branch if you want
+
+[11:06]  
+Oh yeah
+
+[11:06]  
+U can clone from my branch
+
+[11:06]  
+For the new new
+
+[11:06]  
+If u want
+
+adamrais [11:07 AM] 
+Roy, btw I clone the c9 project on your branch like the video, is that good ? Or I should clone it from the master
+
+roykhoury [11:08 AM] 
+It's good from my branch yeah
+
+[11:08]  
+Give me like 3 minutee
+
+[11:09]  
+I'll upload the new stuff on my branch right away
+
+[11:09]  
+Then u can clone it from there
+
+adamrais [11:09 AM] 
+Perfect, btw at what time we are meeting tomorrow?
+
+roykhoury [11:11 AM] 
+Umm not sure
+
+[11:11]  
+What time do you guys wanna meet at?
+
+[11:11]  
+12?
+
+dana.alexandra [11:12 AM] 
+12 works fr me
+
+ryan [11:13 AM] 
+i can meet for 12. i might need some help on how to use git.. i tried pulling updates in my first workspace and had some errors. i just made a new one cloning master and git status  gives
+
+[11:13]  
+fatal: Not a git repository (or any of the parent directories): .git
+
+adamrais [11:14 AM] 
+Same for me, I need help with git and c9
+
+roykhoury [11:15 AM] 
+Hmm  usually that error means
+
+[11:15]  
+U didn't do git unit
+
+[11:15]  
+Git init **
+
+[11:15]  
+Try that out
+
+[11:15]  
+And also Ryan my branch is up to date!
+
+[11:15]  
+Clone it from there now and you'll get what I have at home
+
+jng11232 [11:16 AM] 
+Do u guys want to try to get a room again ?
+
+ryan [11:17 AM] 
+ok i'll try that. at what point do i run git init? after i've cloned everything and finsihed all instructions on the video?
+
+roykhoury [11:22 AM] 
+Oh wait you mean in the c9 repo??
+
+[11:22]  
+Oh that shouldn't happen
+
+[11:22]  
+Recreate a new workspace and make sure it's php/Apache
+
+[11:22]  
+And try tuning git
+
+[11:22]  
+Just "git"
+
+[11:23]  
+Orr
+
+[11:23]  
+Hmm actually I'm not sure ...
+
+[11:23]  
+I'll have to take a look
+
+[11:23]  
+But git init would be the first thing you would do technically
+
+ryan [11:23 AM] 
+before cloning the project yes?
+
+[11:24]  
+i'll try again
+
+roykhoury [11:25 AM] 
+Yeah
+
+[11:25]  
+Wait you got that error while cloning?
+
+ryan [11:26 AM] 
+After cloning then running git staus
+
+roykhoury [11:27 AM] 
+Hmm well
+
+[11:27]  
+To be honest that could be noting
+
+[11:28]  
+I don't really suggest git interactions directly from c9 anyways because the file structure is different
+
+[11:28]  
+What I do is I download the files on my computer in a certain folder with the right file structure
+
+[11:28]  
+And then git push from there locally
+
+[11:29]  
+I can show you tomorrow
+
+ryan [11:31 AM] 
+aight but i'll try cloning your latest branch and making some progress for now..
+
+mnhn329 [3:25 PM] 
+im free tmr as well, so ill see you guys then
+
+roykhoury [6:32 PM] 
+Yeah that's good!
+
+[6:33]  
+Are you guys okay with 2pm instead of? Or is that too late of a meeting?
+
+[6:33]  
+Instead of 11*
+
+[6:33]  
+12**
+
+ryan [7:19 PM] 
+2 is good for me
+
+jng11232 [7:28 PM] 
+Yeah its good
+
+[7:28]  
+For me
+
+dana.alexandra [8:47 PM] 
+2 is good
+
+chenjie [8:51 PM] 
+euhh i have an interview for an internship tomorrow
+
+[8:51]  
+so i might not make it
+
+dana.alexandra [8:51 PM] 
+Gooood luck!!!
+
+roykhoury [8:52 PM] 
+Cool good luck! Yeah it's fine man
+
+chenjie [8:52 PM] 
+ill ask if u guys are still together when i finish
+
+roykhoury [8:52 PM] 
+Get that internship
+
+[8:52]  
+Aight
+
+chenjie [8:52 PM] 
+loooool
+
+roykhoury [8:52 PM] 
+xD
+
+chenjie [8:52 PM] 
+that juicy 19$/h
+
+adamrais [8:52 PM] 
+!!!
+
+dana.alexandra [8:52 PM] 
+Ayee
+
+[8:52]  
+Baller alert
+
+adamrais [8:52 PM] 
+Are you in coop?
+
+chenjie [8:52 PM] 
+nope
+
+[8:53]  
+i applied as much as i could
+
+[8:53]  
+okok im gonna jinx myself lol
+
+adamrais [8:53 PM] 
+You good then !
+
+[8:53]  
+Good luck
+
+chenjie [8:53 PM] 
+thanks guys
+
+siamaksamie [8:54 PM] 
+Good luck, and feel free to refer me ;D
+
+chenjie [8:56 PM] 
+only if i get the job haha
+
+ryan [8:57 PM] 
+They'd be lucky to have u!!!
+
+chenjie [8:58 PM] 
+ikr?
+
+[8:58]  
+jkjk
+
+
+----- February 20th -----
+dana.alexandra [1:43 PM] 
+We're meeeting today right ?
+
+adamrais [1:45 PM] 
+yup im gonna be 20 mins late im working with my other team project
+
+siamaksamie [1:46 PM] 
+!! Right !! Coming!!
+
+[1:46]  
+There in an hour
+
+jng11232 [1:47 PM] 
+Im at 843
+
+ryan [1:50 PM] 
+Omw
+
+dana.alexandra [2:12 PM] 
+Still in 843?
+
+mnhn329 [2:16 PM] 
+ya
+
+mnhn329 [3:46 PM] 
+https://wireframe.cc/UGsbxa
+Wireframe.cc
+Wireframe.cc - minimal wireframing tool
+A simple wireframing tool that doesn't get in your way. Create and share simple wireframes of websites and mobile apps. (107KB)
+
+chenjie [4:01 PM] 
+Yo guys im coming
+
+dana.alexandra [4:01 PM] 
+how was the interview?!
+
+chenjie [4:01 PM] 
+I hope it went well lol
+
+mnhn329 [6:31 PM] 
+Quiz: -list: https://wireframe.cc/URBn31
+             -page: https://wireframe.cc/hjUQA7
+Account: -quizzes done: https://wireframe.cc/UGsbxa
+                     -quizzes created: https://wireframe.cc/68wJuA
+                     -edit account: https://wireframe.cc/zN6z0S
+Wireframe.cc
+Wireframe.cc - minimal wireframing tool
+A simple wireframing tool that doesn't get in your way. Create and share simple wireframes of websites and mobile apps. (107KB)
+
+mnhn329 [6:56 PM] 
+feedback: https://wireframe.cc/oko3SD
+Wireframe.cc
+Wireframe.cc - minimal wireframing tool
+A simple wireframing tool that doesn't get in your way. Create and share simple wireframes of websites and mobile apps. (107KB)
+
+
+----- February 22nd -----
+mnhn329 [1:16 AM] 
+so are we still meeting tmr in the end?
+
+[1:16]  
+or wednesday*
+
+siamaksamie [11:06 AM] 
+we meeting up or nah?
+
+chenjie [3:17 PM] 
+can everyone make it tomorrow?
+
+jng11232 [3:17 PM] 
+I can
+
+dana.alexandra [3:18 PM] 
+what time ?
+
+chenjie [3:21 PM] 
+im pretty much free all day
+
+jng11232 [3:22 PM] 
+I can 10:30-3
+
+roykhoury [3:43 PM] 
+Why so early jojo?
+
+ryan [4:57 PM] 
+I can meet tmrw
+
+dana.alexandra [6:02 PM] 
+i can meet at 1
+
+roykhoury [6:45 PM] 
+Aight 1 is hood
+
+[6:45]  
+Good
+
+jng11232 [7:28 PM] 
+I have dragonboat trainin at 9
+
+
+----- February 23rd -----
+siamaksamie [12:22 PM] 
+Are we meeting at 1?
+
+dana.alexandra [12:23 PM] 
+i think so.....
+
+[12:23]  
+Imma be late
+
+[12:23]  
+30 mins
+
+jng11232 [12:23 PM] 
+Im headin there now
+
+roykhoury [12:31 PM] 
+Hey guys.. I'm kinda sick today I'm not sure if I'll make it
+
+siamaksamie [12:33 PM] 
+I can get there at 2
+
+[12:33]  
+Get well soon brah
+
+dana.alexandra [12:34 PM] 
+Get well sooon !
+
+roykhoury [12:34 PM] 
+Thanks guys haha
+
+dana.alexandra [12:34 PM] 
+lul me too, imma get there for 2 :sweat_smile:
+
+roykhoury [12:34 PM] 
+I'll still be online so if you guys need anything just message me
+
+siamaksamie [12:38 PM] 
+How do you laravel?
+
+jng11232 [12:38 PM] 
+Im almost there but im leaving around 2:30
+
+siamaksamie [12:39 PM] 
+I can stay till 5
+
+[12:39]  
+So I'll actually probably get there when Jo leaves
+
+ryan [12:39 PM] 
+@siamaksamie  can u help me debug my contact us page? It's mostly done but I need help...
+
+chenjie [12:46 PM] 
+I might be 30 min late lol
+
+jng11232 [12:47 PM] 
+Okk ill b at h854 if someone is joinin me
+
+roykhoury [12:48 PM] 
+Siamak should be able to help if not u could upload it to ur branch and i can clone it and take a look
+
+ryan [1:11 PM] 
+Aight thanks. Let u know how it goes
+
+ryan [1:46 PM] 
+Guys what room?
+
+jng11232 [1:47 PM] 
+h854
+
+roykhoury [2:00 PM] 
+What do you mean?
+
+dana.alexandra [2:08 PM] 
+Where u guys
+
+siamaksamie [2:33 PM] 
+Soon
+
+roykhoury [3:12 PM] 
+Hey Adam I resolved the conflicts of the thing we did together last meeting @adamrais  but I couldn't push it onto ur branch it wasn't working sorry so maybe after merging my pull request u can clone that and then like do some small changes and do another pull request so that we have that recorded on git ?
+
+[3:12]  
+Also we really need to have Travis up and running on this
+
+[3:12]  
+We're supposed to have it check every pull request
+
+adamrais [3:12 PM] 
+Perfect Roy no worries
+
+roykhoury [3:13 PM] 
+Okay thanks!
+
+
+----- February 27th -----
+roykhoury [12:12 PM] 
+Yo roger what's up!
+
+[12:13]  
+Did you ever figure out how to autocomplete??
+
+[12:13]  
+Cuz if u didn't I found a way haha
+
+[12:13]  
+@chenjie
+
+chenjie [1:43 PM] 
+Lol i think i found a way, but we can discuss it
+
+siamaksamie [1:49 PM] 
+everyone who's free at 3:40, let's meet up at H8
+
+[1:49]  
+ill be in one of those rooms for two hours
+
+[1:49]  
+i just want us all to make some commits
+
+[1:50]  
+even if they are small
+
+jng11232 [1:50 PM] 
+I have a class at4:15
+
+siamaksamie [1:50 PM] 
+we've all done a lot of work, and we really need to put everything on the github
+
+[1:50]  
+everything, even wireframes and stuff like that
+
+[1:50]  
+we need to show the amount of work we did
+
+[1:51]  
+and i have a bunch of small tasks that can be completed quickly and committed to github
+
+[1:52]  
+no problemo jojo
+
+[1:52]  
+anyone who can meet today we'll upload stuff
+
+[1:53]  
+and then again tomorrow, and again wednsday
+
+[1:53]  
+just so that we all don't upload on one day
+
+ryan [1:55 PM] 
+I can meet tmrw. I have to prep for a midterm tmrw morning but am free after
+
+siamaksamie [1:56 PM] 
+aiight aiight
+
+dana.alexandra [2:12 PM] 
+I can meet wednesday, i have a presentation i need to prep for for tomoooo
+
+chenjie [2:15 PM] 
+I think i can meet today, but ill come like at 4
+
+jng11232 [2:49 PM] 
+At you guys at school ? Cause i can meet u in less than 20 min
+
+roykhoury [2:51 PM] 
+That's good but I have class I'm done at 5:30
+
+siamaksamie [3:31 PM] 
+Almost done my tutorial
+
+[3:31]  
+Is anyone up to meet up right now?
+
+roykhoury [3:42 PM] 
+Imma b free at 5:30 if you're still here
+
+mnhn329 [3:43 PM] 
+i can be there
+
+[3:43]  
+am free right now
+
+siamaksamie [3:48 PM] 
+H831
+
+chenjie [3:51 PM] 
+How long are u guys staying there
+
+jng11232 [4:00 PM] 
+Ill join at around 5:30 if u are still going to b there
+
+mnhn329 [4:28 PM] 
+is sprint 3 for this friday or next friday
+
+jng11232 [4:28 PM] 
+next one
+
+mnhn329 [4:30 PM] 
+oh ok march8th thanks
+
+jng11232 [5:11 PM] 
+Siamak are u still in h831 ?
+
+chenjie [5:44 PM] 
+Meeting cancelled i guess lol
+
+siamaksamie [6:15 PM] 
+I was there though
+
+[6:15]  
+Roy's working on stuff now if you want to join him
+
+[6:16]  
+H807
+
+chenjie [6:18 PM] 
+ok ill go check it out
+
+siamaksamie [6:19 PM] 
+I thiiink he's still there left him about 30 minutes ago
+
+chenjie [6:21 PM] 
+hes gone
+
+[6:21]  
+lol w/e
+
+jng11232 [6:22 PM] 
+he is here im with him
+
+roykhoury [6:22 PM] 
+Yo I'm still here
+
+[6:22]  
+H807
+
+chenjie [6:22 PM] 
+oh lol
+
+[6:23]  
+i guess u were surrounded by the other people
+
+jng11232 [6:23 PM] 
+we are in the front of the class if you wanna join
+
+
+----- February 28th -----
+siamaksamie [1:45 PM] 
+Who's free?
+
+[1:46]  
+If anyone wants to meet up at 5:30 I can do that
+
+[1:48]  
+Also If anyone has friends in other groups
+
+[1:48]  
+Can you ask em how they set up Travis? Roy and I spent a while trying to make it work
+
+mnhn329 [4:20 PM] 
+i can make it
+
+[4:20]  
+ill be there til lastest abt 730
+
+siamaksamie [4:27 PM] 
+Yep I'll have to leave at 7:20
+
+[4:27]  
+But hopefully by then we'll have a few commits
+
+siamaksamie [4:45 PM] 
+Maxim Roger and I are meeting up at 5:30
+
+[4:46]  
+Adam? Ryan?
+
+adamrais [4:47 PM] 
+I'll try to pass by, im having a presentation tomorrow for my mini capstone
+
+[4:47]  
+So I'm doing that
+
+ryan [4:47 PM] 
+I'll be there for 5:30
+
+adamrais [4:47 PM] 
+I can try doing Travis
+
+[4:49]  
+Btw Ryan no scheme B for 313 we have to accept the shitty average and she doesn't want to do anything
+
+ryan [5:30 PM] 
+What room?
+
+siamaksamie [5:31 PM] 
+I'm heading up now
+
+[5:31]  
+In h8 in a min
+
+[5:34]  
+H823
+
+jng11232 [5:41 PM] 
+Im at h821 if someone wants to join
+
+[5:41]  
+Ohhh nvm
+
+siamaksamie [5:44 PM] 
+So you're coming here? :D?
+
+jng11232 [5:44 PM] 
+fine i will for a bit
+
+mnhn329 [6:56 PM] 
+@jng11232   heres the link to my teacher's site from last semester
+
+[6:56]  
+the course is pretty straightforward though, just do a few examples per chapter
+
+dana.alexandra [6:57 PM] 
+U guys free tomorrow?
+
+jng11232 [6:59 PM] 
+ermm @mnhn329 what link?
+
+[7:01]  
+and yeah i am free tmr
+
+mnhn329 [7:11 PM] 
+lol woops forgot to paste it LOL
+
+[7:11]  
+https://users.encs.concordia.ca/~dongyu/ENGR371/
+users.encs.concordia.ca
+ENGR371 Home Page
+ENGR371 Web Page at Concordia University
+
+[7:11]  
+sorry
+
+jng11232 [7:12 PM] 
+hahaha its okaay :slightly_smiling_face:  thankyou !
+
+
+----- March 1st -----
+siamaksamie [3:27 AM] 
+So we usually meet at 11
+
+[3:28]  
+But I'll probably make it for 12
+
+dana.alexandra [8:16 AM] 
+Okk
+
+dana.alexandra [10:39 AM] 
+I have time between classes 2:30-4:15
+
+adamrais [11:46 AM] 
+Guys
+
+[11:46]  
+Bomb threat or something on the H
+
+ryan [11:48 AM] 
+Did you call it in?
+
+[11:48]  
+Not cool bro
+
+adamrais [11:48 AM] 
+I'm literally not joking
+
+dana.alexandra [11:49 AM] 
+??
+
+adamrais [11:49 AM] 
+uploaded this image: Image uploaded from iOS
+Add Comment
+
+adamrais [11:49 AM] 
+uploaded this image: Image uploaded from iOS
+Add Comment
+
+roykhoury [11:50 AM] 
+Oh dayum
+
+[11:52]  
+My group. Chat is also talking about it
+
+dana.alexandra [11:52 AM] 
+Oh shiiii
+
+dana.alexandra [11:52 AM] 
+uploaded this image: Image uploaded from iOS
+Add Comment
+
+roykhoury [11:55 AM] 
+Shitt well I guess uhh we can meet online?
+
+dana.alexandra [11:55 AM] 
+Or tomorrowwww
+
+roykhoury [11:56 AM] 
+Not really worth getting bombed for this :joy:
+
+[11:56]  
+Yeah tomorrow too
+
+adamrais [11:56 AM] 
+Let's meet tomorrow
+
+jng11232 [12:10 PM] 
+omg
+
+siamaksamie [12:20 PM] 
+But
+
+[12:20]  
+I just got here
+
+[12:21]  
+Got out of bed and came to school just for this :(
+
+[12:21]  
+I'll protect you guys!
+
+roykhoury [12:24 PM] 
+uploaded and commented on this image: Pasted image at 2017-03-01, 12:24 PM
+1 Comment
+:slightly_smiling_face:
+
+siamaksamie [12:24 PM] 
+Yaaaaaay
+
+[12:25]  
+Good job Roy!!
+
+adamrais [12:25 PM] 
+Good job Roy!
+
+dana.alexandra [12:25 PM] 
+:raised_hands::skin-tone-3::clap:
+
+roykhoury [12:26 PM] 
+haha thanks guys!!
+
+[12:26]  
+and girls
+
+[12:26]  
+celebratory sushi?
+
+dana.alexandra [12:27 PM] 
+Super downnnn
+
+[12:27]  
+Whennnnnnn
+
+adamrais [12:27 PM] 
+I was shy to ask :flushed::flushed::flushed::flushed:
+
+ryan [12:27 PM] 
+Roy for President!!!
+
+roykhoury [12:29 PM] 
+Hahahahah
+
+[12:29]  
+tmrr!!
+
+siamaksamie [12:33 PM] 
+ARGH
+
+[12:33]  
+came to school for nothing >:(
+
+roykhoury [12:36 PM] 
+sorry brah
+
+[12:36]  
+boms and stuff
+
+[12:36]  
+bombs*
+
+[12:38]  
+So guys, 
+For travis I think ill put this here there's a few files that need to be modified and i think you need to have it in each of ur branches before pull requesting so that it goes green
+
+[12:41]  
+the files are 
+.travis.yml  
+Code Content/config/database.php
+Code Content/phpunit.xml
+Code Content/.env.travis
+
+[12:42]  
+you can copy the .travsil.yml and the .env.travis files completely they're created ffrom scratch
+
+[12:43]  
+database.php you just need to add the section with ''testing''
+
+[12:43]  
+until the closing square bracket  ],
+
+[12:43]  
+and lastly the phpunit.xml file you just add 1 line towards the end 
+<env name="DB_CONNECTION" value="testing"/>
+
+[12:43]  
+and voila
+
+[12:46]  
+You can check out the files in the master branch and copy their content
+
+dana.alexandra [9:00 PM] 
+11am tomorrow?
+
+roykhoury [9:07 PM] 
+I actually have class
+
+[9:07]  
+It's a lab though I can go for a bit and come back
+
+[9:07]  
+If he's not doing much I'll leave early
+
+chenjie [10:40 PM] 
+Im free at 11h30
+
+
+----- March 2nd -----
+jng11232 [1:00 AM] 
+I might arrive at 12-1
+
+dana.alexandra [10:29 AM] 
+Same
+
+ryan [11:52 AM] 
+I'm working on an Android assignment that's due tonight so i can't meet but before tmrw I think I can have the Travis thing sorted out and a pull request done for what I have so far regarding the contact us page
+
+dana.alexandra [1:16 PM] 
+Where u guys at
+
+jng11232 [1:19 PM] 
+Im meeting roy at h819 u can join him
+
+dana.alexandra [1:20 PM] 
+Kk
+
+roykhoury [1:21 PM] 
+I'm already there if u guys
+
+[1:21]  
+Wanna join
+
+dana.alexandra [1:22 PM] 
+Cominn
+
+dana.alexandra [2:48 PM] 
+Hey guys
+
+[2:48]  
+Sushi tomo? After the tutorial?
+
+dana.alexandra [2:54 PM] 
+@roykhoury  heyy can u log me off plzzz lol i forgot
+
+roykhoury [3:09 PM] 
+Ohh shit umm there's a dude there LOL
+
+[3:09]  
+I Think I logged you off when I left though
+
+[3:09]  
+Cuz I used it for like 2 mins after u left
+
+adamrais [3:09 PM] 
+Coming
+
+dana.alexandra [4:07 PM] 
+Okkk thankz!!!
+
+siamaksamie [5:17 PM] 
+You guys still hanging out?
+
+[5:17]  
+My class is almost over
+
+[5:17]  
+I can reach
+
+roykhoury [5:18 PM] 
+I'm in class too
+
+siamaksamie [5:21 PM] 
+Aiiight
+
+dana.alexandra [5:21 PM] 
+But sushi tomoo
+
+jng11232 [5:22 PM] 
+hahaha the sushi cravin is real
+
+roykhoury [5:27 PM] 
+im downnnn
+
+[5:27]  
+LOL
+
+adamrais [5:28 PM] 
+!!!!
+
+roykhoury [5:39 PM] 
+Hahaha
+
+[5:39]  
+But yo Siamak I'm done where u at?
+
+roykhoury [6:06 PM] 
+@dana.alexandra  yo! I think I know why the background is like chopped in half
+
+[6:07]  
+I'll show u tmr!
+
+[6:07]  
+I think anyway
+
+dana.alexandra [6:07 PM] 
+Aighhh cooo
+
+chenjie [7:35 PM] 
+Hey dana
+
+[7:36]  
+Did u update the meetings folder?
+
+dana.alexandra [7:36 PM] 
+Whats upp
+
+[7:36]  
+Yah added feb 20 meeting
+
+[7:36]  
+Notes
+
+[7:36]  
+Y?? Did i fuck shit up ._.
+
+chenjie [7:39 PM] 
+We met yesterday and today
+
+[7:39]  
+Not yesterday
+
+dana.alexandra [7:40 PM] 
+yeahhh its for feb 20 like a week ago
+
+chenjie [7:40 PM] 
+Tuesday
+
+dana.alexandra [7:40 PM] 
+I dnt have notes for tuesday this week
+
+chenjie [7:42 PM] 
+I guess we can update it when everyone is there
+
+
+----- March 3rd -----
+chenjie [11:44 AM] 
+Are we just meeting at the tutorial?
+
+jng11232 [11:44 AM] 
+im  at 821 if you guys wanna join me
+
+adamrais [11:50 AM] 
+I'll come to class directly
+
+jng11232 [11:55 AM] 
+I changed to 823
+
+roykhoury [12:06 PM] 
+I'm almost there yeah
+
+dana.alexandra [12:17 PM] 
+Imma be latee srryyy
+
+roykhoury [12:31 PM] 
+Okokok we're going now it's our turn
+
+dana.alexandra [12:31 PM] 
+Ohhh shiiii aighhhh:confounded:
+
+chenjie [12:32 PM] 
+Hurrry
+
+roykhoury [1:09 PM] 
+uploaded this image: Next weeks sprint stuff to do
+Add Comment
+
+
+----- March 5th -----
+ryan [9:08 PM] 
+should we meet tmrw? it was suggested we meet more than once per week. maybe we could work on the class diagrams.
+
+dana.alexandra [9:08 PM] 
+Im free after 2:30
+
+jng11232 [9:08 PM] 
+i can’t i have a midterm on tuesday
+
+roykhoury [9:09 PM] 
+Yeahhh I have to study for Tuesday too :/ I can meet for a little bit of time if really needed
+
+
+----- March 6th -----
+ryan [4:56 PM] 
+uploaded this image: Our grades for sprint 2
+Add Comment
+
+roykhoury [4:57 PM] 
+Sprint 3?*
+
+ryan [4:59 PM] 
+those are our results for 2 and sprint 3 is here
+
+[4:59]  
+hang on
+
+roykhoury [4:59 PM] 
+Ohhhhh okok whoops
+
+ryan [5:00 PM] 
+uploaded this image: grading scheme for sprint 3
+Add Comment
+
+roykhoury [5:01 PM] 
+Cool :+1:  we'll look trough it
+
+ryan [5:40 PM] 
+has anyone else checked their exam shedule? nothing is listed for soen 341, what up w/ dat
+
+chenjie [5:44 PM] 
+The final is in class
+
+ryan [5:45 PM] 
+i approve
+
+
+----- March 7th -----
+jng11232 [7:27 PM] 
+Are we meeting tmr ?
+
+mnhn329 [8:29 PM] 
+yes, our usual meet time right?
+
+dana.alexandra [8:30 PM] 
+11?
+
+mnhn329 [8:47 PM] 
+ya?
+
+ryan [8:47 PM] 
+I can meet
+
+dana.alexandra [8:47 PM] 
+Okehhh
+
+roykhoury [10:14 PM] 
+11? Alright I'll be there
+
+
+----- Yesterday March 8th, 2017 -----
+siamaksamie [3:38 AM] 
+Anyone down to meet later?
+
+[3:38]  
+Like at 2?
+
+siamaksamie [3:45 AM] 
+If not, I'll do some work later at night and keep you posted with my progress
+
+roykhoury [10:11 AM] 
+Hmmm sure yeah 2?
+
+dana.alexandra [10:17 AM] 
+I can meet 2:30-4:15
+
+[10:17]  
+That works better fr meee. I have a quiz at 1
+
+jng11232 [10:20 AM] 
+I can stay till around 3 if not i could come after 4
+
+ryan [10:21 AM] 
+I can meet @ 2 also
+
+adamrais [10:55 AM] 
+Guys
+
+[10:55]  
+We need to upgrade the burndown chart
+
+jng11232 [10:55 AM] 
+yeah im gonna do it but i need to know what stories are done
+
+adamrais [10:56 AM] 
+We did; profile, comment Page, edit quiz, contactus,aboutus,
+
+jng11232 [10:57 AM] 
+but not all are user stories
+
+[10:59]  
+just to be clear what is done in terms of stories: create quiz, login and forget password
+
+[10:59]  
+but can we comment ?
+
+roykhoury [11:02 AM] 
+Yeah we can comment now
+
+jng11232 [11:02 AM] 
+can we reply to someones comment ?
+
+roykhoury [11:02 AM] 
+No not yet
+
+jng11232 [11:02 AM] 
+or vote
+
+jng11232 [11:10 AM] 
+do i need a pull request to update the burndown chart ?
+
+roykhoury [11:11 AM] 
+Yess
+
+[11:11]  
+And no voting yet
+
+jng11232 [11:27 AM] 
+Ok done but i might re update the burndown chart
+
+chenjie [2:01 PM] 
+Room?
+
+jng11232 [2:02 PM] 
+im at 854 but its sort of full
+
+roykhoury [2:12 PM] 
+I'm On my way!
+
+dana.alexandra [2:25 PM] 
+Still in 854?
+
+ryan [2:25 PM] 
+Yes
+
+roykhoury [5:56 PM] 
+@chenjie  yo I reopened your pull request so you don't have to do another one tonight I didn't know u can do that LOL
+
+chenjie [8:33 PM] 
+Lol alright cool
+
+
+----- Today March 9th, 2017 -----
+chenjie [11:39 AM] 
+When are u guys meeting?
+
+jng11232 [11:56 AM] 
+Im gonna b at school at 12:30
+
+jng11232 [12:07 PM] 
+When do u guys plan on meeting up ?
+
+chenjie [12:28 PM] 
+I have a break at 2h30
+
+jng11232 [12:39 PM] 
+I have a class at 2:45
+
+dana.alexandra [12:39 PM] 
+I think max says he free till 6
+
+[12:39]  
+Imma make it for 3
+
+jng11232 [12:51 PM] 
+i could come see u guys at 4 if not
+
+roykhoury [1:20 PM] 
+I'm free until 4~ and then after 5:30
+
+ryan [1:21 PM] 
+Is anyone at School now I can come meet?
+
+jng11232 [1:21 PM] 
+im at 815
+
+ryan [1:24 PM] 
+I'll be there in 25 min
+
+chenjie [2:34 PM] 
+Coming
+
+ryan [6:11 PM] 
+Anyone meeting?
+
+dana.alexandra [6:11 PM] 
+yeah 815
+
+ryan [6:12 PM] 
+Be right over
+
+chenjie [6:16 PM] 
+Yo adam are u free?
+
+adamrais [6:18 PM] 
+I have a midterm tomorrow
+
+[6:18]  
+If needed I could come quick
+
+chenjie [6:20 PM] 
+Yea just 5 min is enough
+
+chenjie [6:50 PM] 
+Hey siamak did u work on the sample quiz?
+
+[6:51]  
+Jojo did u update the burndown chart?
+
+new messages
+jng11232 [7:08 PM] 
+i havent completly finished the editing of the profil page which is the only reason why i havent updated the burndown chart
