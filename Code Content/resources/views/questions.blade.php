@@ -17,7 +17,6 @@
             <h1>Create New Quiz</h1>
             
             <hr>
-            
             <form method="POST" action="{{ route('questions.store') }}">
                 
                 <div ng-controller = "add-forms">
@@ -55,7 +54,6 @@
                     <button ng-click="addQuestion()" onclick="return false">Add Question</button>
                 
                 </div>
-                
                 
                 <input type="submit" value="Create Quiz" class="btn btn-success btn-lg btn-block">
                 <input type="hidden" name="_token" value="{{ Session::token() }}">

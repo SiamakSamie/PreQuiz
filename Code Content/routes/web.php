@@ -35,3 +35,16 @@ Route::get('/contactus', 'ContactUsController@contactus');
 Route::get('/aboutus', function(){
     return view('aboutus');
 });
+
+Route::post('/sendContactUsMail', function() {
+   $data = request("message");
+   $name = request("name");
+   $email = request("email");
+   
+   \Mail::send('email_message', array('name'=>$name), function($message) {
+       $message->to("ryan3nichols@gmail.com", "contact us")->subject("subject");
+ 
+   });
+
+   return [$data,$name,$email];
+});
