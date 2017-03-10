@@ -31,6 +31,8 @@ Route::get('/profile', 'ProfileController@displayAll');
 Route::resource('create_quiz','QuizController');
 Route::resource('questions','QuestionsController');
 
+Route::get('/take_quiz', 'TakeQuizController@take_quiz');
+
 Route::get('/contactus', 'ContactUsController@contactus');
 
 Route::get('/aboutus', function(){
