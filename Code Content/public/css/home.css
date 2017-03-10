@@ -101,6 +101,7 @@ md-backdrop{
 
 .bg-2 {
     background-image:url("/img/blackboard-bg.jpg");
+    background-repeat: round;
     width:100%;
 }
 

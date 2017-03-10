@@ -35,30 +35,30 @@
           <div class="form-group">
             <label class="col-lg-3 control-label">University:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" value="something">
+              <input class="form-control" type="text" value="{{$user->university}}">
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-3 control-label">Email:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" value="">
+              <input class="form-control" type="text" value="{{$user->email}}">
             </div>
           </div>
           <div class="form-group">
-            <label class="col-md-3 control-label">Password:</label>
-            <div class="col-md-8">
+            <label class="col-lg-3 control-label">Password:</label>
+            <div class="col-lg-8">
               <input class="form-control" type="password" value="11111122333">
             </div>
           </div>
           <div class="form-group">
-            <label class="col-md-3 control-label">Confirm password:</label>
-            <div class="col-md-8">
+            <label class="col-lg-3 control-label">Confirm password:</label>
+            <div class="col-lg-8">
               <input class="form-control" type="password" value="11111122333">
             </div>
           </div>
           <div class="form-group">
-            <label class="col-md-3 control-label"></label>
-            <div class="col-md-8">
+            <label class="col-lg-3 control-label"></label>
+            <div class="col-lg-8">
               <input type="button" class="btn btn-primary" value="Save Changes">
               <span></span>
               <input type="reset" class="btn btn-default" value="Cancel">

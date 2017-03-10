@@ -36,7 +36,7 @@
           </div>
           <div class="form-group">
             <label class="col-lg-3 control-label">University:</label>
-            <p>Some university</p>
+            <p>{{ $info->university }}</p>
           </div>
           <div class="form-group">
             <label class="col-lg-3 control-label">Email:</label>
