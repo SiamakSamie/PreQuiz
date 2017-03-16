@@ -15,6 +15,8 @@ Route::post('/getAllUnis', 'SearchController@getAllUnis');
 
 Route::post('/getAllCourses', 'SearchController@getAllCourses');
 
+Route::post('/getAllUserNames', 'SearchController@getAllUsernames');
+
 Route::get('/', function () {
     
     return view('home');
@@ -26,10 +28,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/profile', 'ProfileController@displayAll');
+Route::get('/profile/{id}', 'ProfileController@displayAll');
 
 Route::resource('create_quiz','QuizController');
 Route::resource('questions','QuestionsController');
+
+Route::get('/take_quiz', 'TakeQuizController@take_quiz');
 
 Route::get('/contactus', 'ContactUsController@contactus');
 

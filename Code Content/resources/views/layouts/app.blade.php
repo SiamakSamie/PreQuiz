@@ -126,15 +126,15 @@
                     <a class="list-group-item" href="{{ url('/notifications') }}" > Notifications <span class="badge badge-default badge-pill"> 3 </span> </a> 
                     <a class="list-group-item" href="{{ url('/create_quiz') }}"> Create a quiz </a> 
                     <a class="list-group-item" href="{{ url('/edit_quiz') }}"> Edit a quiz </a> 
-                    <a class="list-group-item" href="{{ url('/profile') }}" > My profile </a>
+                    <a class="list-group-item" href="{{ url('/profile/0') }}" > My profile </a> <!-- the 0 is the default value for current profile -->
                 @else
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> Notifications <span class="badge badge-default badge-pill"> 3 </span> </a> 
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> Create a quiz </a> 
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> Edit a quiz </a> 
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> My profile </a> 
                 @endif
-                    <a class="list-group-item" href="aboutus"> About us </a> 
-                    <a class="list-group-item" href="contactus"> Contact us </a> 
+                    <a class="list-group-item" href="{{ url('/aboutus') }}"> About us </a> 
+                    <a class="list-group-item" href="{{ url('/contactus') }}"> Contact us </a> 
                     <a class="list-group-item md-accent" href="" ng-click="toggleLeft()"> Close menu </a> 
             </md-content>
         </md-sidenav>

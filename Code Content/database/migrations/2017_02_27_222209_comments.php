@@ -16,7 +16,7 @@ class Comments extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->nullable()->index();
-            $table->integer('course_id')->unsigned()->nullable()->index();
+            $table->integer('quiz_id')->unsigned()->nullable()->index();
             $table->text('comment_content');
             $table->timestamps();
         });

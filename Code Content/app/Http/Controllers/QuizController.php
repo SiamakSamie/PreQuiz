@@ -51,6 +51,7 @@ class QuizController extends Controller
         $quiz ->quizname=$request->quizname;
         $quiz->university=$request->university;
         $quiz->coursename=$request->coursename;
+        $quiz->quizdescription=$request->quizdescription;
         $quiz ->username=auth()->user()->name;
         
         
@@ -58,7 +59,7 @@ class QuizController extends Controller
         
         Session::put('quizID', $quiz->id);
         
-        return redirect()->route('questions.show',$quiz->id);
+        return redirect()->route('questions.show', $quiz->id);
     }
 
     /**
