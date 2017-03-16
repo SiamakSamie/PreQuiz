@@ -36,7 +36,8 @@ Route::get('/aboutus', function(){
     return view('aboutus');
 });
 
-Route::post('/EditProfile', 'EditProfileController@update');
+Route::post('/EditProfile', 'EditProfileController@display');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::post('/updateProfileInfo', "EditProfileController@update");
