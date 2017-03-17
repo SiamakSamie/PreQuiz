@@ -15,6 +15,8 @@ Route::post('/getAllUnis', 'SearchController@getAllUnis');
 
 Route::post('/getAllCourses', 'SearchController@getAllCourses');
 
+Route::post('/getAllUserNames', 'SearchController@getAllUsernames');
+
 Route::get('/', function () {
     
     return view('home');
@@ -25,6 +27,10 @@ Route::post('/search', 'SearchController@search');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+
+Route::get('/profile/{id}', 'ProfileController@displayAll');
+
 
 Route::group( ['middleware' => 'auth' ], function()
 {

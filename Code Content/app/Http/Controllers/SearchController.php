@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Course;
+use App\Quiz;
+use App\User;
+use Blade;
 use Illuminate\Http\Request;
 
 class SearchController extends Controller
@@ -11,7 +13,7 @@ class SearchController extends Controller
     {
         $uni_name = request('uni_name');
     	$course_name = request('course_id'); // this fecthes the course_name actually
-        $query_fetch = Course::where('university_name', $uni_name)->where('course_name', $course_name)->get();
+        $query_fetch = Quiz::where('university', $uni_name)->where('coursename', $course_name)->get();
         
         // because the previous query fetches many courses, the comments for that course will be associated with the first found quiz related to that course
         $first_fetch = $query_fetch->first();
@@ -19,22 +21,25 @@ class SearchController extends Controller
          if($query_fetch->count() == 0)
              return redirect('/')->withErrors(['error']);
         else {       
-    	//dd(request()->all());
-    	return view('/search', [
-    			'uni_name' => $uni_name,
-    			'course_name' => $course_name,
-    			'db_corr_data' => $query_fetch,
-    			'db_corr_first' => $first_fetch,
-    		]);
+        	return view('/search', [
+        			'uni_name' => $uni_name,
+        			'course_name' => $course_name,
+        			'db_corr_data' => $query_fetch,
+        			'db_corr_first' => $first_fetch,
+        		]);
         }
     }
     
     public function getAllUnis() {
-         return Course::distinct()->pluck('university_name')->toArray();
+         return Quiz::distinct()->pluck('university')->toArray();
      }
      
      public function getAllCourses() {
          $uni_name = request('uni_name');
-         return Course::distinct()->where('university_name', $uni_name)->pluck('course_name')->toArray();
+         return Quiz::distinct()->where('university', $uni_name)->pluck('coursename')->toArray();
+      }
+      
+      public function getAllUsernames() {
+          return User::all()->toArray();
       }
 }

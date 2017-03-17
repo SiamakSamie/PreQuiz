@@ -27,3 +27,19 @@
      font-family:verdana;
      font-size:11px;
  } 
+ 
+ #mention_list {
+      overflow-y: scroll;
+      overflow-x: hidden;
+ }
+ 
+ #mention_list img{
+      width: 30px;
+      margin: 5px;
+      margin-left: -10px;
+}
+
+#mention_list a:hover {
+     cursor:pointer;
+}
+ 

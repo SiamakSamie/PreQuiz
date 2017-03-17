@@ -25,35 +25,38 @@
       <div class="col-md-9 personal-info">
        
         <h3><b>Personal info</b></h3>
-        
-         @foreach ( $user_info as $info )
-        <form class="form-horizontal" role="form" action = "/EditProfile" method ="POST">
-          {{ csrf_field() }}
-          
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Name:</label>
-            <p> {{ $info->name }}</p>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">University:</label>
-            <p>{{ $info->university }}</p>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Email:</label>
-            <p>{{ $info->email }}</p>
-          </div>
-          <div class="form-group">
-            <label class="col-md-3 control-label">Password:</label>
-            <p>************</p>
-          </div>
-          <div class="form-group">
-            <label class="col-md-3 control-label"></label>
-            <div class="col-md-8">
-              <input type="submit" class="btn btn-primary"  value="Edit Profile">
+        @if ($user_info->count() == 0) 
+           <h2> Not a user </h2>
+        @else
+           @foreach ( $user_info as $info )
+          <form class="form-horizontal" role="form" action = "/EditProfile" method ="POST">
+            {{ csrf_field() }}
+            
+            <div class="form-group">
+              <label class="col-lg-3 control-label">Name:</label>
+              <p> {{ $info->name }}</p>
             </div>
-          </div>
-        </form>
+            <div class="form-group">
+              <label class="col-lg-3 control-label">University:</label>
+              <p>{{ $info->university }}</p>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-3 control-label">Email:</label>
+              <p>{{ $info->email }}</p>
+            </div>
+            <div class="form-group">
+              <label class="col-md-3 control-label">Password:</label>
+              <p>************</p>
+            </div>
+            <div class="form-group">
+              <label class="col-md-3 control-label"></label>
+              <div class="col-md-8">
+                <input type="submit" class="btn btn-primary"  value="Edit Profile">
+              </div>
+            </div>
+          </form>
           @endforeach
+        @endif
       </div>
   </div>
 </div>

@@ -59,7 +59,7 @@ class QuizController extends Controller
         
         Session::put('quizID', $quiz->id);
         
-        return redirect()->route('questions.show',$quiz->id);
+        return redirect()->route('questions.show', $quiz->id);
     }
 
     /**

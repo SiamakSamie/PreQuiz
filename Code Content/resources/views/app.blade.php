@@ -112,10 +112,10 @@
                 @if (Auth::check())
                     <img src = "/img/profile_pic.jpg">
                     <p id = "name">{{ Auth::user()->name }}</p>
-                    <a class="list-group-item" href="{{ url('/notifications') }}" > Notifications <span class="badge badge-default badge-pill"> 3 </span> </a> 
-                    <a class="list-group-item" href="{{ url('/create_quiz') }}"> Create a quiz </a> 
-                    <a class="list-group-item" href="{{ url('/edit_quiz') }}"> Edit a quiz </a> 
-                    <a class="list-group-item" href="{{ url('/profile') }}" > My profile </a>
+                    <a class="list-group-item" href="{{ url('notifications') }}" > Notifications <span class="badge badge-default badge-pill"> 3 </span> </a> 
+                    <a class="list-group-item" href="{{ url('create_quiz') }}"> Create a quiz </a> 
+                    <a class="list-group-item" href="{{ url('edit_quiz') }}"> Edit a quiz </a> 
+                    <a class="list-group-item" href="{{ url('profile') }}" > My profile </a>
                 @else
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> Notifications <span class="badge badge-default badge-pill"> 3 </span> </a> 
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> Create a quiz </a> 

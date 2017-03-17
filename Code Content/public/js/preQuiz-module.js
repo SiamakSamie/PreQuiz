@@ -97,6 +97,75 @@ var prequiz_module = angular.module('preQuiz-module', ['ngMaterial', 'ngAnimate'
     };
   });
     
+prequiz_module.controller('mention-feature', function($scope, $http) {
+  
+  $scope.username_mentioned = [];
+  $scope.Allusers = [];
+  $scope.startAt = 0;
+  $scope.mentioning = false;
+  
+  $scope.comment_text = "";
+  $scope.user_mentioned_id = [];
+  
+  $http.post('/getAllUserNames')
+    .then(function(response){
+      $scope.Allusers = response.data;
+          
+  });
+  
+  $scope.mention = function($input){
+    
+      $scope.results = [];
+      $scope.comment_text = $input;
+      
+      if($input != undefined && $input[$input.length-1] == "@") {
+        
+        // hide the mention list
+        document.getElementById('mention_list').style.display = 'none';
+                    
+        $scope.startAt = $input.length;
+        $scope.mentioning = true;
+      }
+      
+      if($scope.mentioning == true && $input != undefined) {
+          
+           $scope.username_mentioned = $input.substring($scope.startAt);
+            
+            for(var i = 0; i < $scope.Allusers.length; i++ ) {
+                  
+                if (($scope.Allusers[i].name.toLowerCase().trim().indexOf($scope.username_mentioned.toLowerCase().trim()) >= 0 && $scope.username_mentioned.trim() != "") ) {  
+                    // display the mention list
+                    document.getElementById('mention_list').style.display = 'inline';
+                    
+                    $scope.results.push($scope.Allusers[i]);
+                }
+            }
+       }
+      
+      if($scope.mentioning == true && $input != undefined && $input[$input.length-1] == " " || $input == undefined) {
+        
+            // hide the mention list
+           document.getElementById('mention_list').style.display = 'none';
+           
+           
+          $scope.username_mentioned = [];
+          $scope.mentioning = false;
+      }
+  }
+  
+  $scope.addMentioned = function($result) {
+    
+    $scope.comment_text = $scope.comment_text.replace('@'+$scope.username_mentioned, '@'+$result.name.trim()+'± ');
+    $scope.mentioning = false;
+    
+    console.log("selected user id= " + $result.id);
+    $scope.user_mentioned_id.push($result.id);
+    
+    document.getElementById('mention_list').style.display = 'none';
+    document.getElementById('comment_text').focus();
+  }
+    
+});
     
   
   
