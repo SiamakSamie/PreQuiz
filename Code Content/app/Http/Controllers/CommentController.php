@@ -19,10 +19,10 @@ class CommentController extends Controller
         // have to modify text in case of mentions
         //dd($user_mentioned_id);
         
-        $user_mentioned_ids = request('mentioned_users_id');
+        //$user_mentioned_ids = request('mentioned_users_id');
         
       //  foreach($user_mentioned_ids as $id) {
-            $text = preg_replace("/@/", "<a href='../profile/". 0 ."'>", $text, 1);
+            $text = preg_replace("/@/", "<a href='../profile/". 0 ."'>", $text);
     //    }
         
         // $text = preg_replace("/@/", "<a href='../profile/". 0 ."'>", $text, 1); // the last 1 means max = 1 replacement
