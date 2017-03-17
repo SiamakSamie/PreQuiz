@@ -26,22 +26,20 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/profile', 'ProfileController@displayAll');
-
-Route::resource('create_quiz','QuizController');
-Route::resource('questions','QuestionsController');
+Route::group( ['middleware' => 'auth' ], function()
+{
+    Route::resource('create_quiz','QuizController');
+    Route::resource('questions','QuestionsController');
+    Route::post('/EditProfile', 'EditProfileController@update');
+    Route::post('/addComment', 'CommentController@addComment');
+    Route::get('/profile', 'ProfileController@displayAll');
+});
 
 Route::get('/take_quiz', 'TakeQuizController@take_quiz');
 
 Route::get('/contactus', 'ContactUsController@contactus');
 
-Route::get('/aboutus', function(){
-    return view('aboutus');
-});
-
-Route::post('/EditProfile', 'EditProfileController@update');
-
-Route::post('/addComment', 'CommentController@addComment');
+Route::get('/aboutus', function(){return view('aboutus');});
 
 Route::post('/sendContactUsMail', function() {
    $data = request("message");
