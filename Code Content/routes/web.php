@@ -58,10 +58,12 @@ Route::post('/sendContactUsMail', function() {
    $name = request("name");
    $email = request("email");
    
-   \Mail::send('email_message', array('name'=>$name), function($message) {
-       $message->to("ryan3nichols@gmail.com", "contact us")->subject("subject");
- 
+   Mail::send('email_message', array('name'=>$name, 'data'=>$data, 'email'=>$email), function($message) {        
+     $message->to("ryan3nichols@gmail.com", "contact us")->subject("Contact Us email from PreQuiz"); 
+     
    });
 
    return [$data,$name,$email];
-});
+
+ });  
+
