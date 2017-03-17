@@ -5,7 +5,6 @@
 @endsection
 
 @section('extra_links')
-    <script src='/js/preQuiz-module.js'> </script>
     
 @endsection
 
@@ -18,31 +17,43 @@
     </div>
     
     <div class="flex-center text-center  bg-2" >
-        <div class="panel panel-default panel-index start_box " 
-         ng-controller="searchForm-controller as sfc">
+        <div class="panel panel-default panel-index start_box" 
+         ng-controller="searchForm-controller">
             
             <div class="panel-body">
                 <div class="input-title"> <b>Get Started</b></div>
                 
-                <!-- Display User Input after first submition -->
-                <input class="input-field @{{sfc.display}} extended-input" value="@{{sfc.user_input}}" 
-                maxlength="255" readonly style="text-align:center;">
+                <form id="uni_form" ng-submit="fetchCourses(selected_uni)" autocomplete="off" class="displayed">
+                    <input class="input-submit" type="submit" value="">
+                    
+                    <input list="uni_names" name="uni_name" type="text" class="input-field" ng-model="selected_uni" 
+                    placeholder="Enter the name of your institution" ng-change="autocomplete_unis(selected_uni)" required> 
+                    
+                    <datalist id="uni_names">
+                        <option ng-repeat="match in matching" value="@{{match}}"></option>
+                    </datalist>
+                    
+                    @if($errors->any())
+                         <script> alert('No entries found, please enter a correct course name');</script>
+                    @endif
+                    
+                </form> 
                 
-                <form ng-submit="sfc.submitform()" onsubmit="return false;"  
-                id="form" method="POST" action="/search">
-    
-                    <span ng-repeat="placeholder in sfc.placeholders">
-                        {{ csrf_field() }}  <!-- needed for laravel security otherwise nothing works-->
+               <form  id="course_form" method="POST" action="/search" class="hidden" autocomplete="off">
+                    <input type="text" class="input-field extended-input text-center" value="@{{selected_uni}}" readonly>
+                    {{ csrf_field() }}  <!-- needed for laravel security otherwise nothing works-->
+                    <div class="form-group">
+                        <input class="input-submit" type="submit" value="">
                         
-                        <input class="input-submit" id="@{{placeholder.id}}" type="submit" value="">
+                        <input name="uni_name" type="hidden" value="@{{selected_uni}}">
                         
-                        <input class="input-field" name="course_id" type="text" 
-                        placeholder="@{{placeholder.text}}"  ng-model="sfc.text"
-                         required="required"> <!-- Course # input -->
-                         
-                        <input class="input-field" name="uni_name" type="hidden" 
-                        value="@{{sfc.user_input}}">   <!-- University input -->
-                    </span>
+                        <input list="course_names" name="course_id" type="text" class=" input-field" ng-model="selected_course" 
+                        placeholder="Enter your course name" ng-change="autocomplete_courses(selected_course)" >
+                        
+                        <datalist id="course_names">
+                            <option ng-repeat="match in matching" value="@{{match}}"></option>
+                        </datalist>
+                    </div>
                 </form>
             </div>
         </div>

@@ -37,25 +37,26 @@
           <div class="form-group">
             <label class="col-lg-3 control-label">University:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" value="something" name = "university">
+              <input class="form-control" type="text" value="{{$user->university}}">
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-3 control-label">Email:</label>
             <div class="col-lg-8">
+
               <input class="form-control" type="text" value="{{$user->email}}" name= "email" >
             </div>
           </div>
           <div class="form-group">
             <label class="col-md-3 control-label">Password:</label>
             <div class="col-md-8">
-              <input class="form-control" type="password" value="********" required>
+              <input class="form-control" type="password" value="********" >
             </div>
           </div>
           <div class="form-group">
             <label class="col-md-3 control-label">Confirm password:</label>
             <div class="col-md-8">
-              <input class="form-control" type="password" value="*********" required>
+              <input class="form-control" type="password" value="*********">
             </div>
           </div>
           <div class="form-group">
