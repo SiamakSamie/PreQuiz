@@ -27,3 +27,8 @@ March 16, 2017
 
 - mention (@): 
 	> roy
+
+Work accomplished for next meeting with TA:
+- URL injections security 
+- Replies to comments (mentions @)
+- new database design (table for score to keep track of user's performance in each attempted quiz)
