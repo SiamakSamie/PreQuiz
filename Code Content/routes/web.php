@@ -26,10 +26,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/profile', 'ProfileController@displayAll');
+Route::group( ['middleware' => 'auth' ], function()
+{
+    Route::resource('create_quiz','QuizController');
+    Route::resource('questions','QuestionsController');
+    Route::get('/profile', 'ProfileController@displayAll');
+});
 
-Route::resource('create_quiz','QuizController');
-Route::resource('questions','QuestionsController');
 
 Route::get('/take_quiz', 'TakeQuizController@take_quiz');
 
