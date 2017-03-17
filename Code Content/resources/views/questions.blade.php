@@ -12,7 +12,7 @@
 
      
     <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
+        <div class="col-md-8 col-md-offset-2">
             <h1>Create New Quiz</h1>
             
             <hr>
@@ -26,28 +26,28 @@
                         <br /><br />
                         
                         <div class="form-group">
-                            <label name="question">Question:</label>
-                            <input id="question" ng-model="question.question" name="question" class="form-control">
+                            <label name="question">Question @{{$index + 1}} :</label>
+                            <input id="question" ng-model="question.question" name="question[@{{$index}}]" class="form-control">
                         </div>
                         
                         <div class="form-group">
                             <label name="answer">Correct Answer:</label>
-                            <input id="answer1" ng-model="question.answer1" name="answer1" rows="10" class="form-control">
+                            <input id="answer1" ng-model="question.answer1" name="answer1[@{{$index}}]" rows="10" class="form-control">
                         </div>
                         
                         <div class="form-group">
                             <label name="answer">Wrong Answer 1:</label>
-                            <input id="answer2" ng-model="question.answer2" name="answer2" rows="10" class="form-control">
+                            <input id="answer2" ng-model="question.answer2" name="answer2[@{{$index}}]" rows="10" class="form-control">
                         </div>     
                         
                         <div class="form-group">
                             <label name="answer">Wrong Answer 2:</label>
-                            <input id="answer3" ng-model="question.answer3" name="answer3" rows="10" class="form-control">
+                            <input id="answer3" ng-model="question.answer3" name="answer3[@{{$index}}]" rows="10" class="form-control">
                         </div>
                         
                         <div class="form-group">
                             <label name="answer">Wrong Answer 3:</label>
-                            <input id="answer4" ng-model="question.answer4" name="answer4" rows="10" class="form-control">
+                            <input id="answer4" ng-model="question.answer4" name="answer4[@{{$index}}]" rows="10" class="form-control">
                         </div>
                       
                     </fieldset>
