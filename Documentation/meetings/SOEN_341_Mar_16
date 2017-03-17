@@ -32,3 +32,5 @@ Work accomplished for next meeting with TA:
 - URL injections security 
 - Replies to comments (mentions @)
 - new database design (table for score to keep track of user's performance in each attempted quiz)
+- multiple form submissions on a single page for quiz questions
+- merged databases (creating quiz allows for searchable courses on home page)
