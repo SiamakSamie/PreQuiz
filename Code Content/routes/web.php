@@ -41,6 +41,12 @@ Route::get('/contactus', 'ContactUsController@contactus');
 
 Route::get('/aboutus', function(){return view('aboutus');});
 
+Route::post('/EditProfile', 'EditProfileController@display');
+
+Route::post('/updateProfileInfo', "EditProfileController@update");
+
+Route::post('/addComment', 'CommentController@addComment');
+
 Route::post('/sendContactUsMail', function() {
    $data = request("message");
    $name = request("name");

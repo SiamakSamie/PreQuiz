@@ -1,0 +1,36 @@
+March 16, 2017
+
+- Attendance:
+	> Siamak
+	> Ryan
+	> Chenjie
+	> Roy
+	> Maxim
+	> Dana
+	> Josephine
+	> Adam
+
+- Email for contact us page
+	> Ryan
+	> Siamak
+
+- Back-end planning for displaying quiz answers:
+	> adam
+	> chenjie
+
+- fix referencing:
+	> Maxim
+	> Dana
+
+- edit profile:
+	> josephine
+
+- mention (@): 
+	> roy
+
+Work accomplished for next meeting with TA:
+- URL injections security 
+- Replies to comments (mentions @)
+- new database design (table for score to keep track of user's performance in each attempted quiz)
+- multiple form submissions on a single page for quiz questions
+- merged databases (creating quiz allows for searchable courses on home page)
