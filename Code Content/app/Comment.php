@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
-     public function Course() {
-         return $this->belongsTo('App\Course');
+     public function Quiz() {
+         return $this->belongsTo('App\Quiz');
      }
      
      public function User() {
