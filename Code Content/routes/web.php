@@ -41,7 +41,10 @@ Route::get('/aboutus', function(){
     return view('aboutus');
 });
 
-Route::post('/EditProfile', 'EditProfileController@update');
+
+Route::post('/EditProfile', 'EditProfileController@display');
+
+Route::post('/updateProfileInfo', "EditProfileController@update");
 
 Route::post('/addComment', 'CommentController@addComment');
 
