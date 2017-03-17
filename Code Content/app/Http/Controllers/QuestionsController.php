@@ -39,24 +39,32 @@ class QuestionsController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, array(
-                'question'=> 'required',
-                'answer1' => 'required',
-                'answer2' => 'required',
-                'answer3' => 'required',
-                'answer4' => 'required'
-            ));
+
+        for ($i = 0; $i < count($request->question); $i++)
+        {
+
+
+
+           $this->validate($request, array(
+                    'question.'.$i.''=> 'required',
+                    'answer1.'.$i.'' => 'required',
+                    'answer2.'.$i.'' => 'required',
+                    'answer3.'.$i.'' => 'required',
+                    'answer4.'.$i.'' => 'required'
+                ));
+
+                
+            $questions = new Questions;
+            $questions ->quizID=Session::get('quizID');
+            $questions ->question=$request->question[$i];
+            $questions->answer1=$request->answer1[$i];
+            $questions->answer2=$request->answer2[$i];
+            $questions->answer3=$request->answer3[$i];
+            $questions ->answer4=$request->answer4[$i];
             
-        $questions = new Questions;
-        $questions ->quizID=Session::get('quizID');
-        $questions ->question=$request->question;
-        $questions->answer1=$request->answer1;
-        $questions->answer2=$request->answer2;
-        $questions->answer3=$request->answer3;
-        $questions ->answer4=$request->answer4;
-        
-        $questions->save();
-        
+            $questions->save();
+}
+
         return redirect()->route('questions.show','testing');
     }
 
