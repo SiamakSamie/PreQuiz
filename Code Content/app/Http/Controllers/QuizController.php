@@ -6,11 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Quiz;
+use App\Questions;
 use Session;
 
-
-class QuizController extends Controller
+class QuestionsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,7 +18,7 @@ class QuizController extends Controller
      */
     public function index()
     {
-       	return view('create_quiz');
+        return view('questions');
     }
 
     /**
@@ -29,7 +28,7 @@ class QuizController extends Controller
      */
     public function create()
     {
-         //
+        //
     }
 
     /**
@@ -40,27 +39,35 @@ class QuizController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, array(
+
+        for ($i = 0; $i < count($request->question); $i++)
+        {
+
+
+
+           $this->validate($request, array(
+                    'question.'.$i.''=> 'required',
+                    'answer1.'.$i.'' => 'required',
+                    'answer2.'.$i.'' => 'required',
+                    'answer3.'.$i.'' => 'required',
+                    'answer4.'.$i.'' => 'required'
+                ));
+
+                
+            $questions = new Questions;
+            $questions ->quizID=Session::get('quizID');
+            $questions ->question=$request->question[$i];
+            $questions->answer1=$request->answer1[$i];
+            $questions->answer2=$request->answer2[$i];
+            $questions->answer3=$request->answer3[$i];
+            $questions ->answer4=$request->answer4[$i];
             
-                'quizname'=> 'required|max:255',
-                'university' => 'required',
-                'coursename'=> 'required'
-            ));
-            
-        $quiz = new Quiz;
-        $quiz ->quizname=$request->quizname;
-        $quiz->university=$request->university;
-        $quiz->coursename=$request->coursename;
-        $quiz->quizdescription=$request->quizdescription;
-        $quiz ->username=auth()->user()->name;
-        
-        
-        $quiz->save();
-        
-        Session::put('quizID', $quiz->id);
-        
-        return redirect()->route('questions.show',$quiz->id);
+            $questions->save();
+}
+
+        return redirect()->route('questions.show','testing');
     }
+
 
     /**
      * Display the specified resource.
@@ -70,7 +77,7 @@ class QuizController extends Controller
      */
     public function show($id)
     {
-        //
+    		 return view('questions')->with('quizID', $id);
     }
 
     /**
