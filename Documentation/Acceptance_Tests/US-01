@@ -1,3 +1,5 @@
+As a user, I want to be able to register to be able to keep track of account information
+
 Acceptance Criteria:
 1. The user should be able to enter their info on our register profile page
 2. If their information is valid ie. valid email, matching passwords > 6 characters long, then when the user clicks register they should be taken back to the home page. 
