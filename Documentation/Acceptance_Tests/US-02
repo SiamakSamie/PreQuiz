@@ -1,3 +1,5 @@
+As a user, I want to be able to search for quizzes for a specific class to test my prerequisite knowledge.
+
 Acceptance Criteria:
 1. From the home page the user should be able to find a course that is stored in the database by the  the name of a University and course name.
 2. If the user enters incorrect information, ie University name or course name that's not in the database. They will receive a popup telling them so. 
