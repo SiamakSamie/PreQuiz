@@ -1,3 +1,5 @@
+As a quiz creator, I want to be able to create a quiz to test students on their background knowledge required for the course.
+
 Acceptance Criteria:
 1. The user should be able to create a quiz and then find that quiz later by searching through the home page.
 2. The user should be able to add as many questions to the quiz as the user likes.
