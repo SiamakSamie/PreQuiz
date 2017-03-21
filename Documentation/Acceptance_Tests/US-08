@@ -1,3 +1,5 @@
+As a user, I want to be able to edit my account information as a precaution in case of a change.
+
 Acceptance Criteria:
 1. The user should be able to navigate to their profile page and update their Name, email and password
 2. They should immediately be able to see their new name and email.
