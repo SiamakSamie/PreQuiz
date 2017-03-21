@@ -1,0 +1,20 @@
+Acceptance Criteria:
+1. The user should be able to create a quiz and then find that quiz later by searching through the home page.
+2. The user should be able to add as many questions to the quiz as the user likes.
+
+
+
+Acceptance test:
+1. Navigate to the create a quiz page via the sidebar menu
+2. Fill in all the fields and click on Create Quiz
+3. Verify that this takes you to a page titled Create New Quiz with a Questin field, a correct answer field and 4 incorrect answer fields.
+4. Fill out the fields with valid questions and answers
+5. Using the green plus button verify that you're able to add as many questions as you like to each quiz.
+6. Once multiple questions with corresponding answers have been made select the green create quiz bar button underneath. 
+7. Verify that the question and answers fields have been cleared giving the option of filling them out again to create a new quiz.
+8. Navigate to the home page and now search for the quiz that you've created.
+9. Verify that you're able to find the quiz that you've just created. 
+
+Date Performed: 3/20/17
+Performed By: Ryan Nichols
+Status: Passed 
