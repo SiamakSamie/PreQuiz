@@ -1,5 +1,9 @@
+As a user, I want to receive feedback from a quiz in the form of a list of relevant resources to study.
+
 Acceptance Criteria:
 1. When a user completes a quiz, a list of resources should be produced on the page. This will be in the form of links to learning resources on relevant learning material 
+
+
 Acceptance test:
 1. Create a quiz using the create a quiz features
 2. Include links to learning resources
