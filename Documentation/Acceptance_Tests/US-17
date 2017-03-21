@@ -1,3 +1,5 @@
+As a user, I want to comment on a quiz's comment section.
+
 Acceptance Criteria:
 1. After searching for and finding a quiz the user should  be able to post a comment in the comment section below that quiz selection.
 2. Other users should be able to see the comment once it is posted. 
