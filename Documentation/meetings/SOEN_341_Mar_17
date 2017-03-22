@@ -1,0 +1,54 @@
+March 17, 2017
+
+- Attendance:
+	> roy
+	> siamak
+	> chenjie
+	> maxim
+	> josephine
+	> adam
+	> ryan
+	> dana
+
+- commit logs & referencing 
+
+- check grading scheme for sprint 4 
+	> quantity of code
+	> not just github 
+
+- more description for burndown chart
+
+- "merge table" not "merged database"
+
+- try to get suggestion list as you're typing
+
+- notification (email) for mentions
+
+- email when you sign up? 
+
+- refer to quiz which has just been created 
+	> go to quiz
+	> option to edit quiz as a quiz creator
+
+- bridges
+	> connect work accomplished
+	> more fluid
+	> example: create quiz & edit quiz
+
+- resources for quiz
+	> for every question? give resource
+	> if giving resources at the end, URL box to paste url
+		>> "add a URL"
+		>> see list of questions so you can give proper resourcea
+		>> all resources at the end
+		>> all questions at the end
+		>> each question has to have a reference
+
+- update database design
+
+- no need for issues as tasks!!!!
+	> make subtasks in comments of the actual user story
+	> show progress by pasting into comments
+	> every commit referenced to ONE user story
+	> subtasks as comments
+	> in commit messages reference user story and subtask 
