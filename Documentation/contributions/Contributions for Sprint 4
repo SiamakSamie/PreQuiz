@@ -1,0 +1,28 @@
+Contributions for Sprint 4
+
+
+Dana & Maxim:
+	- cleaned up referencing (commits and issues)
+	- task breakdown for each user story is included in the description 
+	- assigned numbers to each task
+	- referenced each commit to a user story
+	- referencing convention
+
+Roy:
+	- edit quiz
+	- improved reply feature: profile page properly linked to users mentioned 
+
+Adam:
+	- started notifications
+
+Chen Jie: 
+	- validation of quiz answers
+
+Josephine:
+	- update burndown chart
+
+Siamak:
+	- dummy quiz: display answers from database
+
+Ryan:
+	- acceptance tests
