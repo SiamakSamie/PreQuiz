@@ -12,6 +12,10 @@ class User extends Authenticatable
     public function Comments() {
          return $this->hasMany('App\Comment');
     }
+    
+    public function Quizzes() {
+        return $this->hasMany('App\Quiz');
+    }
 
     /**
      * The attributes that are mass assignable.

@@ -1,0 +1,31 @@
+SOEN_341_Mar_21
+
+1:55pm
+
+- Attendance:
+	> Chen Jie
+	> Maxim
+	> Roy
+	> Siamak
+	> Ryan
+	> Adam
+
+- Clean up undetailed titles and descriptions
+	> Maxim
+
+- Edit Quiz
+	> Roy
+
+- Acceptance tests
+	> Ryan
+	
+- Improved Reply feature: profile page properly linked to users mentioned
+	> Roy
+
+- Starting Notifications
+	> Adam
+	
+- Validation of answers
+	>Chen Jie
+	
+4:51pm

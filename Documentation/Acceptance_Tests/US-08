@@ -18,4 +18,4 @@ Date Performed: 3/20/17
 Performed By: Ryan Nichols
 Status: failed
 Notes: 
-After step 5 the name and email show up as changed but afte logging out and then logging back in, it's the old password that allows login so the change of password has not taken effect. 
+After step 5 the name and email show up as changed but after logging out and then logging back in, it's the old password that allows login so the change of password has not taken effect. 

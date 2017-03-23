@@ -1,0 +1,22 @@
+SOEN_341_Mar_20
+
+3:30pm
+
+- Attendance:
+	> Dana
+	> Maxim
+
+- To-do:
+	> fix task breakdown for each USER STORY (number them as 1.1, 1.2, etc.)
+	> reference all commits to USER STORY & a task
+	> issues labelled as "bug" ---> "fixes task #5.1"
+	> issues labelled as "improvement" ---> "refines task #5.1"
+	> referenced all commits that referenced a task
+		
+- referencing convention for commits:
+	> bug: "fixes task #5.1" or "corrects user story #5"
+	> improvement: "refines task #5.1" or "refines user story #5"
+	> completion: "closes task #5.1" or "closes user story #5"
+
+
+8:43pm

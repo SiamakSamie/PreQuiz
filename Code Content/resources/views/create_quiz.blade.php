@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @extends('layouts.app')
 
 @section('title')
@@ -9,13 +8,20 @@
 @endsection
 
 @section('content')
+        @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 
-    
 
-     
         <div class="col-sm-8 col-sm-offset-2">
-            <h1>Create New Quiz</h1>
-            
+            <h1>Create new quiz</h1>
+            <span> <small class="text-muted"> Please note that quizzes with no questions will be permanently deleted after 24 hours of inactivity </small> </span>
             <hr>
             
             <form method="POST" action="{{ route('create_quiz.store') }}">
@@ -40,7 +46,13 @@
                     <textarea name="quizdescription" rows="3" class="form-control"> </textarea>
                 </div> 
                 
+                <div class="form-group">
+                    <label name="resources">resources:</label>
+                    <textarea name="resources" placeholder="*optional*" rows="3" class="form-control"> </textarea>
+                </div> 
+                
                 <input type="submit" value="Create Quiz" class="btn btn-success btn-lg btn-block">
+                <a href="{{ url('/') }}" class="btn btn-default btn-lg btn-block"> Cancel </a>
                 <input type="hidden" name="_token" value="{{ Session::token() }}">
             </form>
         </div>

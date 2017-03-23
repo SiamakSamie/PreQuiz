@@ -57,7 +57,7 @@ return [
 
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'soen341.teamproject@gmail.com'),
-        'name' => env('MAIL_FROM_NAME', 'Password reset request'),
+        'name' => env('MAIL_FROM_NAME', 'Message from Prequiz'),
     ],
 
     /*
