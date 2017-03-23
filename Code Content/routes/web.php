@@ -40,7 +40,8 @@ Route::group( ['middleware' => 'auth' ], function()
     Route::post('/editing_quiz', 'EditQuizController@edit_quiz');
 });
 
-Route::get('/take_quiz/{$id}', 'TakeQuizController@take_quiz');
+Route::resource('/take_quiz', 'TakeQuizController');
+
 
 Route::get('/contactus', 'ContactUsController@contactus');
 

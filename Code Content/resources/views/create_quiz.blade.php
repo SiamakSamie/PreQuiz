@@ -46,6 +46,11 @@
                     <textarea name="quizdescription" rows="3" class="form-control"> </textarea>
                 </div> 
                 
+                <div class="form-group">
+                    <label name="resources">resources:</label>
+                    <textarea name="resources" placeholder="*optional*" rows="3" class="form-control"> </textarea>
+                </div> 
+                
                 <input type="submit" value="Create Quiz" class="btn btn-success btn-lg btn-block">
                 <a href="{{ url('/') }}" class="btn btn-default btn-lg btn-block"> Cancel </a>
                 <input type="hidden" name="_token" value="{{ Session::token() }}">

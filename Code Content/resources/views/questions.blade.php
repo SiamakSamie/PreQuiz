@@ -9,6 +9,12 @@
 @endsection
 
 @section('content')
+
+    @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            Some fields are missing!
+        </div>
+    @endif
     
     @if (session('status'))
         <div class=" alert alert-success">
@@ -17,16 +23,7 @@
         </div>
     @endif
     
-    @if (count($errors) > 0)
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-     
+
     <div class="row">
         <div class="container">
             <h1>Add new questions</h1>
