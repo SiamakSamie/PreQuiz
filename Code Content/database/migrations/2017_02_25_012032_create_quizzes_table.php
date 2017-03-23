@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Comments extends Migration
+class CreateQuizzesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class Comments extends Migration
      */
     public function up()
     {
-        Schema::create('comments', function (Blueprint $table) {
+        Schema::create('quizzes', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned()->nullable()->index();
-            $table->integer('course_id')->unsigned()->nullable()->index();
-            $table->text('comment_content');
+            $table->text('username');
+            $table->text('quizname');
+            $table->text('university');
+            $table->text('coursename');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ class Comments extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comments');
+        Schema::dropIfExists('quizzes');
     }
 }

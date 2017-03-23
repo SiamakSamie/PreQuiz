@@ -5,14 +5,10 @@
 @endsection
 
 @section('extra_links')
-    <script src='/js/preQuiz-module.js'> </script>
     
 @endsection
 
 @section('content')
-
-<!-- @{{ }} is angularJS -->
-<!-- {{ }} is blade -->
 
 <!-- parralax image before the search form -->
     <div class="parallax">
@@ -20,12 +16,12 @@
         <p>you are very good, but you can be better. If you aren't so good and not sure of your stuff, then you have come to the right place.</p>
     </div>
     
-    <div class="flex-center text-center" style="background-color: #f5f8fa">
-        <div class="panel panel-default panel-index" 
+    <div class="flex-center text-center  bg-2" >
+        <div class="panel panel-default panel-index start_box" 
          ng-controller="searchForm-controller">
             
             <div class="panel-body">
-                <div class="input-title"> Get Started </div>
+                <div class="input-title"> <b>Get Started</b></div>
                 
                 <form id="uni_form" ng-submit="fetchCourses(selected_uni)" autocomplete="off" class="displayed">
                     <input class="input-submit" type="submit" value="">
@@ -41,9 +37,9 @@
                          <script> alert('No entries found, please enter a correct course name');</script>
                     @endif
                     
-                </form>  
+                </form> 
                 
-                <form  id="course_form" method="POST" action="/search" class="hidden" autocomplete="off">
+               <form  id="course_form" method="POST" action="/search" class="hidden" autocomplete="off">
                     <input type="text" class="input-field extended-input text-center" value="@{{selected_uni}}" readonly>
                     {{ csrf_field() }}  <!-- needed for laravel security otherwise nothing works-->
                     <div class="form-group">
@@ -62,5 +58,6 @@
             </div>
         </div>
     </div>
+   
 @endsection
 

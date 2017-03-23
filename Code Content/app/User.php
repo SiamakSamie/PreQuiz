@@ -12,7 +12,10 @@ class User extends Authenticatable
     public function Comments() {
          return $this->hasMany('App\Comment');
     }
-
+    
+    public function Notification(){
+        return $this->hasMany('App\Notification');
+    }
     /**
      * The attributes that are mass assignable.
      *

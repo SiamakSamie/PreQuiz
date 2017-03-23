@@ -52,8 +52,8 @@
     @yield('extra_links')
     
 </head>
-<body>
-    <div id="app" ng-app="preQuiz-module"  ng-controller="sidenav-controller" ng-cloak>
+<body style="background-color: #f5f8fa;">
+    <div id="app" ng-app="preQuiz-module"  ng-controller="sidenav-controller" style="background-color: #f5f8fa;" ng-cloak>
         <nav class="navbar navbar-default" style="border-width: 0 0 1px;">
             <div class="container">
                 <div class="navbar-header">
@@ -70,15 +70,15 @@
                     <a class="navbar-brand" href="{{ url('/') }}">
                         <img src = "/img/LogoMakr.png" >
                     </a>
-                    
                 </div>
-
+                
                 <div class="collapse navbar-collapse" id="app-navbar-collapse" >
-                    <!-- Left Side Of Navbar -->
+                        <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav" >
                         <li><a href="" class="navbar-brand" ng-click="toggleLeft()"> Menu</a></li>
                     </ul>
-
+                    
+                    
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
@@ -121,6 +121,8 @@
             <md-content layout-margin >
               
                 @if (Auth::check())
+                    <img src = "/img/profile_pic.jpg">
+                    <p id = "name">{{ Auth::user()->name }}</p>
                     <a class="list-group-item" href="{{ url('/notifications') }}" > Notifications <span class="badge badge-default badge-pill"> 3 </span> </a> 
                     <a class="list-group-item" href="{{ url('/create_quiz') }}"> Create a quiz </a> 
                     <a class="list-group-item" href="{{ url('/edit_quiz') }}"> Edit a quiz </a> 
