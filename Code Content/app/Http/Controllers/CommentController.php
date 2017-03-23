@@ -9,30 +9,27 @@ use App\Quiz;
 
 class CommentController extends Controller
 {
-    public function addComment() {
+    public function addComment(Request $request) {
+        
         $uni_name = request('uni_name');
         $course_name = request('course_name');
         $user_id = request('user_id');
-        $text = request('text');
+        $text = trim(nl2br(request('text')));
         
         $comment = new Comment;
-        // have to modify text in case of mentions
-        //dd($user_mentioned_id);
+        $user_mentioned_ids = request('mentioned_ids');
         
-        //$user_mentioned_ids = request('mentioned_users_id');
+        if(count($user_mentioned_ids) >= 1) {
+            foreach($user_mentioned_ids as $id) {
+                
+                $user_mentioned = User::where('id',$id)->pluck('name')->first();
+                $user_mentioned = str_replace(" ", "", $user_mentioned);
+                
+                $text = preg_replace("/@". $user_mentioned."/", "<a href='../profile/". $id ."'> @". $user_mentioned . " </a>", $text, 1);
+            }
+        }
         
-      //  foreach($user_mentioned_ids as $id) {
-            $text = preg_replace("/@/", "<a href='../profile/". 0 ."'>", $text);
-    //    }
-        
-        // $text = preg_replace("/@/", "<a href='../profile/". 0 ."'>", $text, 1); // the last 1 means max = 1 replacement
-        // $text = preg_replace("/@/", "<a href='../profile/". 1 ."'>", $text, 1);
-        // $text = preg_replace("/@/", "<a href='../profile/". $user_mentioned_ids ."'>", $text, 1);
-        
-        
-        $final_text = preg_replace('/±/', '</a>', $text);
-        
-        $comment->comment_content = $final_text;
+        $comment->comment_content = $text;
         
         $course = Quiz::where('coursename', $course_name)->where('university', $uni_name)->get()->first();
         $user = User::where('id', $user_id)->get()->first();
@@ -40,6 +37,6 @@ class CommentController extends Controller
         $course->Comments()->save($comment);
         $user->Comments()->save($comment);
         
-        return response()->json(['text' => $final_text]);
+        return response()->json(['text' => $text]);
     }
 }

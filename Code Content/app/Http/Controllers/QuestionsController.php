@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Questions;
+use App\Quiz;
 use Session;
 
 class QuestionsController extends Controller
@@ -14,7 +15,13 @@ class QuestionsController extends Controller
   
     public function index()
     {
-        return view('questions');
+        $quiz = Quiz::where('id', Session::get('quiz_id'))->get()->first();
+        $questions = $quiz->Questions;
+        
+        return view('confirm_quiz', [
+            "quiz" => $quiz,
+            "questions" => $questions,
+        ]);
     }
 
     public function store(Request $request)
@@ -29,9 +36,9 @@ class QuestionsController extends Controller
                     'answer3.'.$i.'' => 'required',
                     'answer4.'.$i.'' => 'required'
                 ));
-                
+
+
             $questions = new Questions;
-            $questions ->quiz_id=Session::get('quiz_id');
             $questions ->question=$request->question[$i];
             $questions->answer1=$request->answer1[$i];
             $questions->answer2=$request->answer2[$i];
@@ -39,13 +46,23 @@ class QuestionsController extends Controller
             $questions ->answer4=$request->answer4[$i];
             
             $questions->save();
+
+            $thisQuiz = Quiz::where('id', Session::get('quiz_id'))->get()->first();
+            $thisQuiz->Questions()->save($questions);
+            
+}
+
+
+        return redirect()->route('questions.index');
     }
 
-        return redirect()->route('questions.show','testing');
-    }
-
-    public function show($id)
-    {
-    		 return view('questions')->with('quiz_id', $id);
+    public function show($id) {  
+      
+     $quiz = Quiz::where('id', Session::get('quiz_id'))->get()->first();
+        
+		 return view('questions', [
+		      "quiz" => $quiz,
+		      "quiz_id" , $id,
+	     ]);
     }
 }

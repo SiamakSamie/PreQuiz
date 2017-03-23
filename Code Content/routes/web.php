@@ -42,6 +42,7 @@ Route::group( ['middleware' => 'auth' ], function()
 
 Route::resource('/take_quiz', 'TakeQuizController');
 
+
 Route::get('/contactus', 'ContactUsController@contactus');
 
 Route::get('/aboutus', function(){return view('aboutus');});

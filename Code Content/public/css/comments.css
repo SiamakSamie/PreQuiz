@@ -29,8 +29,13 @@
  } 
  
  #mention_list {
-      overflow-y: scroll;
+      position: relative;
+      max-height: 150px;
+      min-width: 250px;
+      overflow-y: auto;
       overflow-x: hidden;
+      margin-left:15px;
+      margin-top:-15px;
  }
  
  #mention_list img{
@@ -42,4 +47,3 @@
 #mention_list a:hover {
      cursor:pointer;
 }
- 

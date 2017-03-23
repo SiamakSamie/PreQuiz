@@ -28,17 +28,20 @@ class QuizController extends Controller
                 'quizname'=> 'required|max:255',
                 'university' => 'required',
                 'coursename'=> 'required',
-                'quizdescription'=>'required'
-        ));
-        
+               'quizdescription' => 'required',
+            ));
+
         $user_id = Auth::user()->id;
         
         $quiz = new Quiz;
         $quiz ->quizname=$request->quizname;
         $quiz->university=$request->university;
         $quiz->coursename=$request->coursename;
-        $quiz->quizdescription=$request->quizdescription;
+
+        
         $quiz->resources=$request->resources;
+        $quiz->quizdescription=nl2br($request->quizdescription);
+
         $quiz ->username=auth()->user()->name;
         
         $user= User::where('id', $user_id)->get()->first();
@@ -48,7 +51,7 @@ class QuizController extends Controller
         
         Session::put('quiz_id', $quiz->id);
         
-        return redirect()->route('questions.show', $quiz->id);
+        return redirect()->route('questions.show', $quiz->id)->with('status', 'Quiz created, please add some questions!');
     }
 
 }

@@ -19,7 +19,7 @@ class SearchController extends Controller
         $first_fetch = $query_fetch->first();
          
          if($query_fetch->count() == 0)
-             return redirect('/')->withErrors(['error']);
+             return Redirect('/')->with('status', 'No quiz was found!');
         else {       
         	return view('/search', [
         			'uni_name' => $uni_name,

@@ -5,11 +5,23 @@
 @endsection
 
 @section('extra_links')
-    
+    <style>
+        body {
+            height: 120%;
+        }
+    </style>
 @endsection
 
 @section('content')
 
+    @if (session('status'))
+        <div class="alert alert-danger">
+            <a class="close" data-dismiss="alert">×</a>
+            <p> {{ session('status') }} </p>
+            <p> Please make sure the univeristy name/course name was chosen from the suggested list.</p>
+        </div>
+    @endif
+    
 <!-- parralax image before the search form -->
     <div class="parallax">
         <h1 >BRUSHING UP YOUR BASICS</h1>
@@ -33,10 +45,6 @@
                         <option ng-repeat="match in matching" value="@{{match}}"></option>
                     </datalist>
                     
-                    @if($errors->any())
-                         <script> alert('No entries found, please enter a correct course name');</script>
-                    @endif
-                    
                 </form> 
                 
                <form  id="course_form" method="POST" action="/search" class="hidden" autocomplete="off">
@@ -58,6 +66,6 @@
             </div>
         </div>
     </div>
-   
+
 @endsection
 
