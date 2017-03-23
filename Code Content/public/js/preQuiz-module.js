@@ -202,19 +202,7 @@ prequiz_module.controller('mention-feature', function($scope, $http) {
         $scope.answer.answer4 = true;
       }
     };
-    // $scope.validateAnswer = function(){
-    //   if ($scope.answer==2){
-    //     $scope.answer2 = true;
-    //   }
-    
-      $scope.select=function(item){
-        $scope.test = item;
-        console.log('hello' + $scope.test);
-        if(item == 1){
-          $scope.answer.answer1=true;
-        }
-      
-      }
+
    
   });
   
