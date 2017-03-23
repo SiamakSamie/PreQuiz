@@ -260,9 +260,49 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
        $scope.savedStartIndex = [];
        $scope.username_mentioned = [];
     }
-    
+
     $window.scrollToBot = function(div_id) {
        document.getElementById(div_id).scrollTop = document.getElementById(div_id).scrollHeight;
     }
   
 });
+
+  prequiz_module.controller('validate-answer', function($scope){
+    $scope.answer = {answer1:false, answer2:false, answer3:false, answer4:false};
+    $scope.data = ["Object1", "Object2", "Object3"];
+    $scope.isValid = false;
+    
+    $scope.test = "";
+    $scope.validation = function(answer){
+      //console.log('hello' + answer);
+      $scope.isValid = true;
+      
+      if (answer ==1){
+        $scope.answer.answer1 = true;
+        $scope.answer.answer2 = false;
+        $scope.answer.answer3 = false;
+        $scope.answer.answer4 = false;
+      }
+      if (answer ==2){
+        $scope.answer.answer1 = true;
+        $scope.answer.answer2 = true;
+        $scope.answer.answer3 = false;
+        $scope.answer.answer4 = false;
+      }
+      if (answer ==3){
+        $scope.answer.answer1 = true;
+        $scope.answer.answer2 = false;
+        $scope.answer.answer3 = true;
+        $scope.answer.answer4 = false;
+      }
+      if (answer ==4){
+        $scope.answer.answer1 = true;
+        $scope.answer.answer2 = false;
+        $scope.answer.answer3 = false;
+        $scope.answer.answer4 = true;
+      }
+    };
+
+   
+  });
+  
