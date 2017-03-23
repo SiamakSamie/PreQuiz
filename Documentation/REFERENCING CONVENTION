@@ -15,7 +15,7 @@ REFERENCING CONVENTION
 - The tasks are identified in "Task Breakdown" of the User Story description.
 
 
-- if you're completing a TASK which, in turn, completes the user story:
+- If you're completing a TASK which, in turn, COMPLETES the USER STORY:
 	> "Finalizes Task: #5.1 and Closes User Story: #5"
 
 - Commits reference user stories!
