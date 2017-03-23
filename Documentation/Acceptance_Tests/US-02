@@ -1,17 +1,26 @@
 As a user, I want to be able to search for quizzes for a specific class to test my prerequisite knowledge.
 
 Acceptance Criteria:
-1. From the home page the user should be able to find a course that is stored in the database by the  the name of a University and course name.
-2. If the user enters incorrect information, ie University name or course name that's not in the database. They will receive a popup telling them so. 
+
+1. From the home page the user should be able to find a course that is stored in the database by the 
+the name of a University and course name.
+2. If the user enters incorrect information, ie University name or course name that's not in the 
+database. They will receive a popup telling them so. 
 
 Acceptance test:
-We have one course from one University so far stored in the database. The user should be ab le to find it using the correct information.
+
+We have one course from one University so far stored in the database.
+The user should be ab le to find it using the correct information.
+
 1. From the home page enter in the search field where it says getting started and press enter. 
 2.This information is incorrect. Verify the users sees a popup saying that univeristy can't be found.
 3. Enter Concordia University and select the arrow.
 4. A new search field is generated, enter COMP 346 and select the arrow.
-5.  Verify that you are taken to a page when the user can select the quiz that's been created for COMP 346 @ Concordia University.
+5.  Verify that you are taken to a page when the user can select the quiz that's been created for
+COMP 346 @ Concordia University.
 
 Date Performed: 3/20/17
 Performed By: Ryan Nichols
 Status: Passed 
+
+Note: I was able to successfully search for and find a quiz for COMP 346
