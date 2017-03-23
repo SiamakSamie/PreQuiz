@@ -17,6 +17,10 @@ REFERENCING CONVENTION
 
 - If you're completing a TASK which, in turn, COMPLETES the USER STORY:
 	> "Finalizes Task: #5.1 and Closes User Story: #5"
+	
+- If you need to include an ADDITIONAL task to a user story, follow the order!!!
+	> Example: 5.1, 5.2, 5.3, etc.
+	> include this new Task in the comment section of the User Story.
 
 - Commits reference user stories!
 	> include references in commit message following the convention above!
