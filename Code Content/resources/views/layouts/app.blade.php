@@ -39,6 +39,9 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
 
+    <!--Angular Scroll Glue feature-->
+    <script type="text/javascript" src="https://cdn.rawgit.com/Luegg/angularjs-scroll-glue/master/src/scrollglue.js"></script>
+    
      <!-- Angular Material Library -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
     
@@ -52,8 +55,8 @@
     @yield('extra_links')
     
 </head>
-<body style="background-color: #f5f8fa;">
-    <div id="app" ng-app="preQuiz-module"  ng-controller="sidenav-controller" style="background-color: #f5f8fa;" ng-cloak>
+<body id="body" style="background-color: #f5f8fa;">
+    <div id="app" ng-app="preQuiz-module"  ng-controller="sidenav-controller" style="background-color: #f5f8fa;" ng-cloak >
         <nav class="navbar navbar-default" style="border-width: 0 0 1px;">
             <div class="container">
                 <div class="navbar-header">
@@ -75,7 +78,10 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse" >
                         <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav" >
-                        <li><a href="" class="navbar-brand" ng-click="toggleLeft()"> Menu</a></li>
+                        <li><a href="" class="navbar-brand" ng-click="toggleLeft()">
+                                 <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+                            </a>
+                        </li>
                     </ul>
                     
                     
@@ -119,10 +125,12 @@
             </md-toolbar>
           
             <md-content layout-margin >
-              
                 @if (Auth::check())
                     <img src = "/img/profile_pic.jpg">
                     <p id = "name">{{ Auth::user()->name }}</p>
+                @endif
+                    <a class="list-group-item" href="{{ url('/') }}"> Search for a quiz </a>
+                @if (Auth::check())
                     <a class="list-group-item" href="{{ url('/notifications') }}" > Notifications <span class="badge badge-default badge-pill"> 3 </span> </a> 
                     <a class="list-group-item" href="{{ url('/create_quiz') }}"> Create a quiz </a> 
                     <a class="list-group-item" href="{{ url('/edit_quiz') }}"> Edit a quiz </a> 
@@ -145,6 +153,8 @@
     <!-- Scripts -->
     <script src="/js/app.js"></script>
     <script src='/js/preQuiz-module.js'> </script>
+    
+    @yield('extra_script')
     
 </body>
 </html>

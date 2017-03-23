@@ -9,24 +9,48 @@
 @endsection
 
 @section('content')
-
+    
+    @if (session('status'))
+        <div class=" alert alert-success">
+            <a class="close" data-dismiss="alert">×</a>
+            <strong>Great!</strong> {{ session('status') }}
+        </div>
+    @endif
+    
+    @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
      
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <h1>Create New Quiz</h1>
-            
+        <div class="container">
+            <h1>Add new questions</h1>
             <hr>
+            
+            <div class="panel panel-default">
+              <div class="panel-heading"> <b> Current quiz information </b> </div>
+              <div class="panel-body"> <b> University name: </b>{{ $quiz->university }} </div>
+              <div class="panel-body"> <b> Course name: </b>{{ $quiz->coursename }} </div>
+              <div class="panel-body"> <b> Quiz name: </b>{{ $quiz->quizname }} </div>
+              <div class="panel-body"> <b> Quiz description: </b> {!! $quiz->quizdescription !!} </div>
+            </div>
+            
             <form method="POST" action="{{ route('questions.store') }}">
                 
                 <div ng-controller = "add-forms">
                     
                     <fieldset data-ng-repeat="question in questions">
                         
-                        <button class="btn btn-info btn-sm" ng-show="$last" ng-click="removeQuestion()"><span class="glyphicon glyphicon-minus" ></span></button> 
+                        <button class="btn btn-info btn-sm" ng-show="$last" ng-click="removeQuestion()" ><span class="glyphicon glyphicon-minus" ></span></button> 
                         <br /><br />
                         
                         <div class="form-group">
-                            <label name="question">Question @{{$index + 1}} :</label>
+                            <label name="question">Question <span ng-bind="$index + 1"></span>:</label>
                             <input id="question" ng-model="question.question" name="question[@{{$index}}]" class="form-control">
                         </div>
                         
@@ -58,6 +82,7 @@
                 </div>
                 
                 <input type="submit" value="Create Quiz" class="btn btn-success btn-lg btn-block">
+                <a href="{{ url('/') }}" class="btn btn-default btn-lg btn-block"> Cancel </a>
                 <input type="hidden" name="_token" value="{{ Session::token() }}">
             </form>
         </div>

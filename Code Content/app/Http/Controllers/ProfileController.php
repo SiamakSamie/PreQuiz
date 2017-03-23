@@ -23,7 +23,7 @@ class ProfileController extends Controller
      }
      
      $user_info = User::where('id', $user_id)->get();
-         
+     
      return view('profile', [
          'user_info' => $user_info ,
          ]);
