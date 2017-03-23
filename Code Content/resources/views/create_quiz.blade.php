@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @extends('layouts.app')
 
 @section('title')
@@ -10,9 +9,17 @@
 
 @section('content')
 
+        @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
     
 
-     
         <div class="col-sm-8 col-sm-offset-2">
             <h1>Create New Quiz</h1>
             
@@ -38,6 +45,11 @@
                 <div class="form-group">
                     <label name="quizdescription">Quiz description:</label>
                     <textarea name="quizdescription" rows="3" class="form-control"> </textarea>
+                </div> 
+                
+                <div class="form-group">
+                    <label name="resources">resources:</label>
+                    <textarea name="resources" placeholder="*optional*" rows="3" class="form-control"> </textarea>
                 </div> 
                 
                 <input type="submit" value="Create Quiz" class="btn btn-success btn-lg btn-block">

@@ -10,7 +10,12 @@
 
 @section('content')
 
-     
+    @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            Some fields are missing!
+        </div>
+    @endif
+
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <h1>Create New Quiz</h1>
