@@ -38,8 +38,7 @@
 								<p> {{$entry->quizname}}. </p>
 								<p> Description : <br /> {!!$entry->quizdescription!!}</p>
 								<p class="card-text"> by {{$entry->username}}. </p>
-								<a href="{{ url('take_quiz/$entry->id') }}" class="btn btn-primary center-block">Take this quiz</a>
-								
+								<a href="{{ route('take_quiz.show', ['id' => $entry->id]) }}" class="btn btn-primary center-block">Take this quiz</a>
 							</div>
 						</div>
 					</div>
