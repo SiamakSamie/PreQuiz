@@ -22,4 +22,5 @@ Date Performed: 3/20/17
 Performed By: Ryan Nichols
 Status: passed
 Notes: 
+
 Can confirm that the email is sent with a reset link. Reset works. Logged out and logged back in with new password. 
