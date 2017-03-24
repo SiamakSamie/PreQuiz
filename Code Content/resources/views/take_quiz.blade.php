@@ -30,6 +30,7 @@
                 </md-radio-group>
                 <md-button ng-click="validation(radio_group)" ng-show="!$last" class="md-raised md-primary btn-block">Check Answer</md-button>
                 <md-button ng-click="validation(radio_group);openDialog('{{$quiz->resources}}')" ng-show="$last" class="md-raised md-primary btn-block">Finalize Answer</md-button>
+
               </md-content>
             </md-tab> 
         </md-tabs>
