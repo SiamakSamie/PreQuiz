@@ -44,6 +44,7 @@ class EditQuizController extends Controller
         $this_quiz->university = $request->university;
         $this_quiz->coursename = $request->coursename;
         $this_quiz->quizdescription = $request->quizdescription;
+        $this_quiz->resources = $request->quizresources;
         
         $this_quiz->save();
         

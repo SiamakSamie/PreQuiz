@@ -18,6 +18,12 @@
 
     
      <div class="container" >
+         
+         <a class="pull-right btn btn-info" href="{{ url('create_quiz') }}"> 
+             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 
+             Create another quiz 
+        </a>
+        
          <div class="row">
              @if($all_my_quizzes->count() == 0)
                  <div class=""> <h4> <small> No quizzes found for this user </small> </h4> </div>
