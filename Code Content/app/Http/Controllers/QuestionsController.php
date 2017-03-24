@@ -50,7 +50,7 @@ class QuestionsController extends Controller
             $thisQuiz = Quiz::where('id', Session::get('quiz_id'))->get()->first();
             $thisQuiz->Questions()->save($questions);
             
-}
+    }
 
 
         return redirect()->route('questions.index');

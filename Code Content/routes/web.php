@@ -17,6 +17,9 @@ Route::post('/getAllCourses', 'SearchController@getAllCourses');
 
 Route::post('/getAllUserNames', 'SearchController@getAllUsernames');
 
+
+Route::post('/getQuestions', 'EditQuizController@getQuestions');
+
 Route::get('/', function () {
     
     return view('home');

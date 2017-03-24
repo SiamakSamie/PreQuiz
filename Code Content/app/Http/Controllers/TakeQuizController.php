@@ -9,13 +9,24 @@ use App\Http\Controllers\Controller;
 use Auth;
 use App\User;
 use Session;
+use App\Quiz;
 
 
 class TakeQuizController extends Controller
 {
     public function index()
     {
-       	return view('take_quiz');
+
+    }
+    
+    public function show($id)
+    {
+        $quiz_id = Quiz::where('id', $id)->get()->first();
+        
+        return view('take_quiz', [
+            "quiz" => $quiz_id,
+        ]);
+        
     }
 
 

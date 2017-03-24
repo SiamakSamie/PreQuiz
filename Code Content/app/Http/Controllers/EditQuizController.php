@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Quiz;
+use App\Questions;
 use Redirect;
 use Auth;
 use Illuminate\Http\Request;
@@ -15,6 +16,10 @@ class EditQuizController extends Controller
         return view('editable_quizzes', [
             "all_my_quizzes" => $all_my_quizzes
         ]);
+    }
+    
+    public function getQuestions(Request $request) {
+        return Questions::where('quiz_id', $request->id)->get();
     }
     
     public function edit_quiz(Request $request) {
