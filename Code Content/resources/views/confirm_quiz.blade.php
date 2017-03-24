@@ -9,13 +9,20 @@
  
  @section('content')
    <div class="container">
-       
+    
+     <a class="pull-right btn btn-info" href="{{ url('create_quiz') }}"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create another quiz </a>
+     <h1>Review this quiz</h1>
+     
+     <hr>
+
+     
      <div class="panel panel-primary">
          <div class="panel-heading"> <b> Confirmation quiz information </b> </div>
          <div class="panel-body"> <b> University name: </b>{{ $quiz->university }} </div>
          <div class="panel-body"> <b> Course name: </b>{{ $quiz->coursename }} </div>
          <div class="panel-body"> <b> Quiz name: </b>{{ $quiz->quizname }} </div>
          <div class="panel-body"> <b> Quiz description: </b> {!! $quiz->quizdescription !!} </div>
+         <div class="panel-body"> <b> Resources: </b> {{ $quiz->resources }}</div>
      </div>
      <div class="panel panel-primary list-group">
         @foreach ($questions as $i => $q)
@@ -29,9 +36,13 @@
      </div>
      
      <div>
-         <button class="pull-right btn btn-primary"> Edit this quiz </button> 
+         <form action="{{ url('editing_quiz') }}" method="POST">
+             {{csrf_field()}}
+             <input name="quiz_id" type="hidden" value="{{$quiz->id}}">
+             <button class="pull-right btn btn-primary"> Edit this quiz </button> 
+         </form>
+         
          <button class="pull-right btn btn-primary"> Take this quiz </button> 
-         <button class="pull-right btn btn-primary"> Search for a quiz </button>
      </div>
      
    </div>

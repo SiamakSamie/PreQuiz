@@ -21,7 +21,7 @@ class CreateQuizzesTable extends Migration
             $table->text('university');
             $table->text('coursename');
             $table->text('quizdescription');
-            $table->text('resources');
+            $table->text('resources')->nullable();
             $table->timestamps();
         });
     }

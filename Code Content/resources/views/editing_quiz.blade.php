@@ -15,7 +15,7 @@
                 <h1>Editing Quiz</h1>
                 <hr>
                 
-                <form method="POST" action="/updateQuizInfo">
+                <form method="POST" action="{{ url('updateQuizInfo') }}">
                     <input type="hidden" name="_method" value="PATCH">
                     <input type="hidden" name="_token" value="{{ Session::token() }}">
                     <input type="hidden" name="quiz_id" value="{{ $my_quiz->id }}">
@@ -41,6 +41,11 @@
                     <div class="form-group">
                         <label name="quizdescription">Quiz description:</label>
                         <textarea name="quizdescription" rows="3" class="form-control" required>{{$my_quiz->quizdescription}}</textarea>
+                    </div> 
+                    
+                    <div class="form-group">
+                        <label name="quizresources">Resources:</label>
+                        <textarea name="quizresources" rows="3" class="form-control" required>{{$my_quiz->resources}}</textarea>
                     </div> 
                     
                     
