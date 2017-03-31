@@ -22,7 +22,7 @@ class QuizController extends Controller
 
     public function store(Request $request)
     {
-        
+        // validate the entries
         $this->validate($request, array(
             
                 'quizname'=> 'required|max:255',
@@ -30,17 +30,17 @@ class QuizController extends Controller
                 'coursename'=> 'required',
                'quizdescription' => 'required',
             ));
-
+            
+        // this is used later to make the relations
         $user_id = Auth::user()->id;
         
+        // save the entries
         $quiz = new Quiz;
         $quiz ->quizname=$request->quizname;
         $quiz->university=$request->university;
         $quiz->coursename=$request->coursename;
-
-        
         $quiz->resources=$request->resources;
-        $quiz->quizdescription=nl2br($request->quizdescription);
+        $quiz->quizdescription=$request->quizdescription;
 
         $quiz ->username=auth()->user()->name;
         

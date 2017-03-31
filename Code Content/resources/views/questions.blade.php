@@ -46,6 +46,8 @@
                         <button class="btn btn-info btn-sm" ng-show="$last" ng-click="removeQuestion()" ><span class="glyphicon glyphicon-minus" ></span></button> 
                         <br /><br />
                         
+                        <input type="hidden" name="quiz_id" value="{{ $quiz->id }}">
+                        
                         <div class="form-group">
                             <label name="question">Question <span ng-bind="$index + 1"></span>:</label>
                             <input id="question" ng-model="question.question" name="question[@{{$index}}]" class="form-control">

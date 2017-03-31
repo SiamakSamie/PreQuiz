@@ -12,10 +12,22 @@
 
 
 <div class="row">
+   <div class="container">
+     <form action="{{ url('/search') }}" method="POST"  > 
+        <button type="submit" class="pull-right btn btn-info">
+              <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+              Go back to quiz results 
+              
+              {{ csrf_field() }}
+              <input name="uni_name" type="hidden" value="{{$quiz->university}}">
+              <input name="course_id" type="hidden" value="{{$quiz->coursename }}">
+        </button>
+    </form>
+  </div>
     <div class="col-md-8 col-md-offset-2">
-    
+      
       <h1 class="md-display-2">{{$quiz->quizname}}</h1>
-    
+
       <md-content ng-controller="validate-answer" ng-init="getAllQuestions({{$quiz->id}})">
         <md-tabs md-dynamic-height="" md-border-bottom="">
             <md-tab ng-repeat="input in data" label="Question @{{$index+1}}">

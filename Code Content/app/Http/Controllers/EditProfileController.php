@@ -10,36 +10,36 @@ use Auth;
 class EditProfileController extends Controller
 {
 
-public function display(Request $request) {
-
-  /**
-     * fetching the user model
-     */
-    $user = Auth::user();
-
-     return view('editprofile', [
-       'user' => $user]);
-       
-    //return back();
-}
-
-public function update(Request $request){
-  $id = Auth::user()->id;
+    public function display(Request $request) {
     
-    $user = User::findOrFail($id);
-
-    $user->name = $request->get('name');
-
-    $user->email = $request->get('email');
-
-    $user->save();
+      /**
+         * fetching the user model
+         */
+        $user = Auth::user();
     
-   $user_info = User::where('id', $id)->get();
-         
-         return view('profile', [
-             'user_info' => $user_info ,
-             ]);
+         return view('edit_profile', [
+           'user' => $user]);
+           
+        //return back();
+    }
     
-}
+    public function update(Request $request){
+        $id = Auth::user()->id;
+        
+        // fetching user with id $id
+        $user = User::findOrFail($id);
+        
+        $user->name = $request->get('name');
+        $user->university = $request->get('university');
+        $user->email = $request->get('email');
+    
+        $user->save();
+        
+       $user_info = User::where('id', $id)->get()->first();
+    
+        return view('profile', [
+          'user_info' => $user_info ,
+        ]);
+    }
 
 }

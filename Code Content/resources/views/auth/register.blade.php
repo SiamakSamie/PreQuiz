@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}" >
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -24,17 +24,23 @@
                             </div>
                         </div>
                         
-                        <div class="form-group{{ $errors->has('university') ? ' has-error' : '' }}">
+                        <div class="form-group{{ $errors->has('university') ? ' has-error' : '' }}" ng-controller="searchForm-controller">
                             <label for="university" class="col-md-4 control-label">University</label>
 
                             <div class="col-md-6">
-                                <input id="university" type="text" class="form-control" name="university" value="{{ old('university') }}" required autofocus>
+                                <input list="uni_names" ng-model="selected_uni" id="university"
+                                type="text" class="form-control" name="university" value="{{ old('university') }}" 
+                                ng-change="autocomplete_unis(selected_uni)" required>
 
                                 @if ($errors->has('university'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('university') }}</strong>
                                     </span>
                                 @endif
+                                
+                                <datalist id="uni_names">
+                                    <option ng-repeat="match in matching" value="@{{match}}"></option>
+                                </datalist>
                             </div>
                         </div>
  

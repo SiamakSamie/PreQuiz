@@ -44,7 +44,7 @@
     
      <!-- Angular Material Library -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
@@ -127,7 +127,7 @@
             <md-content layout-margin >
                 @if (Auth::check())
                     <img src = "/img/profile_pic.jpg">
-                    <p id = "name">{{ Auth::user()->name }}</p>
+                    <p> <a href="{{ URL::to('profile/' . Auth::user()->id) }}" id = "name">{{ Auth::user()->name }}</a> </p>
                 @endif
                     <a class="list-group-item" href="{{ url('/') }}"> Search for a quiz </a>
                 @if (Auth::check())
@@ -141,8 +141,8 @@
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> Edit a quiz </a> 
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> My profile </a> 
                 @endif
-                    <a class="list-group-item" href="{{ url('/aboutus') }}"> About us </a> 
-                    <a class="list-group-item" href="{{ url('/contactus') }}"> Contact us </a> 
+                    <a class="list-group-item" href="{{ url('/about_us') }}"> About us </a> 
+                    <a class="list-group-item" href="{{ url('/contact_us') }}"> Contact us </a> 
                     <a class="list-group-item md-accent" href="" ng-click="toggleLeft()"> Close menu </a> 
             </md-content>
         </md-sidenav>
