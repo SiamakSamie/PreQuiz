@@ -267,19 +267,61 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
   
 });
 
-  prequiz_module.controller('validate-answer', function($scope, $http, $mdDialog, $rootElement){
-    
-    $scope.openDialog = function(resources, ev) {
-        $mdDialog.show(
-          $mdDialog.alert()
-          .clickOutsideToClose(true)
-          .title('Good job!')
-          .textContent('Score : 100%   ' + 'Resources : '+ resources)
-          .ok('Thanks!')
-          .targetEvent(ev)
-      );
+  prequiz_module.controller('validate-answer', function($scope, $http, $mdDialog, $rootElement, $timeout){
 
+
+
+    $scope.openDialog = function(resources, evt) {
+        $mdDialog.show({
+            template:
+               '<md-dialog aria-label="Dialog" style="width:55%; padding: 10px;">'+
+               '<md-toolbar>'+
+               '<div class="md-toolbar-tools">All Done!</div>'+
+               '</md-toolbar>'+
+                 '<md-dialog-content>'+
+                 '<br /><br />'+
+                 
+                  '<div class="panel panel-primary">'+
+                  ' <div class="panel-heading">Your Score</div>'+
+                  '<div class="panel-body">100%</div>'+
+                  ' </div>'+
+                  
+                  '<div class="panel panel-info">'+
+                  ' <div class="panel-heading">Extra Resources</div>'+
+                  '<div class="panel-body">'+ resources +'</div>'+
+                  ' </div>'+
+
+                 '</md-dialog-content>'+
+                 '<div class="md-actions" layout="row">'+
+                 '<md-button id="btn-close" ng-click="retry()" class="md-accent">Retry</md-button>'+
+                 '<md-button id="btn-close" ng-click="close()" class="md-accent">Save and Close</md-button>'+
+                 '</div>'+
+                 '</md-dialog>',
+            targetEvent: evt,
+            clickOutsideToClose: true,
+            focusOnOpen: true,
+            controller: DialogController,
+        });
     };
+    
+  
+      function DialogController($scope, $mdDialog) {
+        $scope.close = function() {
+          $mdDialog.hide();
+        }
+        $scope.retry = function() {
+          window.location.reload();
+        }
+    };
+  
+    
+    $scope.selectedIndex = 0;
+    $scope.nextTab = function() {
+        $timeout( function(){
+            $scope.selectedIndex = $scope.selectedIndex+1;
+        }, 1000 );
+    };
+  
     
     $scope.allQuestionsResponse = "";
     
@@ -333,12 +375,6 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
         });
     }
   });
-  
-  
-  
-  
-  
-
   
   
   
