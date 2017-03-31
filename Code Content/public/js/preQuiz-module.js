@@ -470,46 +470,55 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
     
     $scope.getAllQuestions = function(quiz_id) {
      
-        $scope.allQuestionsResponse = 
+
         $http({
           url: '/getQuestions', 
           method: "POST",
           params: {id: quiz_id}
         })
           .then( function(response) {
-            $scope.answer = {answer1:false, answer2:false, answer3:false, answer4:false};
-            $scope.data = response.data;
-            $scope.isValid = false;
+            $scope.answer = [];
+            $scope.isValid = [];
             
-            $scope.test = "";
-            $scope.validation = function(answer){
-              $scope.isValid = true;
+            $scope.all_tabs = [];
+            $scope.data = response.data;
+            
+            for(var i = 0; i < $scope.data.length; i++) {
+                $scope.answer.push({answer1:false, answer2:false, answer3:false, answer4:false});
+                $scope.all_tabs.push(i);
+                $scope.isValid.push(false);
+            }
+            
+            $scope.validation = function(answer, index){
+
+              $scope.isValid[index] = true;
               
               if (answer ==1){
-                $scope.answer.answer1 = true;
-                $scope.answer.answer2 = false;
-                $scope.answer.answer3 = false;
-                $scope.answer.answer4 = false;
+                $scope.answer[index].answer1 = true;
+                $scope.answer[index].answer2 = false;
+                $scope.answer[index].answer3 = false;
+                $scope.answer[index].answer4 = false;
               }
               if (answer ==2){
-                $scope.answer.answer1 = true;
-                $scope.answer.answer2 = true;
-                $scope.answer.answer3 = false;
-                $scope.answer.answer4 = false;
+                $scope.answer[index].answer1 = true;
+                $scope.answer[index].answer2 = true;
+                $scope.answer[index].answer3 = false;
+                $scope.answer[index].answer4 = false;
               }
               if (answer ==3){
-                $scope.answer.answer1 = true;
-                $scope.answer.answer2 = false;
-                $scope.answer.answer3 = true;
-                $scope.answer.answer4 = false;
+                $scope.answer[index].answer1 = true;
+                $scope.answer[index].answer2 = false;
+                $scope.answer[index].answer3 = true;
+                $scope.answer[index].answer4 = false;
               }
               if (answer ==4){
-                $scope.answer.answer1 = true;
-                $scope.answer.answer2 = false;
-                $scope.answer.answer3 = false;
-                $scope.answer.answer4 = true;
+                $scope.answer[index].answer1 = true;
+                $scope.answer[index].answer2 = false;
+                $scope.answer[index].answer3 = false;
+                $scope.answer[index].answer4 = true;
               }
-           };
+              
+            };
        });
     }
  });

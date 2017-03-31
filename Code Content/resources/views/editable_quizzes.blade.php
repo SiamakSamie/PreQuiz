@@ -54,9 +54,13 @@
                         
                         <input type="hidden" name="quiz_id" value="{{$quiz->id}}">
                         
+                        @if ($quiz->Questions->count() == 0)
+                
+                        @else
                         <button type="submit"  class="btn btn-primary">
                             Edit this quiz
                         </button>
+                        @endif
                         
                         <a href="{{ route('take_quiz.show', ['id' => $quiz->id]) }}" class="btn btn-primary"> 
                             Take this quiz

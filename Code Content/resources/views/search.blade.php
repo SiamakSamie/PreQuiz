@@ -30,8 +30,12 @@
 	   	  <ul class="commentList" id="commentList" ng-model="commentList"  ng-change="scrollToBot(commentList)">
 	   		  @include('comment_list')
 		  </ul>
-	   	   
- 	  	  <form id="comment_form" method='POST' ng-submit="commentRequest('{{ $course_name }}', '{{ Auth::user()->id }}', '{{$uni_name}}')"> <!-- onSubmit='return AjaxCommentRequest() -->
+		  
+	   	  @if (Auth::check())
+	   	  <form id="comment_form" method='POST' ng-submit="commentRequest('{{ $course_name }}', '{{ Auth::user()->id }}', '{{$uni_name}}')">
+	   	  @else
+	   	  <form id="comment_form">
+	   	  @endif
  	  	  	{{ csrf_field() }}  <!-- needed for laravel security otherwise nothing works-->
  	  	  	<div class="row" >
  	  	  		@if (Auth::guest())
