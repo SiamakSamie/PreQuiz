@@ -25,6 +25,10 @@ class User extends Authenticatable
           return $this->hasMany('App\Vote');
      }
 
+     public function Notification(){
+        return $this->hasMany('App\Notification');
+    }
+
     /**
      * The attributes that are mass assignable.
      *

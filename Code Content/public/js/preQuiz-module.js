@@ -413,8 +413,7 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
   
 });
 
-  prequiz_module.controller('validate-answer', function($scope, $http, $mdDialog){
-    
+  prequiz_module.controller('validate-answer', function($scope, $http, $mdDialog, $rootElement, $timeout){
     $scope.openDialog = function(resources, evt) {
         $mdDialog.show({
             template:
@@ -425,7 +424,7 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
                  '<md-dialog-content>'+
                  '<br /><br />'+
                  
-                  '<div class="panel panel-success">'+
+                  '<div class="panel panel-primary">'+
                   ' <div class="panel-heading">Your Score</div>'+
                   '<div class="panel-body">100%</div>'+
                   ' </div>'+
@@ -437,68 +436,92 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
 
                  '</md-dialog-content>'+
                  '<div class="md-actions" layout="row">'+
-                 '  <md-button id="btn-close" ng-click="" class="md-accent">Close</md-button>'+
+                 '<md-button id="btn-close" ng-click="retry()" class="md-accent">Retry</md-button>'+
+                 '<md-button id="btn-close" ng-click="close()" class="md-accent">Save and Close</md-button>'+
                  '</div>'+
                  '</md-dialog>',
             targetEvent: evt,
             clickOutsideToClose: true,
-            focusOnOpen: true
+            focusOnOpen: true,
+            controller: DialogController,
         });
     };
+    
+  
+      function DialogController($scope, $mdDialog) {
+        $scope.close = function() {
+          $mdDialog.hide();
+        }
+        $scope.retry = function() {
+          window.location.reload();
+        }
+    };
+  
+    
+    $scope.selectedIndex = 0;
+    $scope.nextTab = function() {
+        $timeout( function(){
+            $scope.selectedIndex = $scope.selectedIndex+1;
+        }, 1000 );
+    };
+  
     
     $scope.allQuestionsResponse = "";
     
     $scope.getAllQuestions = function(quiz_id) {
      
-        $scope.allQuestionsResponse = 
+
         $http({
           url: '/getQuestions', 
           method: "POST",
           params: {id: quiz_id}
         })
           .then( function(response) {
-            $scope.answer = {answer1:false, answer2:false, answer3:false, answer4:false};
-            $scope.data = response.data;
-            $scope.isValid = false;
+            $scope.answer = [];
+            $scope.isValid = [];
             
-            $scope.test = "";
-            $scope.validation = function(answer){
-              $scope.isValid = true;
+            $scope.all_tabs = [];
+            $scope.data = response.data;
+            
+            for(var i = 0; i < $scope.data.length; i++) {
+                $scope.answer.push({answer1:false, answer2:false, answer3:false, answer4:false});
+                $scope.all_tabs.push(i);
+                $scope.isValid.push(false);
+            }
+            
+            $scope.validation = function(answer, index){
+
+              $scope.isValid[index] = true;
               
               if (answer ==1){
-                $scope.answer.answer1 = true;
-                $scope.answer.answer2 = false;
-                $scope.answer.answer3 = false;
-                $scope.answer.answer4 = false;
+                $scope.answer[index].answer1 = true;
+                $scope.answer[index].answer2 = false;
+                $scope.answer[index].answer3 = false;
+                $scope.answer[index].answer4 = false;
               }
               if (answer ==2){
-                $scope.answer.answer1 = true;
-                $scope.answer.answer2 = true;
-                $scope.answer.answer3 = false;
-                $scope.answer.answer4 = false;
+                $scope.answer[index].answer1 = true;
+                $scope.answer[index].answer2 = true;
+                $scope.answer[index].answer3 = false;
+                $scope.answer[index].answer4 = false;
               }
               if (answer ==3){
-                $scope.answer.answer1 = true;
-                $scope.answer.answer2 = false;
-                $scope.answer.answer3 = true;
-                $scope.answer.answer4 = false;
+                $scope.answer[index].answer1 = true;
+                $scope.answer[index].answer2 = false;
+                $scope.answer[index].answer3 = true;
+                $scope.answer[index].answer4 = false;
               }
               if (answer ==4){
-                $scope.answer.answer1 = true;
-                $scope.answer.answer2 = false;
-                $scope.answer.answer3 = false;
-                $scope.answer.answer4 = true;
+                $scope.answer[index].answer1 = true;
+                $scope.answer[index].answer2 = false;
+                $scope.answer[index].answer3 = false;
+                $scope.answer[index].answer4 = true;
               }
-           };
+              
+            };
        });
     }
  });
-  
-  
-  
-  
-  
-
   
   
   

@@ -30,18 +30,18 @@
 
       <md-content ng-controller="validate-answer" ng-init="getAllQuestions({{$quiz->id}})">
         <md-tabs md-dynamic-height="" md-border-bottom="">
-            <md-tab ng-repeat="input in data" label="Question @{{$index+1}}">
+            <md-tab ng-repeat="(key, input) in data" label="Question @{{$index+1}}">
               <md-content class="md-padding">
                 <h1 class="md-display-1" ng-bind="input.question"> </h1>
-                <md-radio-group ng-disabled="isValid==true" flex ng-model="radio_group">
-                    <md-radio-button ng-class="{'bg-success':answer.answer1}"name="answer1" value="1" aria-label="@{{$index}}"> <span ng-bind="input.answer1"> </span> </md-radio-button>
-                    <md-radio-button ng-class="{'bg-danger':answer.answer2}" name="answer2"  value="2" aria-label="@{{$index}}"> <span ng-bind="input.answer2"> </span> </md-radio-button>
-                    <md-radio-button ng-class="{'bg-danger':answer.answer3}" name="answer3"  value="3" aria-label="@{{$index}}"> <span ng-bind="input.answer3"> </span> </md-radio-button>
-                    <md-radio-button ng-class="{'bg-danger':answer.answer4}" name="answer4"  value="4" aria-label="@{{$index}}"> <span ng-bind="input.answer4"> </span> </md-radio-button>
+                <md-radio-group ng-disabled="isValid[$index]==true" flex ng-model="radio_group">
+                    <md-radio-button ng-class="{'bg-success':answer[$index].answer1}"name="answer1" value="1" aria-label="@{{$index}}"> <span ng-bind="input.answer1"> </span> </md-radio-button>
+                    <md-radio-button ng-class="{'bg-danger':answer[$index].answer2}" name="answer2"  value="2" aria-label="@{{$index}}"> <span ng-bind="input.answer2"> </span> </md-radio-button>
+                    <md-radio-button ng-class="{'bg-danger':answer[$index].answer3}" name="answer3"  value="3" aria-label="@{{$index}}"> <span ng-bind="input.answer3"> </span> </md-radio-button>
+                    <md-radio-button ng-class="{'bg-danger':answer[$index].answer4}" name="answer4"  value="4" aria-label="@{{$index}}"> <span ng-bind="input.answer4"> </span> </md-radio-button>
                     <!--<span ng-bind="answers"></span>-->
                 </md-radio-group>
-                <md-button ng-click="validation(radio_group)" ng-show="!$last" class="md-raised md-primary btn-block">Check Answer</md-button>
-                <md-button ng-click="validation(radio_group);openDialog('{{$quiz->resources}}')" ng-show="$last" class="md-raised md-primary btn-block">Finalize Answer</md-button>
+                <md-button ng-click="validation(radio_group, key)" ng-show="!$last" class="md-raised md-primary btn-block">Check Answer</md-button>
+                <md-button ng-click="validation(radio_group, key);openDialog('{{$quiz->resources}}')" ng-show="$last" class="md-raised md-primary btn-block">Finalize Answer</md-button>
 
               </md-content>
             </md-tab> 

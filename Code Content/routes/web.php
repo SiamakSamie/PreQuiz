@@ -76,3 +76,4 @@ Route::post('/sendContactUsMail', function() {
 
  });  
 
+Route::get('/notifications', 'NotificationsController@display');
