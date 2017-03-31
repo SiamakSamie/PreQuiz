@@ -24,11 +24,17 @@
             <span> <small class="text-muted"> Please note that quizzes with no questions will be permanently deleted after 24 hours of inactivity </small> </span>
             <hr>
             
-            <form method="POST" action="{{ route('create_quiz.store') }}">
+            <form method="POST" action="{{ route('create_quiz.store') }}" ng-controller="searchForm-controller">
                 
                 <div class="form-group">
                     <label name="university">University name:</label>
-                    <input id="university" name="university" rows="10" class="form-control">
+                    
+                    <input list="uni_names" id="university" name="university" rows="10" class="form-control" 
+                    ng-model="selected_uni" ng-change="autocomplete_unis(selected_uni)">
+                    
+                    <datalist id="uni_names">
+                        <option ng-repeat="match in matching" value="@{{match}}"></option>
+                    </datalist>
                 </div>
                 
                 <div class="form-group">

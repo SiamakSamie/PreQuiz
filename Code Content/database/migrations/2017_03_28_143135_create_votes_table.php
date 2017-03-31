@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Comments extends Migration
+class CreateVotesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class Comments extends Migration
      */
     public function up()
     {
-        Schema::create('comments', function (Blueprint $table) {
+        Schema::create('votes', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned()->nullable()->index();
-            $table->integer('quiz_id')->unsigned()->nullable()->index();
-            $table->text('comment_content');
+            $table->integer('user_id')->unsigned()->nullable();
+            $table->integer('comment_id')->unsigned()->nullable();
+            $table->boolean('up_down'); // up == true, down == false
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class Comments extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comments');
+        Schema::dropIfExists('votes');
     }
 }

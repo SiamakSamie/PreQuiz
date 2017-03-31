@@ -105,14 +105,6 @@ md-backdrop{
     width:100%;
 }
 
-.start_box{
-    opacity:0.75;
-}
-
-.start_box:hover{
-    opacity:1;
-}
-
 .bar {
     width: 23px;
     height: 3px;

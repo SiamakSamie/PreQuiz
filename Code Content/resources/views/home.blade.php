@@ -5,20 +5,18 @@
 @endsection
 
 @section('extra_links')
-    <style>
-        body {
-            height: 120%;
-        }
-    </style>
+    <style> body { height: 120%; } </style>
 @endsection
 
 @section('content')
 
     @if (session('status'))
         <div class="alert alert-danger">
+            
             <a class="close" data-dismiss="alert">×</a>
             <p> {{ session('status') }} </p>
-            <p> Please make sure the univeristy name/course name was chosen from the suggested list.</p>
+            <p> Please make sure the univeristy name/course name was chosen from the suggested list. </p>
+            <p> Would you like to <a href='/create_quiz'> create a quiz?</a> </p>
         </div>
     @endif
     
@@ -35,7 +33,7 @@
             <div class="panel-body">
                 <div class="input-title"> <b>Get Started</b></div>
                 
-                <form id="uni_form" ng-submit="fetchCourses(selected_uni)" autocomplete="off" class="displayed">
+                <form id="uni_form" ng-submit="fetchCourses(selected_uni)" class="displayed" autocomplete="off" >
                     <input class="input-submit" type="submit" value="">
                     
                     <input list="uni_names" name="uni_name" type="text" class="input-field" ng-model="selected_uni" 
@@ -46,9 +44,15 @@
                     </datalist>
                     
                 </form> 
+                <small ng-bind-html="errorMsg">  </small>
                 
                <form  id="course_form" method="POST" action="/search" class="hidden" autocomplete="off">
-                    <input type="text" class="input-field extended-input text-center" value="@{{selected_uni}}" readonly>
+                    
+                    <p id="uni_name_after" ng-click="undoSubmit()" class="input-field extended-input">
+                        <span ng-bind="selected_uni"> </span>  &nbsp;
+                        <span id="edit_icon" class="glyphicon glyphicon-pencil text-muted" aria-hidden="true"></span> 
+                    </p>
+                        
                     {{ csrf_field() }}  <!-- needed for laravel security otherwise nothing works-->
                     <div class="form-group">
                         <input class="input-submit" type="submit" value="">
@@ -66,6 +70,12 @@
             </div>
         </div>
     </div>
-
 @endsection
 
+@section('extra_script')
+    <script>
+        $('#uni_name_after').hover(function() {
+            $("#edit_icon").toggleClass('text-muted');
+        });
+    </script>
+@endsection
