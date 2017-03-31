@@ -5,40 +5,50 @@
 @endsection
 
 @section('extra_links')
+<link href="/css/dialog.css" rel="stylesheet" type="text/css">
 @endsection
 
 @section('content')
 
 
 <div class="row">
+   <div class="container">
+     <form action="{{ url('/search') }}" method="POST"  > 
+        <button type="submit" class="pull-right btn btn-info">
+              <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+              Go back to quiz results 
+              
+              {{ csrf_field() }}
+              <input name="uni_name" type="hidden" value="{{$quiz->university}}">
+              <input name="course_id" type="hidden" value="{{$quiz->coursename }}">
+        </button>
+    </form>
+  </div>
     <div class="col-md-8 col-md-offset-2">
+      
+      <h1 class="md-display-2">{{$quiz->quizname}}</h1>
     
-      <h1 class="md-display-2">Dummy Quiz</h1>
-    
-      <md-content>
+      <md-content ng-controller="validate-answer" ng-init="getAllQuestions({{$quiz->id}})">
         <md-tabs md-dynamic-height="" md-border-bottom="">
-          <div ng-controller="validate-answer">
-            
             <md-tab ng-repeat="input in data" label="Question @{{$index+1}}">
               <md-content class="md-padding">
-                <h1 class="md-display-1">How much wood could a wood chuck chuck if a wood could chuck wood?</h1>
-                <md-radio-group ng-disabled="isValid==true" flex ng-model="data">
-                    <md-radio-button ng-class="{'bg-success':answer.answer1}" name="answer1" value="1">about all of it</md-radio-button>
-                    <md-radio-button ng-class="{'bg-danger':answer.answer2}" name="answer2"  value="2">What's a woodchuck? A beaver? </md-radio-button>
-                    <md-radio-button ng-class="{'bg-danger':answer.answer3}" name="answer3"  value="3">depends on the time of the year</md-radio-button>
-                    <md-radio-button ng-class="{'bg-danger':answer.answer4}" name="answer4"  value="4">14.5</md-radio-button>
+                <h1 class="md-display-1" ng-bind="input.question"> </h1>
+                <md-radio-group ng-disabled="isValid==true" flex ng-model="radio_group">
+                    <md-radio-button ng-class="{'bg-success':answer.answer1}"name="answer1" value="1" aria-label="@{{$index}}"> <span ng-bind="input.answer1"> </span> </md-radio-button>
+                    <md-radio-button ng-class="{'bg-danger':answer.answer2}" name="answer2"  value="2" aria-label="@{{$index}}"> <span ng-bind="input.answer2"> </span> </md-radio-button>
+                    <md-radio-button ng-class="{'bg-danger':answer.answer3}" name="answer3"  value="3" aria-label="@{{$index}}"> <span ng-bind="input.answer3"> </span> </md-radio-button>
+                    <md-radio-button ng-class="{'bg-danger':answer.answer4}" name="answer4"  value="4" aria-label="@{{$index}}"> <span ng-bind="input.answer4"> </span> </md-radio-button>
                     <!--<span ng-bind="answers"></span>-->
                 </md-radio-group>
-                <md-button ng-click="validation(data)" class="md-raised md-primary btn-block">Check Answer</md-button>
+                <md-button ng-click="validation(radio_group)" ng-show="!$last" class="md-raised md-primary btn-block">Check Answer</md-button>
+                <md-button ng-click="validation(radio_group);openDialog('{{$quiz->resources}}')" ng-show="$last" class="md-raised md-primary btn-block">Finalize Answer</md-button>
+
               </md-content>
             </md-tab> 
-            
-          </div>  <!-- end validate-answer controller -->
         </md-tabs>
       </md-content>
     </div>
 </div>
-
 <!--
 Copyright 2016 Google Inc. All Rights Reserved. 
 Use of this source code is governed by an MIT-style license that can be foundin the LICENSE file at http://material.angularjs.org/HEAD/license.

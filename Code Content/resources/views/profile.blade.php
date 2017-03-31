@@ -9,56 +9,58 @@
  
  @section('content')
    <div class="container" style = "padding-top:50px">
-    <h1>Profile information</h1>
-  	<hr>
-	<div class="row">
-      <!-- left column -->
-      <div class="col-md-3">
-        <div class="text-center">
-          <img src="/img/profile_pic.jpg" class="avatar img-circle" alt="avatar">
-          <h6>Default profile picture</h6>
-          
-        </div>
-      </div>
+      <h1>Profile information</h1>
+  	  <hr>
+	    <div class="row">
+          <!-- left column -->
+          <div class="col-sm-3">
+            <div class="text-center">
+              <img src="/img/profile_pic.jpg" class="avatar img-circle" alt="avatar">
+              <h6>Default profile picture</h6>
+              
+            </div>
+          </div>
       
-      <!-- profile information -->
-      <div class="col-md-9 personal-info">
+          <!-- profile information -->
+          <div class="col-sm-9 personal-info">
        
-        <h3><b>Personal info</b></h3>
-        @if ($user_info->count() == 0) 
-           <h2> Not a user </h2>
-        @else
-           @foreach ( $user_info as $info )
-          <form class="form-horizontal" role="form" action = "/EditProfile" method ="POST">
-            {{ csrf_field() }}
+              <h3><b>Personal info</b></h3>
+              @if ($user_info->count() == 0) 
+                 <h2> Not a user </h2>
+              @else
+           
+                <form class="form-horizontal" role="form" action = "/edit_profile" method ="POST">
+                  {{ csrf_field() }}
+                  
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">Name:</label>
+                    <p> {{ $user_info->name }}</p>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">University:</label>
+                    <p>{{ $user_info->university }}</p>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">Email:</label>
+                    <p>{{ $user_info->email }}</p>
+                  </div>
+                  
+                  @if ( Auth::user()->id == $user_info->id || $user_info->id == 0)
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label"></label>
+                        <input type="submit" class="btn btn-primary"  value="Edit Profile">
+                    </div>
+                    <!--<div class="form-group">-->
+                    <!--  <label class="col-sm-3 control-label"></label>-->
+                    <!--    <a class="btn btn-primary" href="{{ url('password/reset/'.csrf_token() ) }}" > Forgot your password? </a>-->
+                    <!--</div>-->
+                  @endif
+                  
+                </form>
             
-            <div class="form-group">
-              <label class="col-lg-3 control-label">Name:</label>
-              <p> {{ $info->name }}</p>
-            </div>
-            <div class="form-group">
-              <label class="col-lg-3 control-label">University:</label>
-              <p>{{ $info->university }}</p>
-            </div>
-            <div class="form-group">
-              <label class="col-lg-3 control-label">Email:</label>
-              <p>{{ $info->email }}</p>
-            </div>
-            <div class="form-group">
-              <label class="col-md-3 control-label">Password:</label>
-              <p>************</p>
-            </div>
-            <div class="form-group">
-              <label class="col-md-3 control-label"></label>
-              <div class="col-md-8">
-                <input type="submit" class="btn btn-primary"  value="Edit Profile">
-              </div>
-            </div>
-          </form>
-          @endforeach
-        @endif
+              @endif
+          </div>
       </div>
-  </div>
-</div>
-<hr>
+    </div>
+    <hr>
  @endsection

@@ -8,7 +8,7 @@
 
 @section('content')
 
-<div class = "col-md-8 col-md-offset-2 ">
+<div class = "container">
 
     <p>You can call me anytime... </p>
     <h3>Or fill out this form and we'll get back to you asap</h3>

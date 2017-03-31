@@ -19,11 +19,17 @@
                     <input type="hidden" name="_method" value="PATCH">
                     <input type="hidden" name="_token" value="{{ Session::token() }}">
                     <input type="hidden" name="quiz_id" value="{{ $my_quiz->id }}">
-                    
-                    <div class="form-group">
+                                                                                     
+                                                    <!-- this is used as a default value for uni name, before suggesting others -->
+                    <div class="form-group" ng-controller="searchForm-controller" ng-init="selected_uni= '{{$my_quiz->university}}'">
                         <label name="university">University name:</label>
-                        <input id="university" name="university" rows="10" class="form-control"
-                        value="{{$my_quiz->university}}" required>
+                        <input list="uni_names" id="university" name="university" rows="10" class="form-control" ng-model="selected_uni"
+                        ng-change="autocomplete_unis(selected_uni)" required>
+                        
+                        <datalist id="uni_names">
+                            <option ng-repeat="match in matching" value="@{{match}}"></option>
+                        </datalist>
+                    
                     </div>
                     
                     <div class="form-group">
@@ -40,12 +46,12 @@
                     
                     <div class="form-group">
                         <label name="quizdescription">Quiz description:</label>
-                        <textarea name="quizdescription" rows="3" class="form-control" required>{{$my_quiz->quizdescription}}</textarea>
+                        <textarea name="quizdescription" rows="3" class="form-control" required>{!!$my_quiz->quizdescription!!}</textarea>
                     </div> 
                     
                     <div class="form-group">
                         <label name="quizresources">Resources:</label>
-                        <textarea name="quizresources" rows="3" class="form-control" required>{{$my_quiz->resources}}</textarea>
+                        <textarea name="quizresources" rows="3" class="form-control">{{$my_quiz->resources}}</textarea>
                     </div> 
                     
                     

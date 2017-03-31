@@ -30,6 +30,7 @@ class SearchController extends Controller
         }
     }
     
+    // the three following functions are used by AngularJS to fetch data
     public function getAllUnis() {
          return Quiz::distinct()->pluck('university')->toArray();
      }

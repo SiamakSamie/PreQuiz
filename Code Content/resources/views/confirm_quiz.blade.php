@@ -17,7 +17,7 @@
 
      
      <div class="panel panel-primary">
-         <div class="panel-heading"> <b> Confirmation quiz information </b> </div>
+         <div class="panel-heading"> <b> Confirmation of quiz information </b> </div>
          <div class="panel-body"> <b> University name: </b>{{ $quiz->university }} </div>
          <div class="panel-body"> <b> Course name: </b>{{ $quiz->coursename }} </div>
          <div class="panel-body"> <b> Quiz name: </b>{{ $quiz->quizname }} </div>
@@ -26,7 +26,7 @@
      </div>
      <div class="panel panel-primary list-group">
         @foreach ($questions as $i => $q)
-             <div class="panel-heading"> <b> Final question {{$i+1}} information </b> </div>
+             <div class="panel-heading"> <b> Question {{$i+1}} information </b> </div>
              <div class="panel-body"> <b> Question {{$i+1}}  </b> {{ $q->question }}  </div>
              <div class="panel-body list-group-item-success"> <b> Correct answer : </b> {{ $q->answer1  }} </div>
              <div class="panel-body"> <b> Incorrect answer 1 </b> {{ $q->answer2  }}  </div>
@@ -42,7 +42,11 @@
              <button class="pull-right btn btn-primary"> Edit this quiz </button> 
          </form>
          
-         <button class="pull-right btn btn-primary"> Take this quiz </button> 
+         <span class="pull-right"> &nbsp;</span>
+    
+         <a href="{{ route('take_quiz.show', ['id' => $quiz->id]) }}" class="pull-right btn btn-primary"> Take this quiz </a> 
+     
+         
      </div>
      
    </div>
