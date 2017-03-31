@@ -1,0 +1,1843 @@
+siamaksamie [5:18 AM] 
+anyone awake?
+
+[5:18]  
+can someone pull my thing in?
+
+siamaksamie [5:30 AM] 
+uploaded this file
+prequiz (1).zip
+9MB
+Zip
+ Click to download
+Add Comment
+
+siamaksamie [5:32 AM] 
+I added a TakeQuizController in controllers,  take_quiz.balde.php in views, and added a route in web.php
+
+[5:34]  
+actually... I'll just make another siamak branch and make a pull request
+
+siamaksamie [5:43 AM] 
+done, now i have 2 pull requests
+
+jng11232 [9:55 AM] 
+did we do the architecture to show to the TA?
+
+chenjie [10:26 AM] 
+Yea check for pull request 69
+
+[10:27]  
+( ͡° ͜ʖ ͡°)
+
+roykhoury [10:28 AM] 
+LOOL
+
+[10:29]  
+Hey @ryan if you're free can  you approve Siamak's new pull request the one from 5 hours ago
+
+ryan [10:39 AM] 
+Yes
+
+[10:41]  
+I left a comment and approved. Want me to merge?
+
+roykhoury [10:41 AM] 
+Yea please
+
+ryan [10:41 AM] 
+Done
+
+chenjie [10:47 AM] 
+Do we have everything now?
+
+roykhoury [10:53 AM] 
+Everything except for security route thing
+
+dana.alexandra [10:54 AM] 
+All speint 3 issues r closed?
+
+roykhoury [10:55 AM] 
+All except security and wait why is comment section thing back here I thought we closed that
+
+[10:56]  
+Ok I closed commenting
+
+[10:56]  
+So yeah there's just 1 of them that's not closed
+
+[10:57]  
+Oh was it maybe cuz it wasn't referenced?
+
+dana.alexandra [10:58 AM] 
+Yess
+
+roykhoury [10:58 AM] 
+Ok reopened it LOL
+
+chenjie [11:04 AM] 
+i dont see a task to display the quiz to the user
+
+roykhoury [11:04 AM] 
+Dummy quiz?
+
+chenjie [11:05 AM] 
+i mean take a quiz from the database and display it to the user
+
+[11:05]  
+when chooses a quiz from the result page
+
+roykhoury [11:06 AM] 
+Oh yeah?
+
+chenjie [11:06 AM] 
+i think were also missing a user story where the user wants to take a quiz to test his knowledge
+
+roykhoury [11:06 AM] 
+Maybeyeah
+
+[11:06]  
+Oh okok we can add that for sprint 4
+
+chenjie [11:07 AM] 
+ok we can fix that before the meeting
+
+roykhoury [11:07 AM] 
+:+1:
+
+ryan [11:51 AM] 
+Anyone chillin in a lab?
+
+adamrais [11:51 AM] 
+845
+
+chenjie [11:52 AM] 
+im in the tutorial room
+
+siamaksamie [12:15 PM] 
+There in 7 minutes
+
+
+----- March 11th -----
+ryan [4:52 PM] 
+uploaded this image: example of commit message from tutorial
+Add Comment
+
+ryan [4:53 PM] 
+uploaded this image: Selection 071
+Add Comment
+
+ryan [4:53 PM] 
+uploaded this image: Selection 072
+Add Comment
+
+ryan [4:53 PM] 
+i think this is all we're missing from the tutorial.
+
+roykhoury [4:54 PM] 
+Yeah that's the one. Nice!
+
+
+----- March 12th -----
+chenjie [12:25 PM] 
+anyone know the email of the teacher?
+
+ryan [12:35 PM] 
+uploaded this image: Selection_075.png
+Add Comment
+
+chenjie [12:42 PM] 
+thanks for googling for me haha
+
+ryan [12:44 PM] 
+Lolz
+
+
+----- March 14th -----
+chenjie [5:00 PM] 
+hey guys, when are we meeting tomorrow?
+
+[5:01]  
+lets stick to a time, or it might suck for some people like last week
+
+roykhoury [5:24 PM] 
+I'm free whenever tmr
+
+dana.alexandra [5:25 PM] 
+Im free 2:30
+
+jng11232 [6:13 PM] 
+im free till 4h3-
+
+[6:13]  
+4h30*
+
+chenjie [6:14 PM] 
+ok so around 2?
+
+roykhoury [6:17 PM] 
+Sounds good
+
+jng11232 [6:38 PM] 
+sureee
+
+
+----- March 15th -----
+dana.alexandra [7:26 AM] 
+Yo guyss
+
+[7:26]  
+No schoool
+
+[7:26]  
+Wanna meet tomorrow instead? orrr
+
+dana.alexandra [7:26 AM] 
+uploaded this image: Image uploaded from iOS
+Add Comment
+
+adamrais [7:26 AM] 
+uploaded this image: Image uploaded from iOS
+Add Comment
+
+jng11232 [9:02 AM] 
+We can discuss it right here as well
+
+siamaksamie [9:37 AM] 
+Cancelled then
+
+[9:37]  
+Pulled all nighter, decided to shovel snow at 7
+
+[9:37]  
+Been out till now and I'm only half done
+
+roykhoury [11:44 AM] 
+Oh shit no way awesome
+
+[11:45]  
+Aight well I worked on the replying feature
+
+[11:46]  
+That's. Pretty much what I'm doing right now
+
+siamaksamie [11:59 AM] 
+hey, just clonedd the lastest project into c9 from github. The questions page is completely blank. Anyone else have the same problem?
+
+roykhoury [12:00 PM] 
+Yeah remove the Ng-app tag
+
+[12:02]  
+Might something else though
+
+[12:02]  
+Cuz I remember doing . That already
+
+[12:03]  
+Oh btw Siamak I merged our databases together now
+
+[12:03]  
+So there's no more courses db
+
+[12:04]  
+I mean rave
+
+[12:04]  
+Table * xD
+
+
+----- March 16th -----
+siamaksamie [3:14 AM] 
+there's no ng-app in questions.blade.php
+
+[3:17]  
+although the problem just magically dissapeared... maybe c9 didn't load it properly at first
+
+[3:19]  
+different bug though
+
+[3:20]  
+when we create a quiz
+
+[3:20]  
+(as in while we're on the quastions page)
+
+[3:20]  
+and then with the sidenav we try to go to another page like "about us"
+
+[3:20]  
+the url changes but the page doesn't
+
+roykhoury [9:05 AM] 
+Oh
+
+[9:05]  
+Yeah fixed that dw bout it
+
+[9:05]  
+Uhhh
+
+[9:06]  
+C9 has been super laggy lately
+
+[9:06]  
+The website is super slow  have y noticed that?
+
+siamaksamie [9:06 AM] 
+Sometimes yeah but intermittently so it has to be the servers
+
+roykhoury [9:07 AM] 
+Yeah it's the servers!
+
+[9:07]  
+I tried it on xampp it was lightning fast
+
+siamaksamie [9:07 AM] 
+Usually when you just begin to run
+
+roykhoury [9:07 AM] 
+For me it's like
+
+siamaksamie [9:07 AM] 
+I guess you can have your laptop ready just incase
+
+roykhoury [9:08 AM] 
+Really when you do anything when you click c anywhere it takes like 7 seconds
+
+siamaksamie [9:08 AM] 
+For the meeting
+
+roykhoury [9:08 AM] 
+Yeah
+
+[9:08]  
+We meeting tot day btw?
+
+roykhoury [10:05 AM] 
+Hey guys I have a bunch of commits you guys can do for tmr we need to meet up though
+
+adamrais [10:05 AM] 
+Just give me a time and I'll come
+
+jng11232 [10:05 AM] 
+i can  met whenever today
+
+roykhoury [10:05 AM] 
+How about umm 12:30?
+
+[10:06]  
+Cuz I'm not at school yet haha
+
+adamrais [10:06 AM] 
+Perfect!
+
+jng11232 [10:06 AM] 
+samee haha okkk
+
+ryan [11:15 AM] 
+I'm around school. I can meet
+
+jng11232 [12:09 PM] 
+Ill join u later
+
+siamaksamie [12:32 PM] 
+Which room?
+
+ryan [12:34 PM] 
+I'm in h 854 but there's not much room. I can switch
+
+roykhoury [12:35 PM] 
+I'm On my way! Right now
+
+[12:35]  
+Yeah we can take any room at h8
+
+dana.alexandra [12:38 PM] 
+How long are u guys staying? I can make it for 2
+
+roykhoury [12:39 PM] 
+I'm staying till like 4
+
+dana.alexandra [12:39 PM] 
+Okkk cool
+
+chenjie [12:49 PM] 
+Did u guys switch rooms or did u stay in 854?
+
+roykhoury [12:51 PM] 
+^
+
+ryan [12:52 PM] 
+854 for now
+
+chenjie [12:53 PM] 
+Ok im coming, but i have another class soon
+
+adamrais [12:56 PM] 
+Guys btw
+
+[12:57]  
+How are you feeling for tomorrow quiz?
+
+[12:59]  
+I really don't know how you guys from soen do to memorize a lot of material like that
+
+dana.alexandra [2:14 PM] 
+Where u guys at
+
+roykhoury [2:15 PM] 
+I'm in 854 the others have class LOL it's just me
+
+[2:15]  
+Not sure where other people are at
+
+adamrais [2:16 PM] 
+Roy
+
+[2:16]  
+Il coming soon
+
+[2:16]  
+:)
+
+jng11232 [2:16 PM] 
+Ill b there in 30 min ish
+
+dana.alexandra [2:16 PM] 
+looo kk almost there
+
+roykhoury [2:17 PM] 
+Ahahaha aights guys xD
+
+mnhn329 [2:45 PM] 
+omw guys
+
+jng11232 [2:50 PM] 
+U still at 854 right ?
+
+siamaksamie [7:22 PM] 
+Hey Roger
+
+[7:23]  
+I asked a question on stackoverflow
+
+[7:23]  
+https://stackoverflow.com/questions/42846297/how-to-store-an-array-of-form-inputs-contructed-with-angularjs-using-laravel
+stackoverflow.com
+How to store an array of form inputs contructed with angularjs using laravel?
+I am making a an application that allows a user to create a quiz. I want the user to add as many questions and answers as they'd like into a database. I want one form to submit an array of question...
+ 
+
+[7:23]  
+I got some good replies
+
+roykhoury [7:25 PM] 
+Yo Siamak I actually tried implementing the name="somename[]" but I didn't know how to read that it would always give me like bad inputs
+
+[7:25]  
+But if u can figure it out
+
+[7:26]  
+I think that's the way to go
+
+chenjie [7:36 PM] 
+Hmm ok ill check it out
+
+[7:37]  
+Btw the last slides for the quiz is architectural design?
+
+dana.alexandra [7:37 PM] 
+Yeah inclusive
+
+chenjie [7:37 PM] 
+Ok cool
+
+siamaksamie [7:50 PM] 
+DUUUDE
+
+[7:51]  
+the guy was right
+
+[7:51]  
+he said that because the name field in the view is the same it kept getting overwritten and therefore only 1 set of values
+
+[7:52]  
+i tested it by changing everything with name="question[0]" name="answer1[0]" .....
+
+[7:53]  
+and then in "inspect element" i manually changed everything to name="question[1]" name="answer1[1]" .....
+
+[7:53]  
+and the dd($request->all()) shows that both sets of data is being sent
+
+[7:54]  
+soooo
+
+[7:54]  
+we need to increment the array number with each new form thing
+
+[7:55]  
+think you could do it?
+
+
+----- March 17th -----
+siamaksamie [4:24 AM] 
+Finished making it work server side :slightly_smiling_face:
+
+[4:27]  
+ahhh nevermind the validate's not working but thats a problem for tomorrow before class
+
+[4:28]  
+also we need the angular to increment the names
+
+roykhoury [9:32 AM] 
+H821 when you're done!
+
+ryan [9:34 AM] 
+Aight
+
+roykhoury [10:28 AM] 
+You guys should be done
+
+[10:28]  
+H821
+
+[10:28]  
+We need to prepare
+
+siamaksamie [10:47 AM] 
+Where are you guys?
+
+siamaksamie [10:57 AM] 
+We need to do last minute commits and have some extra time to make sure everything works
+
+roykhoury [11:05 AM] 
+Yo Adam u at school? We need u to review a pull request real quick
+
+roykhoury [1:47 PM] 
+So yeah @dana.alexandra  just clone my branch on ur c9 when you wanna try working on it
+
+dana.alexandra [2:09 PM] 
+kkk
+
+chenjie [2:17 PM] 
+Yo siamak where is ur 331 tutorial usually?
+
+ryan [5:29 PM] 
+uploaded this image: sprint 4
+Add Comment
+
+ryan [5:30 PM] 
+the only thing that's diff is code, quality of code, and coding style inforced.
+
+[5:31]  
+should i ask specifically about the comments and then also what each of those means exactly or ...?
+
+chenjie [5:35 PM] 
+Yea just ask for more detail in general
+
+[5:35]  
+What is he gonna look for
+
+siamaksamie [6:08 PM] 
+So Roy, Roger, and I are really going to focus on code. Which is a small portion of what we're graded on but is very time consuming
+
+[6:11]  
+I'm counting on some of you to take on the task of making sure the  planning section is taken care of 100%
+
+[6:11]  
+I'm tired of being one of the worst teams.
+
+
+----- March 18th -----
+chenjie [9:51 AM] 
+we got this
+
+[9:52]  
+yo siamak, when u call angular material, u dont have to provide any javascript code? or am i not seeing it?
+
+[9:53]  
+for my part, i need to add onto the code
+
+roykhoury [11:12 AM] 
+It's the first line u add stuff as arguments to the module
+
+[11:12]  
+I think that's what u mean?
+
+chenjie [11:22 AM] 
+i mean that angular material doesnt show the javascript code?
+
+[11:22]  
+for the take_quiz
+
+roykhoury [11:23 AM] 
+Oh we import all the scripts
+
+[11:23]  
+At the top of the app.blade. Php
+
+[11:23]  
+And app is extended in every file
+
+chenjie [11:23 AM] 
+so i cant modify the script?
+
+roykhoury [11:23 AM] 
+There's Angular material scripts
+
+[11:23]  
+Nah
+
+chenjie [11:24 AM] 
+lol... then i cant do my part
+
+roykhoury [11:24 AM] 
+Wait
+
+[11:24]  
+Why not
+
+chenjie [11:24 AM] 
+cause i have to modify the script
+
+[11:25]  
+to make our adjustments
+
+roykhoury [11:25 AM] 
+ahh I see
+
+[11:25]  
+The whole thing is built internally huh
+
+chenjie [11:26 AM] 
+yea i dont see any javascript for the take a quiz form
+
+roykhoury [11:26 AM] 
+Oh so it's just a blade.pho file?
+
+[11:26]  
+I mean there might be a way to overload some functions if Angular no?
+
+[11:27]  
+Of*
+
+chenjie [11:27 AM] 
+maybe, but i cant overload functions that are not even called in the blade.php
+
+roykhoury [11:28 AM] 
+Well that blade hmfile has all the scripts
+
+[11:28]  
+It's importing everything through the app file
+
+[11:28]  
+So it has all the functions available
+
+[11:29]  
+So u could do it if there's a way
+
+chenjie [11:29 AM] 
+wait so wheres that file?
+
+roykhoury [11:29 AM] 
+App.blade.oho
+
+[11:29]  
+Php*
+
+[11:29]  
+Resources > views > layout
+
+[11:30]  
+It's just a link
+
+[11:30]  
+It's not the actual code
+
+chenjie [11:30 AM] 
+ahh
+
+[11:30]  
+hmm
+
+chenjie [11:38 AM] 
+ok yea ill start the take a quiz page from scratch
+
+[11:38]  
+or we're pretty much stuck with what we have
+
+roykhoury [11:38 AM] 
+Ye sûre
+
+[11:39]  
+Btw I'm pretty much done with replies now
+
+[11:39]  
+But idk what to work :joy:
+
+[11:39]  
+Edit quiz?
+
+chenjie [11:39 AM] 
+yea that
+
+roykhoury [11:39 AM] 
+Aight
+
+[11:39]  
+I'll do that
+
+siamaksamie [11:48 AM] 
+Wait what?
+
+[11:48]  
+I don't see why you need to angular material code
+
+chenjie [1:01 PM] 
+yea youre right
+
+[1:01]  
+as i was working on it, i realized that
+
+[1:02]  
+i might have some trouble with switching tabs, but ill see
+
+siamaksamie [1:10 PM] 
+We'll worry about that last
+
+
+----- March 19th -----
+ryan [5:21 PM] 
+guys i think we should meet twice this week. we need an acceptance test for every user story
+
+[5:22]  
+https://www.agilealliance.org/glossary/acceptance/
+Agile Alliance
+What is Acceptance Testing? | Agile Alliance
+An acceptance test is a formal description of the behavior of a software product, generally expressed as an example or a usage scenario. (4KB)
+Dec 5th, 2015 at 12:05 PM
+
+[5:25]  
+says they don't have to be overly technical. think something client focused. so this is a good way to balance the workload for this week. Roy, Samie and Roger can tidy up the code and the rest of us can write and perform acceptance tests
+
+[5:25]  
+when are people free?
+
+roykhoury [5:36 PM] 
+Oh dam sounds good I'm free Any day tbh
+
+[5:36]  
+It's just a question of what time
+
+adamrais [5:36 PM] 
+Same for me
+
+dana.alexandra [6:13 PM] 
+Im meeting max tomorrow at 3
+
+[6:13]  
+if u guys wanna meet
+
+[6:13]  
+We're gonna clean the repo lol
+
+jng11232 [6:18 PM] 
+I could meet up tomorrow after 5:30 or tuesday before 2:45
+
+ryan [6:30 PM] 
+I'm free after 1 pm if anyone is available. i'll stick around to meet u guys later as well
+
+chenjie [7:10 PM] 
+i can meet tomorrow afternoon, and thursday afternoon
+
+[7:10]  
+tuesday ill be busy
+
+[7:11]  
+and wednesday, i can meet, but not too long because i have an exam to study for
+
+
+----- March 20th -----
+chenjie [2:26 AM] 
+after working with the variable name "answer" for hours, I cant fucking tell if im spelling it correctly anymore LOL
+
+
+ryan [1:45 PM] 
+@roykhoury   or @siamaksamie  you guys around school? i'm having trouble logging in on Laravel so acceptance testing not going well so far...
+
+[1:46]  
+make that registering
+
+[1:46]  
+also if someone has a login that's already saved in the system that could be helpful
+
+roykhoury [1:47 PM] 
+I'm not at school but what's the problem you're getting??
+
+[1:47]  
+Cuz every cloud9 has its own server we can't really make a general user
+
+[1:48]  
+But we can just create one before showing him
+
+ryan [1:51 PM] 
+uploaded this image: When i try to register
+Add Comment
+
+ryan [1:52 PM] 
+i just cloned the latest master into my cloud 9 and when i run it the site comes up fine but when i try to register I get an error. i'll post a pic. maybe someone else can try logging in
+
+roykhoury [1:52 PM] 
+Oh it's cuz
+
+[1:52]  
+You didn't update
+
+[1:52]  
+Ur database
+
+ryan [1:53 PM] 
+how do i do that?
+
+roykhoury [1:53 PM] 
+2 commands on ur c9
+
+[1:53]  
+Php artisan migrate:refresh
+
+[1:53]  
+And then to seed the db u do
+
+[1:53]  
+Php artisan db:seed
+
+ryan [1:53 PM] 
+that's in bash terminal yeah?
+
+roykhoury [1:53 PM] 
+Yeah!
+
+[1:54]  
+U might  run into an error while
+
+[1:55]  
+Doing the refresh
+
+[1:55]  
+Because of the courses table
+
+ryan [1:55 PM] 
+undefined index yeah
+
+[1:55]  
+that a prob?
+
+roykhoury [1:55 PM] 
+You need to do something yeah
+
+[1:55]  
+It's nothing
+
+[1:55]  
+When you launch the website
+
+[1:55]  
+Open that link
+
+[1:55]  
+And add
+
+[1:55]  
+/phpmyadmin
+
+[1:55]  
+At the end of it
+
+siamaksamie [1:56 PM] 
+Then drop all the tables and then run the migrate command
+
+[1:56]  
+Omg... All these BINGS on ma phone
+
+roykhoury [1:56 PM] 
+Nah lOL that's not what u have to do
+
+[1:57]  
+U log in with ur c9 username and empty password U just have to go to the migrations table
+
+[1:57]  
+And delete the courses
+
+ryan [2:03 PM] 
+ok so i deleted courses from phpmyadmin, now should i run those 2 artisan commands again?
+
+chenjie [2:04 PM] 
+Yes
+
+roykhoury [2:04 PM] 
+^
+
+chenjie [2:04 PM] 
+Wait isnt it migrate?
+
+roykhoury [2:04 PM] 
+U deleted courses from the migration table right?
+
+[2:04]  
+Not just the table courses
+
+ryan [2:04 PM] 
+correct
+
+roykhoury [2:06 PM] 
+Should work now then
+
+ryan [2:06 PM] 
+seem to be back in business
+
+[2:07]  
+tnx
+
+roykhoury [2:08 PM] 
+:muscle:
+
+roykhoury [2:32 PM] 
+I'm working on edit quiz now btw should be done by tonight or tmr I'll show u guys what I have tmr
+
+adamrais [2:34 PM] 
+Roy you're not coming to school today?
+
+roykhoury [2:34 PM] 
+I mean my only class got canceled
+
+[2:34]  
+When is everyone meeting?
+
+[2:34]  
+I can come if needed
+
+adamrais [2:36 PM] 
+I want a private date with you
+
+ryan [2:42 PM] 
+nah man stay home and code. we'll msg u if we need something. @adamrais  come help me w/ these acceptance tests!!!!!!!
+
+adamrais [2:42 PM] 
+But for real if you're at school I wanna code with you
+
+roykhoury [2:42 PM] 
+LOOLLL
+
+[2:43]  
+hahah
+
+adamrais [2:43 PM] 
+Ryan
+
+roykhoury [2:43 PM] 
+Okay okay maybe  tomorrow @adam I'm still home for now
+
+adamrais [2:43 PM] 
+I'll come once my class is done
+
+roykhoury [2:43 PM] 
+I'm st school all day tomorrow
+
+[2:43]  
+At*
+
+adamrais [2:43 PM] 
+Okay perfect
+
+ryan [2:44 PM] 
+coolio. i have a format we can follow for the tests. they don't THAT long but there's a lot of user stories
+
+ryan [3:26 PM] 
+found a bug
+
+[3:26]  
+changing profile information. name and email changes fine but after logging out and logging back in to check change of password the new password doesn't allow login. it's the old password that allows login
+
+roykhoury [3:27 PM] 
+Yeah actually that makes sense
+
+[3:28]  
+Cool I didn't know!  Nice
+
+[3:28]  
+To fix that we're not gonna allow the user to change password from there we can just put a button that redirects to the forgot password .. idk if you guys are okay with that? But it works from there
+
+ryan [3:31 PM] 
+works for me. When Dana fixes up our issues/user story situation we can add that as an issue to this user story
+
+roykhoury [3:31 PM] 
+Perfect! @jng11232  u can do that edit to the profile page too right?
+
+jng11232 [3:32 PM] 
+Yesss :+1::skin-tone-2:
+
+roykhoury [3:33 PM] 
+Btw @ryan I'm not sure if we need to take care of that but right now there's a bug with the mobile view of the website
+
+[3:34]  
+When you shrink it and then the menu button appears on the right up corner it doesn't work properly u can try it
+
+[3:34]  
+U think we really need to fix that? Or not because right now u can unroll it but u can't collapse it back to hide the items
+
+ryan [3:36 PM] 
+i think as long as it works on a computer its fine. when we were talking about making sure that it works on every platform the TA was like 'ur crazy, why? don't commit to that it's too much"
+
+roykhoury [3:36 PM] 
+Yeah fair enough
+
+ryan [3:37 PM] 
+would be  nice if it works on mobile but not a priority
+
+ryan [4:01 PM] 
+the database is not persistent correct? like all the user profiles i'm entering won't be there if someone else is testing on their own cloud 9 right?
+
+roykhoury [4:02 PM] 
+Exactly
+
+[4:02]  
+But I can just access ur link
+
+[4:02]  
+And it will be
+
+ryan [4:02 PM] 
+good cuz i just left some pretty offensive comments
+
+roykhoury [4:02 PM] 
+LOOL
+
+ryan [4:20 PM] 
+i see user story #19 is closed but i don't see the functionality. there's no button beside each comment ???
+
+roykhoury [4:20 PM] 
+Is that for replying?
+
+ryan [4:20 PM] 
+yeah
+
+roykhoury [4:20 PM] 
+Yeah I improved it like a shit ton right  now
+
+[4:20]  
+But it still works
+
+[4:21]  
+U just type
+
+[4:21]  
+@
+
+[4:21]  
+And the name of the dude you're replying to
+
+[4:21]  
+I can add a button tho
+
+[4:25]  
+Once Dana and max finish with the user stories I'll upload my version
+
+ryan [4:26 PM] 
+when i use the @targetUser... it just makes whatever i typed for a message turn into a clickable link once posted in the chat box that once clicked takes me to my own profile page
+
+roykhoury [4:26 PM] 
+Yeah
+
+[4:26]  
+Eventually that user will be notified
+
+[4:26]  
+That someone replied to him
+
+[4:27]  
+Well now it sends us to  his/her profile
+
+[4:28]  
+I fixed that
+
+ryan [4:29 PM] 
+kk .. will that be done by friday tho? cuz if not maybe we should open US #19 back up so it's still in progess
+
+roykhoury [4:30 PM] 
+Well replying is already done right? I already have it fixed here, we have another user story for "being notified when a user replies to you"
+
+ryan [4:31 PM] 
+kkk
+
+[4:31]  
+i think i closed that other one saying that it's covered by #19, we can open it again if we want. it was #18
+
+roykhoury [4:32 PM] 
+Actually
+
+[4:32]  
+Oh yeah if u closed the notification one yeaha reopen it haha
+
+[4:32]  
+But also if u wanna see what replying looks like now u can check
+
+[4:33]  
+prequiz-cloned-cloned-Roy Khoury.c9users.io
+
+[4:33]  
+Just type that in ur URL haha
+
+[4:33]  
+roykhoury  one wors
+
+[4:33]  
+Word*
+
+ryan [4:33 PM] 
+aight yeah i'll reopen 18, and check out the new commenting
+
+roykhoury [4:33 PM] 
+U can also check what I have for editing so far
+
+ryan [4:37 PM] 
+what's diff for editing?
+
+roykhoury [4:38 PM] 
+Editing a quiz?
+
+[4:38]  
+I mean it didn't exist before hah
+
+ryan [4:38 PM] 
+oh i wasn't sure what u meant. i was thinking something else
+
+roykhoury [4:39 PM] 
+Oh sorry yeah
+
+ryan [4:44 PM] 
+how exactly is the user notified when someone uses @theirName ?
+
+[4:45]  
+notifications tab gives an error
+
+roykhoury [4:45 PM] 
+Oh it's not there yet
+
+[4:45]  
+Adam is gonna start working on it
+
+[4:45]  
+Put like a default layout
+
+[4:46]  
+And then we'll see hahha. I  was thinking we should move it s5
+
+[4:46]  
+Cuz notifications should be like the last thing we do
+
+ryan [4:46 PM] 
+aight
+
+jng11232 [5:16 PM] 
+Are you guys at school right now ?
+
+ryan [5:19 PM] 
+i'm just getting ready to leave. been here since 1 and tired + hungry
+
+[5:19]  
+@dana.alexandra  I can't find the US for the contact us page
+
+[5:20]  
+where'd it go?
+
+[5:22]  
+or did it not exist??
+
+[5:22]  
+im confused
+
+dana.alexandra [5:27 PM] 
+@ryan it doesnt exist
+
+chenjie [5:28 PM] 
+Were in 817 btw
+
+dana.alexandra [5:29 PM] 
+@ryan if u need to reference something, use #32
+
+[5:29]  
+We'll make that "task" a user story
+
+ryan [6:55 PM] 
+anyone know how to make a folder under documentation? we need one for acceptance tests. i have some to upload
+
+[6:55]  
+i just don't see how to create a folder
+
+mnhn329 [7:07 PM] 
+i only know how on git bash
+
+[7:08]  
+just go into documentation, and write
+
+[7:08]  
+mkdir
+
+[7:09]  
+then the folder name
+
+ryan [7:09 PM] 
+genius
+
+[7:09]  
+i'll do that
+
+dana.alexandra [8:33 PM] 
+RYANNN dont reference #3w
+
+[8:33]  
+32***
+
+ryan [9:02 PM] 
+ok lol
+
+roykhoury [9:12 PM] 
+I'll wait for tomorrow to update my branch :joy:  I don't wanna reference shit and then turns out its we gotta restart the whole thing
+
+[9:12]  
+But editing a quiz now works!
+
+ryan [9:45 PM] 
+woot!
+
+
+----- March 21st -----
+chenjie [12:07 PM] 
+Hey guys, are we meeting today?
+
+chenjie [1:01 PM] 
+Roy, im stuck on something with my program
+
+[1:01]  
+When are u free today?
+
+roykhoury [1:03 PM] 
+I'm going to a group meeting real quick then I'll be free'
+
+chenjie [1:05 PM] 
+Ok well take your time, cause i have a class now
+
+roykhoury [1:13 PM] 
+:ok_hand:
+
+roykhoury [1:55 PM] 
+I'm at h813
+
+siamaksamie [1:56 PM] 
+I'll be there in 30
+
+ryan [4:40 PM] 
+@dana.alexandra  US #18 needs to remain open for now. Its actually not done. I think it's going in the next sprint. Reopening now
+
+dana.alexandra [4:46 PM] 
+Kk
+
+mnhn329 [5:04 PM] 
+US #18 was mixed with US #11
+
+[5:04]  
+"As a user, I want to be notified if someone replied to one of my comments or commented a quiz I have taken."
+
+[5:05]  
+so #18 was closed a long time ago, if you want to make a seperate user story, well discuss it
+
+ryan [5:14 PM] 
+yes your right. i thought it was closed due to being similar to a different user story but #11 is exactly the same
+
+mnhn329 [5:18 PM] 
+- To reference specific TASKS:
+    > bug: "Fixes Task: #5.1"
+    > improvement: "Refines Task: #5.1"
+    > completion: "Closes Task: #5.1"
+
+- To reference specific USER STORIES:
+    > bug: "Fixes User Story: #5"
+    > improvement: "Refines User Story #5"
+    > completion: "Closes User Story: #5"
+
+dana.alexandra [5:19 PM] 
+NOOO wait
+
+[5:19]  
+Rmbr we have to change some terms
+
+[5:19]  
+Cuz fixes and closes actually close the issue story
+
+[5:19]  
+Issue/user story**
+
+mnhn329 [5:20 PM] 
+ya roy said its fine
+
+dana.alexandra [5:20 PM] 
+Not w the tasks no??
+
+[5:21]  
+Cuz if u reference #4.1 it will close #4
+
+mnhn329 [5:27 PM] 
+for TASKS: fixes=> corrects, Closes=>Finalize
+
+[5:28]  
+i guess
+
+[5:28]  
+look good?
+
+[5:28]  
+@dana.alexandra  -sensei
+
+dana.alexandra [5:29 PM] 
+Finalizes (consistency max consistency)
+
+[5:29]  
+Hahaha yesss looks good
+
+roykhoury [7:07 PM] 
+LOL aight thanks guys! Imma do it tonight
+
+jng11232 [9:58 PM] 
+Are we meetin tmr?
+
+chenjie [11:00 PM] 
+Yea we should
+
+[11:00]  
+2pm like last week?
+
+jng11232 [11:11 PM] 
+Suree
+
+
+----- Yesterday March 22nd, 2017 -----
+dana.alexandra [12:11 AM] 
+ill come after classs
+
+ryan [8:11 AM] 
+I'll be there at some point doing acceptance tests
+
+ryan [9:35 AM] 
+In class now. Notes on code quality
+
+[9:35]  
+Meaningful identifier names
+
+ryan [9:40 AM] 
+Comments explain 'why' not what. What should be obvious from identifier names. Public functions and vars need a comment and for private only functions that are particularly complex or important need a comment
+
+chenjie [11:46 AM] 
+Nice thanks for the info
+
+[11:47]  
+That probably saved us lots of points
+
+ryan [11:56 AM] 
+there's a mark for code style. that means if we're using camel case for functions we should be doing that everywhere. if our code isn't like this at least find some examples of where we're being consistent in case he wants us to show him. That would be ideal but i have a feeling he wants to look around himself
+
+[11:56]  
+doesn't matter which style, as long as it's consistent
+
+roykhoury [2:09 PM] 
+Cool! We'll do that on Thursday
+
+[2:09]  
+Thanks Ryan!
+
+[2:10]  
+I'm going to work on adding the reply button right now
+
+dana.alexandra [2:27 PM] 
+Where u guys at
+
+jng11232 [2:28 PM] 
+im at 847 but its pretty full
+
+chenjie [2:32 PM] 
+Im in 821, but its also full lol
+
+mnhn329 [3:04 PM] 
+which user stories can be closed for sprint 4? 5 of them are currently open
+
+jng11232 [3:24 PM] 
+Are u guys at 821 ? Cause they have a few places now
+
+chenjie [3:26 PM] 
+Its only me lol
+
+jng11232 [3:26 PM] 
+oh lol
+
+chenjie [3:26 PM] 
+I can come
+
+[3:26]  
+Whos there?
+
+jng11232 [3:26 PM] 
+just me as well haha
+
+chenjie [3:28 PM] 
+Lol well we have to talk about what to finish for sprint 4
+
+dana.alexandra [3:39 PM] 
+Can u guys tell me what u been working on
+
+[3:39]  
+Making a contributions doc for sprint 4
+
+roykhoury [3:40 PM] 
+Working on editing a quiz and replying feature still has bugs
+
+[3:40]  
+So those 2 for me
+
+jng11232 [3:42 PM] 
+roy where are you ?
+
+roykhoury [3:43 PM] 
+I stayed home today
+
+[3:43]  
+I'm gonna try to finish this thing
+
+[3:43]  
+For tonight
+
+jng11232 [3:45 PM] 
+okkk
+
+[3:45]  
+@dana.alexandra @mnhn329   where are you guys?
+
+[3:46]  
+we neeed to discuss what needs to be done for sprint 4
+
+dana.alexandra [4:07 PM] 
+We're comii
+
+[4:07]  
+Where are uguys
+
+[4:07]  
+821?
+
+jng11232 [4:07 PM] 
+im still at 847 and got 2 places nxt to me
+
+dana.alexandra [4:08 PM] 
+Okayy coming
+
+siamaksamie [4:17 PM] 
+sorry i'm crazy behind studying for my exam tomorrow i can't make it
+
+[4:17]  
+i'll work non-stop tomorrow though
+
+jng11232 [4:17 PM] 
+what will you be doing tho ?
+
+[4:17]  
+like what will u b working on
+
+siamaksamie [4:18 PM] 
+you knwo the dummy quiz?
+
+[4:18]  
+I'll make it show the actual questions and answers from the database
+
+[4:19]  
+also insert the "score" in another table
+
+[4:21]  
+Roy i don't think ill combine the create quiz pages for sprint 4 since there's a bunch of more important tasks. That bug is not the most important thing right now
+
+roykhoury [4:21 PM] 
+Yeah sure
+
+siamaksamie [4:26 PM] 
+so the next thing ill work on is the take_quiz stuff
+
+[4:27]  
+Roy you going to make a pull request of your stuff so far?
+
+roykhoury [4:27 PM] 
+Well I was gonna wait for ur resources thing
+
+siamaksamie [4:28 PM] 
+oh i thought my thing should go second
+
+[4:28]  
+it's already done
+
+roykhoury [4:28 PM] 
+Cuz I need to fix my edit quiz
+
+[4:28]  
+Accordingly to ur resources addition
+
+[4:28]  
+Before uploading
+
+siamaksamie [4:29 PM] 
+yeah i mentioned that I would have to change your edit thing and that's why i wanted it
+
+[4:29]  
+but hey... more work for you :slightly_smiling_face:
+
+roykhoury [4:30 PM] 
+Ah u wanted to do it?
+
+[4:30]  
+I don't mind doing it xD
+
+siamaksamie [4:30 PM] 
+I don't mind, ill put it more effort for sprint 5. Damn numerical reform -_-
+
+roykhoury [4:31 PM] 
+Aight cool cool hha
+
+siamaksamie [4:31 PM] 
+1 sec ill double check my stuff and make a new pull request
+
+siamaksamie [5:06 PM] 
+hey dana i added a "resources" input to the create quiz page.
+
+[5:07]  
+i want to make a pull request
+
+[5:07]  
+but im not sure how the TA wants it
+
+[5:07]  
+help?
+
+jng11232 [5:19 PM] 
+rooy meet up tmr?
+
+
+----- Today March 23rd, 2017 -----
+roykhoury [1:21 PM] 
+Oh sorry guys I didn't get a notification for this chat
+
+[1:22]  
+Yeah I'm going to school right now
+
+[1:22]  
+Everyone needs to make a pull request today btw
+
+[1:22]  
+If not everyone almost everyone if you need some code to put I have some stuff for u
+
+[1:22]  
+I need to make sure the website still works after merging everything
+
+dana.alexandra [1:24 PM] 
+@siamak -- sorry didnt see this
+
+[1:24]  
+@siamaksamie   ^^^
+
+[1:27]  
+In your commit message, write "Refines User Story #4"
+
+[1:27]  
+@siamaksamie
+
+[1:28]  
+Dnt forget to add reviewers
+
+ryan [1:30 PM] 
+I don't think i need pull request cuz i uploaded a bunch of Acceptance tests. For all the US that we've finished so far i performed the tests as well.  Turns out they don't need to be finished until next sprint but it's good that we're ahead of the game there and the TA said he was still going to go through and test a bit
+
+[1:32]  
+One of our tests failed and not sure what to do. It's for a US that's been closed so we reopen it and add a task to fix???
+
+[1:32]  
+if no one knows we can ask him tmrw
+
+dana.alexandra [1:36 PM] 
+Once a user story is closed, we dnt need to re open it. Just write a subtask in the comment section of the user story
+
+ryan [1:37 PM] 
+kk
+
+roykhoury [1:46 PM] 
+Cool sounds good which US? Failed?
+
+[1:46]  
+But for everyone else who can make a pull request please do
+
+ryan [1:48 PM] 
+i'm trying to find it now but it was the one about updating profile info password , didn't work.
+
+roykhoury [1:49 PM] 
+Oh that one! Okay yeah
+
+roykhoury [1:59 PM] 
+Any1 at a lab room?
+
+ryan [2:00 PM] 
+@dana.alexandra  in that subtask comment i must need to put something to mark it so that someone can reference the comment during a commit later. For example it's user story #8 and i see no other subtasks assigned to it so in the comment  i will   write
+
+[2:00]  
+#8.1 This user story failed it's acceptance test because the password could not be updated
+
+[2:00]  
+is that a kosher format?
+
+dana.alexandra [3:56 PM] 
+i dont know what kosher format is.....
+
+[3:57]  
+@mnhn329  kosher format? Know what it is?
+
+mnhn329 [4:52 PM] 
+no idea...
+
+roykhoury [5:06 PM] 
+Jojo u need to make a pull request
+
+jng11232 [5:06 PM] 
+i thought of making it with the burndown chart
+
+[5:07]  
+since idk how many more US have been closed
+
+roykhoury [5:12 PM] 
+Ok sure make sure it's tonight tho!
+
+jng11232 [5:12 PM] 
+i will!
+
+roykhoury [5:12 PM] 
+Did you finish the profile page changes ?
+
+dana.alexandra [5:12 PM] 
+Jojo we added new User stories
+
+[5:13]  
+So gotta change the points
+
+jng11232 [5:13 PM] 
+it wasnt able to cause i dont know how to make the button show only when its the user itself like till now it will only show if someone’s login in
+
+[5:13]  
+okk
+
+dana.alexandra [5:13 PM] 
+If youre busy w edit oage
+
+[5:13]  
+I can do burndown
+
+roykhoury [5:13 PM] 
+Okok u st school? It's really small
+
+jng11232 [5:14 PM] 
+and the forget the password can only be accessed when you arent logged it
+
+[5:14]  
+noo …..
+
+roykhoury [5:14 PM] 
+Come toh811
+
+jng11232 [5:14 PM] 
+unless i go to school now
+
+roykhoury [5:14 PM] 
+Ahh nah whatever haha
+
+[5:14]  
+If the acceptance test is not due tmr we can fix it another time
+
+jng11232 [5:14 PM] 
+ok
+
+[5:16]  
+@dana.alexandra  what are the new US? i dont see them
+
+dana.alexandra [5:16 PM] 
+just check the project tab
+
+[5:16]  
+The one with the highest reference numbers
+
+[5:17]  
+Sorry im driving i can check later
+
+jng11232 [5:18 PM] 
+okkk
+
+[5:18]  
+if its #96 and #97, i alrdy have them
+
+roykhoury [5:23 PM] 
+Oh jojo can you review and merge my pull request on git please
+
+[5:23]  
+I can't upload stuff until it's done :disappointed:
+
+jng11232 [5:24 PM] 
+done !
+
+roykhoury [5:26 PM] 
+Thanjs!
+
+mnhn329 [5:44 PM] 
+we didnt add any others,so ya she was referring to 96 and 97
+
+chenjie [5:54 PM] 
+Yo ryan we need to prepare the email for the TA
+
+[5:55]  
+Dana or max also come to explain the changes in github
+
+roykhoury [6:32 PM] 
+Btw @ryan for the user story about contacting the administrator is it done? Cuz if it is u actually need to make a PR and reference it so we can close it
+
+[6:34]  
+Btw @dana.alexandra  the key words that we came up with are good! But I think the last commit actually has to be with the original ones cuz if we close an issue manually he's gonna be like wtf guys issues should be closed with pull requests
+
+[6:34]  
+So we can use the replacement key words until the last commit we use "fixes" or whatever to actually close all our US for the sprint
+
+ryan [6:43 PM] 
+As a user, I want to be able to contact the administrators to resolve complications. #97
+
+[6:44]  
+this should have been closed last week. i did a pull request friday before we saw the TA. not sure why it's still open
+
+[6:46]  
+does that mean i didn't i didn't ref it properly cuz it didn't close automatically?
+
+dana.alexandra [6:47 PM] 
+If youre working on a subtask that will complete the user story, then just use "Closes User Story: #"
+
+[6:48]  
+And that will close the user story automatically
+
+[6:48]  
+okkk ill upload a document
+
+[6:48]  
+So u guys know how to reference ur commits for all situations ok?
+
+ryan [6:49 PM] 
+yes please
+
+dana.alexandra [6:49 PM] 
+Alsoo, i started a contributions doc
+
+[6:49]  
+So if u guys can just write what u did
+
+[6:49]  
+Then we can show all these things to TA
+
+ryan [6:50 PM] 
+added and commented on this Plain Text snippet: Show the TA for sprint 4
+the usual:
+-burndown chart updated
+-slack chat updated 
+-contributions updated
+-Travis is still working
+new for this week:
+--we got a good start on acceptance tests
+- our commit messages finally good
+-github more organized
+1)
+what's new for features here coding wise:
+-features
+-features
+2)
+For Coding style enforced:
+- what can we tell him to look for? camelCase?? under_score??
+3)
+Plan for the next sprint:
+-Finish all our user stories?
+1 Comment Click to expand inline 26 lines
+we need stuff to say for 1,2,3
+
+ryan [6:50 PM] 
+i'm at home but i just need those 3 things and i can send the email
+
+dana.alexandra [6:54 PM] 
+camelCase or under_score thing
+
+[6:54]  
+What did u guys use ??
+
+ryan [6:55 PM] 
+We just need some naming convention themes so we can say we're consistent
+
+dana.alexandra [7:09 PM] 
+added this Plain Text snippet: REFERENCING CONVENTION
+REFERENCING CONVENTION
+- To reference specific TASKS:
+    > bug: "Corrects Task: #5.1"
+    > improvement: "Refines Task: #5.1"
+    > completion: "Finalizes Task: #5.1"
+- To reference specific USER STORIES:
+    > bug: "Fixes User Story: #5"
+    > improvement: "Refines User Story: #5"
+    > completion: "Closes User Story: #5"
+***Important Notes***
+- The tasks are identified in "Task Breakdown" of the User Story description.
+- if you're completing a TASK which, in turn, completes the user story:
+    > "Finalizes Task: #5.1 and Closes User Story: #5"
+- Commits reference user stories!
+    > include references in commit message following the convention above!
+Add Comment Collapse
+
+dana.alexandra [7:09 PM] 
+guys have a look pls!
+
+[7:10]  
+i'll upload this on git under documentation
+
+chenjie [7:19 PM] 
+The thing is we used different conventions for like php, angular, html, but they are all consistent with each other
+
+dana.alexandra [7:19 PM] 
+uhm, maybe u can write which conventions u used for each language ?
+
+[7:20]  
+and then we can ask if he wants a universal convention or if we can keep it that way
+
+ryan [7:21 PM] 
+Within each language is fine we just need a word on each
+
+chenjie [7:25 PM] 
+Also, do we do a pull request on the convention fix?
+
+[7:26]  
+We could subtly change it while committing something else lol
+
+ryan [7:45 PM] 
+yeah not sure how to deal w/ that cuz it doesn't fit into a user story
+
+ryan [7:54 PM] 
+so for US #97 about contact us, I commented and closed it and referenced the correct pull request that should have closed it last week
+
+chenjie [8:30 PM] 
+Whered u guys go?
+
+dana.alexandra [8:31 PM] 
+Looks good ryan just saw the reference!! U can just write "Closes User Story: #" completion/bug/improvement are just to describe which term to use for u guys
+
+new messages
+jng11232 [9:35 PM] 
+is there any more user stories to be closed?

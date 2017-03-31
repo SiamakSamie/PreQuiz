@@ -489,10 +489,10 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
                 $scope.answer.answer3 = false;
                 $scope.answer.answer4 = true;
               }
-            };
-        });
+           };
+       });
     }
-  });
+ });
   
   
   

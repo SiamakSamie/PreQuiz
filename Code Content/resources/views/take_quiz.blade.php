@@ -27,7 +27,7 @@
     <div class="col-md-8 col-md-offset-2">
       
       <h1 class="md-display-2">{{$quiz->quizname}}</h1>
-    
+
       <md-content ng-controller="validate-answer" ng-init="getAllQuestions({{$quiz->id}})">
         <md-tabs md-dynamic-height="" md-border-bottom="">
             <md-tab ng-repeat="input in data" label="Question @{{$index+1}}">

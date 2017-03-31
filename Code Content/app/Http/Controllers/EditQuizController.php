@@ -20,11 +20,13 @@ class EditQuizController extends Controller
         ]);
     }
     
+
     // this is used by AngularJS to fetch all questions by a specific ID
     public function getQuestions(Request $request) {
         return Questions::where('quiz_id', $request->id)->get();
     }
     
+
     // fetch the quiz where id is the given id and give it with the view
     public function edit_quiz(Request $request) {
         

@@ -20,7 +20,7 @@
 		</small> 
 	</p>
 	<hr >
-	
+
 	@include('quiz_list')
 	
 	<div class="panel panel-primary">

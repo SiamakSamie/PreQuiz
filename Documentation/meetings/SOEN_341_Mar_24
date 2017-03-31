@@ -1,0 +1,70 @@
+March 24, 2017
+
+- Work Accomplished:
+	> burndown chart
+	> referencing 
+	> edit quiz
+	> improved reply feature 
+	> validation of quiz answers (w/ bug)
+	> started acceptance tests
+	> resources are available at the end of quiz
+	> content of quiz taken from DB
+	> site much more fluid (navigation)
+	> created DB for score table
+	> updated DB design
+
+
+- Last week:
+	> edit profile
+	> reply to comments
+	> contact administrators  
+
+- Attendance:
+	> siamak
+	> chenjie
+	> josephine
+	> adam
+	> dana
+	> maxim
+	> ryan
+	> roy
+
+- prompt user to create quiz if it doesn't exist already
+	> on homepage when searching for institution/course
+
+- edit quiz
+	> be able to create more questions
+
+- "check answer" should lead to next question
+	> didn't notice "question 2" tab
+
+- be able to click username in comment section
+
+- things are connecting...but a lot of bugs
+
+- writing code to test features = unit tests
+
+- voting feature not that important for resources
+	> voting more important for comments
+
+- fix bugs!!!
+
+- unit tests
+	> check lecture slides!!
+
+- acceptance test:
+	> shorten
+	> table format
+	> refer to pictures which were sent
+
+- close resources US
+
+	
+
+
+
+
+
+
+
+
