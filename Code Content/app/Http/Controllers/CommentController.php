@@ -33,6 +33,7 @@ class CommentController extends Controller
     }
     
     // this is called by AJAX request
+    // returns void
     public function addComment(Request $request) {
         
         // fetching request data

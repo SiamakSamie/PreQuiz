@@ -34,7 +34,7 @@
                 <div class="input-title"> <b>Get Started</b></div>
                 
                 <form id="uni_form" ng-submit="fetchCourses(selected_uni)" class="displayed" autocomplete="off" >
-                    <input class="input-submit" type="submit" value="">
+                    <input name="search_unis" class="input-submit" type="submit" value="">
                     
                     <input list="uni_names" name="uni_name" type="text" class="input-field" ng-model="selected_uni" 
                     placeholder="Enter the name of your institution" ng-change="autocomplete_unis(selected_uni)" required> 
@@ -55,7 +55,7 @@
                         
                     {{ csrf_field() }}  <!-- needed for laravel security otherwise nothing works-->
                     <div class="form-group">
-                        <input class="input-submit" type="submit" value="">
+                        <input class="input-submit" type="submit" value="" name="search">
                         
                         <input name="uni_name" type="hidden" value="@{{selected_uni}}">
                         

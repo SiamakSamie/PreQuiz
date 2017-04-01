@@ -464,9 +464,6 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
             $scope.selectedIndex = $scope.selectedIndex+1;
         }, 1000 );
     };
-  
-    
-    $scope.allQuestionsResponse = "";
     
     $scope.getAllQuestions = function(quiz_id) {
      
