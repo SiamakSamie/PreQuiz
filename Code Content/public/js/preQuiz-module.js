@@ -100,11 +100,8 @@ var prequiz_module = angular.module('preQuiz-module', ['ngMaterial', 'ngAnimate'
         })
           .then( function(response) {
               
-            //console.log(response.data);
             var numOfQuestions = response.data.length;
-            // console.log(numOfQuestions);
             $scope.lengthQuestions = numOfQuestions;
-            // $scope.numOfQuestions = numOfQuestions;
           });
       
     };
@@ -122,7 +119,6 @@ var prequiz_module = angular.module('preQuiz-module', ['ngMaterial', 'ngAnimate'
     
     $scope.addEditedQuestion = function(){
      
-      // console.log($scope.editedQuestions.length);
       number = $scope.editedQuestions.length;
       $scope.numOfQuestions += 1;
       numOfQuestions = $scope.numOfQuestions;
@@ -135,19 +131,6 @@ var prequiz_module = angular.module('preQuiz-module', ['ngMaterial', 'ngAnimate'
       $scope.editedQuestions.splice(lastQuestion);
     };
     
-  // $scope.appendQuestion = function(quiz_id){
-      
-  //           //console.log(numOfQuestions);
-  //           $scope.editedQuestions.push({'id':'uestion'+numOfQuestions});
-  //           console.log($scope.editedQuestions);
-  //           // $scope.questionList = response.data;
-  //           // console.log($scope.questionList);
-  //           // $scope.questionList[2].push({"question:"});
-            
-  //           //SCOPE.QUESTIONLIST = QUESTIONS FROM DATABASE
-  //           //SCOPE.QUESTIONLIST.PUSH({'QUESTION' + NUMOFQUESTIONS})
-   
-  //   };
     
   });
     
@@ -329,7 +312,7 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
     
     $scope.test = "";
     $scope.validation = function(answer){
-      //console.log('hello' + answer);
+      
       $scope.isValid = true;
       
       if (answer ==1){
