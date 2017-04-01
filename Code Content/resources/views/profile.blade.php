@@ -61,6 +61,16 @@
               @endif
           </div>
       </div>
+      
+     
+@include('score_list')
+
+
+
+
+            
+      
+      
     </div>
     <hr>
  @endsection
