@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+  
 <div class="container">
 	<!-- this is to refresh the page when the back button is pressed -->
 	<input type="hidden" id="refresh" value="no">
@@ -32,7 +33,7 @@
 		  </ul>
 		  
 	   	  @if (Auth::check())
-	   	  <form id="comment_form" method='POST' ng-submit="commentRequest('{{ $course_name }}', '{{ Auth::user()->id }}', '{{$uni_name}}')">
+	   	  <form id="comment_form" method='POST' ng-submit="commentRequest('{{ $course_name }}', '{{ Auth::user()->id }}', '{{$uni_name}}', '{{ $db_corr_first->id }}')">
 	   	  @else
 	   	  <form id="comment_form">
 	   	  @endif
@@ -76,7 +77,29 @@
  	  	  </form>
        </div>
      </div>
-</div>	 	
+</div>	 
+
+
+@if ($scroll_to != '')
+    <script>
+    	$( document ).ready(function() {
+    		setTimeout(scrollToComment, 100);
+    	});
+    	function scrollToComment() {
+    		$('#'+{{$scroll_to}}).toggleClass('aliceblue');
+    		
+	    	$('#commentList').animate({
+		        scrollTop: $("#" + {{$scroll_to}}).offset().top - $("#" + {{ $db_corr_first->Comments[2]->id }}).offset().top 
+		    }, "fast");
+		    
+		    
+		    // $('#mention_list').animate({
+      //            scrollTop: $("#user_"+$scope.mentioned_user_kb_index).offset().top - $('#user_2').offset().top
+      //        }, "fast");
+    	}
+    </script>
+@endif
+
 @endsection	
 
 @section('extra_script')

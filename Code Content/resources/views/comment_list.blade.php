@@ -1,5 +1,5 @@
 @foreach($db_corr_first->Comments as $comm)
- <li class="row">
+ <li id="{{$comm->id}}" class="row">
       <div class="col-lg-2 commenterName">
  	 	  <small> <a href="{{ URL::to('profile/' . $comm->User->id) }}"> {{ $comm->User->name }} </a> </small>
        </div>

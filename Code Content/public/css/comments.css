@@ -47,3 +47,7 @@
 #mention_list a:hover {
      cursor:pointer;
 }
+
+.aliceblue {
+  background-color: aliceblue;  
+}

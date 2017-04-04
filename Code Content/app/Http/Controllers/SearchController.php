@@ -20,13 +20,24 @@ class SearchController extends Controller
          
          if($query_fetch->count() == 0)
              return Redirect('/')->with('status', 'No quiz was found!');
-        else {       
-        	return view('/search', [
+        else { 
+            if ( request('scroll_to') === 'undefined') {
+            	return view('/search', [
         			'uni_name' => $uni_name,
         			'course_name' => $course_name,
         			'db_corr_data' => $query_fetch,
         			'db_corr_first' => $first_fetch,
         		]);
+            }
+            else {
+                return view('/search', [
+        			'uni_name' => $uni_name,
+        			'course_name' => $course_name,
+        			'db_corr_data' => $query_fetch,
+        			'db_corr_first' => $first_fetch,
+        			'scroll_to' => request('scroll_to'),
+        		]);
+            }
         }
     }
     
