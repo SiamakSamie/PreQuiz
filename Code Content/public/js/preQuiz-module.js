@@ -167,7 +167,7 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
   });
   
   //posting a comment
-  $scope.commentRequest = function($coursename, $user_id, $uni_name) {
+  $scope.commentRequest = function($coursename, $user_id, $uni_name, $quiz_id) {
 
      // we need to go to the route and execute the db insertion
      $http({
@@ -178,6 +178,7 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
             "course_name":$coursename,
             "user_id":$user_id,
             "text": $scope.comment_text,
+            "quiz_id":$quiz_id,
             "mentioned_ids":$scope.user_mentioned_id,
        },
     })

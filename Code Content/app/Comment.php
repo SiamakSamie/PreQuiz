@@ -17,4 +17,8 @@ class Comment extends Model
      public function Vote() {
           return $this->hasMany('App\Vote');
      }
+     
+     public function Notification() {
+          return $this->hasMany('App\Notification');
+     }
 }

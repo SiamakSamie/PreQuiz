@@ -25,8 +25,12 @@ class User extends Authenticatable
           return $this->hasMany('App\Vote');
      }
 
-     public function Notification(){
-        return $this->hasMany('App\Notification');
+     public function Send_Notification(){
+        return $this->hasMany('App\Notification', 'to_user_id');
+    }
+    
+    public function Receive_Notification(){
+        return $this->hasMany('App\Notification', 'from_user_id');
     }
 
     /**

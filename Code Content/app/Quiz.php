@@ -21,4 +21,8 @@ class Quiz extends Model
      public function Questions() {
          return $this->hasMany('App\Questions');
      }
+     
+     public function Notification(){
+         return $this->hasMany('App\Quiz');
+     }
 }
