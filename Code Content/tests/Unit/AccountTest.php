@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+use Auth;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -10,25 +11,25 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 class AccountTest extends TestCase
 {
     use DatabaseTransactions;
-      public function testRegistration()// make sure this is new everytime, use factory
-    {
-        //$this->withoutEvents();
+//       public function testRegistration()// make sure this is new everytime, use factory
+//     {
+//         //$this->withoutEvents();
         
-        $this->visit('/register')
-            ->see('Register')
-            ->type('1', 'name')
-            ->type('1', 'university')
-            ->type('test@t123est.test', 'email')
-            ->type('testtesttest', 'password')
-            ->type('testtesttest', 'password_confirmation')
+//         $this->visit('/register')
+//             ->see('Register')
+//             ->type('1', 'name')
+//             ->type('1', 'university')
+//             ->type('test@t1253est.test', 'email')
+//             ->type('testtesttest', 'password')
+//             ->type('testtesttest', 'password_confirmation')
             
-            ->press('Register')
-//            ->see('The email has already been taken.')
-            ->seePageIs('/home')
-//            ->see('Get Started')
-                ;
+//             ->press('Register')
+// //            ->see('The email has already been taken.')
+//             ->seePageIs('/home')
+// //            ->see('Get Started')
+//                 ;
                 
-    }
+//     }
     
     public function testIncorrectLogin()
     {
@@ -44,11 +45,26 @@ class AccountTest extends TestCase
                 ;
     }
     
-    public function testCorrectLogin()
+    public function testCorrectLoginAndRegister()
     {
+         $this->visit('/register')
+            ->see('Register')
+            ->type('1', 'name')
+            ->type('1', 'university')
+            ->type('test@t123est.test', 'email')
+            ->type('testtesttest', 'password')
+            ->type('testtesttest', 'password_confirmation')
+            
+            ->press('Register')
+//            ->see('The email has already been taken.')
+            ->seePageIs('/home')
+//            ->see('Get Started')
+                ;
+        Auth::logout();
+        
         $this->visit('/login')
             ->see('Login')
-            ->type('test@t12est.test', 'email')
+            ->type('test@t123est.test', 'email')
             ->type('testtesttest', 'password')
             ->check('remember')
             ->press('Login')
