@@ -17,6 +17,8 @@ class ExampleTest extends TestCase
       $this->visit('/')
             ->see('Get Started')
             ->dontSee('Delete user');
+            
+      
     }
     
     public function test_Search_For_Class() {
