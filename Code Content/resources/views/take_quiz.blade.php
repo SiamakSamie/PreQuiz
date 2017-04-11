@@ -25,7 +25,9 @@
     </form>
   </div>
     <div class="col-md-8 col-md-offset-2">
-      
+      @if ($quiz->Questions->count() == 0) 
+          No questions are found for this quiz
+      @else
       <h1 class="md-display-2">{{$quiz->quizname}}</h1>
 
       <md-content ng-controller="validate-answer" ng-init="getAllQuestions({{$quiz->id}})">
@@ -47,6 +49,7 @@
             </md-tab> 
         </md-tabs>
       </md-content>
+      @endif
     </div>
 </div>
 <!--
