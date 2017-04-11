@@ -34,9 +34,9 @@ class CreateQuizTest extends TestCase
          ->see('Taylor');
     }
     
-    public function testSearch() {
-        $this->post('/search', ['uni_name' => 'Concordia University', 'course_id' => 'SOEN 341']);
-        dd($this);
-    }
+//     public function testSearch() {
+//         $this->post('/search', ['uni_name' => 'Concordia University', 'course_id' => 'SOEN 341']);
+//         dd($this);
+//     }
 
 }
