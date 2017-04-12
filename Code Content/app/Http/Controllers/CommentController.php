@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Notification;
 use App\Comment;
 use App\Vote;
 use App\User;
 use App\Quiz;
 use Auth;
+
 
 class CommentController extends Controller
 {
@@ -31,8 +33,9 @@ class CommentController extends Controller
             "commentator" => $commentator,
         ];
     }
-    
-    // this is called by AJAX request
+
+
+    // returns void
     public function addComment(Request $request) {
         
         // fetching request data
@@ -40,10 +43,15 @@ class CommentController extends Controller
         $course_name = request('course_name');
         $user_id = request('user_id');
         $text = trim(nl2br(request('text')));
+        $quiz_id = request('quiz_id');
         
         // making a new comment with requested data
         $comment = new Comment;
         $user_mentioned_ids = request('mentioned_ids');
+        
+        // save the old content of text
+        $comment->comment_content = $text;
+        $comment->save();
         
         // if there is a mentioned user
         if(count($user_mentioned_ids) >= 1) {
@@ -54,6 +62,23 @@ class CommentController extends Controller
                 $user_mentioned = str_replace(" ", "", $user_mentioned);
                 
                 $text = preg_replace("/@". $user_mentioned."/", "<a href='../profile/". $id ."'> @". $user_mentioned . " </a>", $text, 1);
+                $from_user = Auth::user()->id;
+                $to_user = $id;
+                
+                $notif = new Notification;
+                $notif->message = $text;
+                
+                $user_send = User::where('id', $to_user)->get()->first();
+                $user_send->Send_Notification()->save($notif);
+                
+                $user_receive = User::where('id', $from_user)->get()->first();
+                $user_receive->Receive_Notification()->save($notif);
+                
+                $comment->Notification()->save($notif);
+               
+                $course = Quiz::where('coursename', $course_name)->where('university', $uni_name)->get()->first();
+                $course->Notification()->save($notif);
+                
             }
         }
         
@@ -63,7 +88,6 @@ class CommentController extends Controller
         // this part takes cares of relations, we fetch the related quiz and user and assign them that comment
         $course = Quiz::where('coursename', $course_name)->where('university', $uni_name)->get()->first();
         $user = User::where('id', $user_id)->get()->first();
-        
         
         $course->Comments()->save($comment);
         $user->Comments()->save($comment);

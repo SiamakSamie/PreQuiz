@@ -18,8 +18,9 @@ class CreateNotifications extends Migration
             $table->integer("to_user_id")->unsigned()->nullable();
             $table->integer("from_user_id")->unsigned()->nullable();
             $table->integer("quiz_id")->unsigned()->nullable();
+            $table->integer("comment_id")->unsigned()->nullable();
             $table->text("message");
-            $table->boolean("seen");
+            $table->boolean("seen")->default(false);
             $table->timestamps();
         });
     }

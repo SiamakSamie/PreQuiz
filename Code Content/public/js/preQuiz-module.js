@@ -89,9 +89,34 @@ var prequiz_module = angular.module('preQuiz-module', ['ngMaterial', 'ngAnimate'
       };
   });
 
-  prequiz_module.controller('add-forms', function($scope){
-    
+  prequiz_module.controller('add-forms', function($scope, $http){
+   
     $scope.questions = [{id: 'question1'}];
+    $scope.editedQuestions = [];
+    $scope.numOfQuestions = 0;
+    
+    var lengthQuestions=$scope.lengthQuestions;
+    var numOfQuestions=0;
+    
+    var number=0;
+    
+    $scope.initQuizId = function(quiz_id){
+  
+      $http({
+          url: '/getQuestions', 
+          method: "POST",
+          params: {id: quiz_id}
+        })
+          .then( function(response) {
+              
+            //console.log(response.data);
+            var numOfQuestions = response.data.length;
+            // console.log(numOfQuestions);
+            $scope.lengthQuestions = numOfQuestions;
+            // $scope.numOfQuestions = numOfQuestions;
+          });
+      
+    };
     
     $scope.addQuestion= function(){
       var newQuestion = $scope.questions.length + 1;
@@ -103,6 +128,22 @@ var prequiz_module = angular.module('preQuiz-module', ['ngMaterial', 'ngAnimate'
       var lastQuestion = $scope.questions.length-1;
       $scope.questions.splice(lastQuestion);
     };
+    
+    $scope.addEditedQuestion = function(){
+     
+      // console.log($scope.editedQuestions.length);
+      number = $scope.editedQuestions.length;
+      $scope.numOfQuestions += 1;
+      numOfQuestions = $scope.numOfQuestions;
+      $scope.editedQuestions.push({'id':'question' + $scope.numOfQuestions});
+    
+    };
+    
+    $scope.removeEditedQuestion = function(){
+      var lastQuestion = $scope.editedQuestions.length - 1;
+      $scope.editedQuestions.splice(lastQuestion);
+    };
+
   });
     
 prequiz_module.controller('mention-feature', function($scope, $http, $window) {
@@ -126,7 +167,7 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
   });
   
   //posting a comment
-  $scope.commentRequest = function($coursename, $user_id, $uni_name) {
+  $scope.commentRequest = function($coursename, $user_id, $uni_name, $quiz_id) {
 
      // we need to go to the route and execute the db insertion
      $http({
@@ -137,6 +178,7 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
             "course_name":$coursename,
             "user_id":$user_id,
             "text": $scope.comment_text,
+            "quiz_id":$quiz_id,
             "mentioned_ids":$scope.user_mentioned_id,
        },
     })
@@ -464,9 +506,6 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
             $scope.selectedIndex = $scope.selectedIndex+1;
         }, 1000 );
     };
-  
-    
-    $scope.allQuestionsResponse = "";
     
     $scope.getAllQuestions = function(quiz_id) {
      

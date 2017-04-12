@@ -131,12 +131,12 @@
                 @endif
                     <a class="list-group-item" href="{{ url('/') }}"> Search for a quiz </a>
                 @if (Auth::check())
-                    <a class="list-group-item" href="{{ url('/notifications') }}" > Notifications <span class="badge badge-default badge-pill"> 3 </span> </a> 
+                    <a class="list-group-item" href="{{ url('/notifications') }}" > Notifications <span class="badge badge-default badge-pill"> </span> </a> 
                     <a class="list-group-item" href="{{ url('/create_quiz') }}"> Create a quiz </a> 
                     <a class="list-group-item" href="{{ url('/edit_quiz') }}"> Edit a quiz </a> 
                     <a class="list-group-item" href="{{ url('/profile/0') }}" > My profile </a> <!-- the 0 is the default value for current profile -->
                 @else
-                    <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> Notifications <span class="badge badge-default badge-pill"> 3 </span> </a> 
+                    <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> Notifications <span class="badge badge-default badge-pill"> </span> </a> 
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> Create a quiz </a> 
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> Edit a quiz </a> 
                     <a class="list-group-item" href="" ng-click="dispErrMsg($event)"> My profile </a> 

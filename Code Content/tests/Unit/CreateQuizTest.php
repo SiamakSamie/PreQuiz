@@ -8,7 +8,9 @@ use \App\Quiz;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class QuizTest extends TestCase
+
+class CreateQuizTest extends TestCase
+
 {
     use DatabaseTransactions;
     /**
@@ -33,6 +35,7 @@ class QuizTest extends TestCase
          ->see('Add new questions')
          ->see('Taylor');
     }
+
     public function testSearchQuiz()
     {
         $user = factory(User::class)->create();

@@ -37,7 +37,7 @@
               <div class="panel-body"> <b> Quiz description: </b> {!! $quiz->quizdescription !!} </div>
             </div>
             
-            <form method="POST" action="{{ route('questions.store') }}">
+            <form method="POST" action="{{ route('questions.store') }}" >
                 
                 <div ng-controller = "add-forms">
                     

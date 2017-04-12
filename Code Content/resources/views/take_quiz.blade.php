@@ -25,7 +25,9 @@
     </form>
   </div>
     <div class="col-md-8 col-md-offset-2">
-      
+      @if ($quiz->Questions->count() == 0) 
+          No questions are found for this quiz
+      @else
       <h1 class="md-display-2">{{$quiz->quizname}}</h1>
 
       <md-content ng-controller="validate-answer" ng-init="getAllQuestions({{$quiz->id}})">
@@ -40,13 +42,14 @@
                     <md-radio-button ng-class="{'bg-danger':answer[$index].answer4}" name="answer4"  value="4" aria-label="@{{$index}}"> <span ng-bind="input.answer4"> </span> </md-radio-button>
                     <!--<span ng-bind="answers"></span>-->
                 </md-radio-group>
-                <md-button ng-click="validation(radio_group, key)" ng-show="!$last" class="md-raised md-primary btn-block">Check Answer</md-button>
+                <md-button ng-click="validation(radio_group, key);" ng-show="!$last" class="md-raised md-primary btn-block">Check Answer</md-button>
                 <md-button ng-click="validation(radio_group, key);openDialog('{{$quiz->resources}}')" ng-show="$last" class="md-raised md-primary btn-block">Finalize Answer</md-button>
 
               </md-content>
             </md-tab> 
         </md-tabs>
       </md-content>
+      @endif
     </div>
 </div>
 <!--

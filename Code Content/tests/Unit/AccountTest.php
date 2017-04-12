@@ -11,6 +11,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 class AccountTest extends TestCase
 {
     use DatabaseTransactions;
+
     
     public function testIncorrectRegistration(){
         $this->visit('/register')
@@ -56,6 +57,7 @@ class AccountTest extends TestCase
                 ;
                 
     }
+
     
     public function testIncorrectLogin()
     {
@@ -71,6 +73,7 @@ class AccountTest extends TestCase
     }
     
     public function testCorrectLogin()
+
     {
          $this->visit('/register')
             ->see('Register')
