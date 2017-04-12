@@ -1,4 +1,8 @@
 <?php
+
+use App\Quiz;
+use App\Questions;
+
 use Illuminate\Database\Seeder;
 class fill_courses extends Seeder
 {
@@ -11,124 +15,26 @@ class fill_courses extends Seeder
     {
         DB::table('quizzes')->delete();
         
-        DB::table('quizzes')->insert([
-            'university' => 'Concordia University',
-            'coursename' => 'SOEN 341',
-            'quizname' => 'Quiz #1',
-            'username' => 'Dr. Computer guy',
-            'quizdescription' => 'This quiz helps you undestand the basics of software processes, it has a few exercices regarding git, some programming and other required topics regarding this course.',
-            'resources' => 'https://www.w3schools.com/',
-        ]);
+        $quiz = new Quiz;
+        $quiz->university = 'Concordia University';
+        $quiz->coursename = 'SOEN 341';
+        $quiz->quizname = 'Quiz #1';
+        $quiz->username = 'Dr. Computer Guy';
+        $quiz->quizdescription = 'This quiz helps you undestand the basics of software processes, it has a few exercices regarding git, some programming and other required topics regarding this course.';
+        $quiz->resources = 'https://www.w3schools.com/';
+        $quiz->save();
         
-        DB::table('quizzes')->insert([
-            'university' => 'Concordia University',
-            'coursename' => 'SOEN 341',
-            'quizname' => 'Quiz #2',
-            'username' => 'Dr. Software guy',
-            'quizdescription' => 'This review quiz is created to test students on wether or not they know the difference between software enginerring and computer sicnece.',
-            'resources' => 'https://www.w3schools.com/',
-        ]);
-        
-        DB::table('quizzes')->insert([
-            'university' => 'Concordia University',
-            'coursename' => 'COMP 346',
-            'quizname' => 'Quiz #1',
-            'username' => 'Dr. guy',
-            'quizdescription' => 'The following quiz helps students understand Uniquore programming in order to prepare them for multicore programming, a topic that is focused on in COMP 346.',
-            'resources' => 'https://www.w3schools.com/',
-        ]);
-        
-        DB::table('quizzes')->insert([
-            'university' => 'Stanford University',
-            'coursename' => 'SOEN 331',
-            'quizname' => 'Quiz 331',
-            'username' => 'Dr. Computer',
-            'quizdescription' => 'This quiz helps you undestand the basics of the class, and master the prerequisits in order to reduce the difficulties faced through this class',
-            'resources' => 'https://www.w3schools.com/',
-        ]);
-        
-        DB::table('quizzes')->insert([
-            'university' => 'University of toronto',
-            'coursename' => 'SOEN 410',
-            'quizname' => 'Quiz #1',
-            'username' => 'Dr. Software Engineering',
-            'quizdescription' => 'This quiz helps you undestand the basics of the class, and master the prerequisits in order to reduce the difficulties faced through this class',
-            'resources' => 'https://www.w3schools.com/',
+        // lets do 3 questions
+        for($i = 0; $i < 3; $i++){ 
+            $question = new Questions;
+            $question->question= "How many bytes in a kilobyte?";
+            $question->answer1 = "1024";
+            $question->answer2 = "1000";
+            $question->answer3 = "500";
+            $question->answer4 = "512";
+            $question->save();
             
-        ]);
-        
-        DB::table('quizzes')->insert([
-            'university' => 'University of toronto',
-            'coursename' => 'SOEN 287',
-            'quizname' => 'Quiz review',
-            'username' => 'Dr. Computer guy',
-            'quizdescription' => 'This quiz helps you undestand the basics of the class, and master the prerequisits in order to reduce the difficulties faced through this class',
-            'resources' => 'https://www.w3schools.com/',
-        ]);
-        
-        DB::table('quizzes')->insert([
-            'university' => 'Harvard University',
-            'coursename' => 'SOEN 287',
-            'quizname' => 'Quiz review',
-            'username' => 'Dr. Computer guy',
-            'quizdescription' => 'This quiz helps you undestand the basics of software processes, it has a few exercices regarding git, some programming and other required topics regarding this course.',
-            'resources' => 'https://www.w3schools.com/',
-            
-        ]);
-        
-        DB::table('quizzes')->insert([
-            'university' => 'Mcgill University',
-            'coursename' => 'COMP 123',
-            'quizname' => 'Quiz review',
-            'username' => 'Dr. Computer guy',
-            'quizdescription' => 'This quiz helps you undestand the basics of the class, and master the prerequisits in order to reduce the difficulties faced through this class',
-            'resources' => 'https://www.w3schools.com/',
-        ]);
-        
-        DB::table('quizzes')->insert([
-            'university' => 'Mcgill University',
-            'coursename' => 'SOEN 246',
-            'quizname' => 'Quiz Mcgill',
-            'username' => 'Dr. Computer guy',
-            'quizdescription' => 'This quiz helps you undestand the basics of the class, and master the prerequisits in order to reduce the difficulties faced through this class',
-            'resources' => 'https://www.w3schools.com/',
-        ]);
-        
-        DB::table('quizzes')->insert([
-            'university' => 'Mcgill University',
-            'coursename' => 'COMP 165',
-            'quizname' => 'Quiz #1',
-            'username' => 'Dr. guy',
-            'quizdescription' => 'This quiz helps you undestand the basics of the class, and master the prerequisits in order to reduce the difficulties faced through this class',
-            'resources' => 'https://www.w3schools.com/',
-        ]);
-        
-        DB::table('quizzes')->insert([
-            'university' => 'Mcgill University',
-            'coursename' => 'SOEN 311',
-            'quizname' => 'Quiz review',
-            'username' => 'Dr. Smartypants',
-            'quizdescription' => 'This quiz helps you undestand the basics of the class, and master the prerequisits in order to reduce the difficulties faced through this class',
-            'resources' => 'https://www.w3schools.com/',
-        ]);
-        
-        DB::table('quizzes')->insert([
-            'university' => 'Michigan University',
-            'coursename' => 'SOEN 354',
-            'quizname' => 'Quiz review',
-            'username' => 'Dr. Mcgill guy',
-            'quizdescription' => 'This quiz helps you undestand the basics of the class, and master the prerequisits in order to reduce the difficulties faced through this class',
-            'resources' => 'https://www.w3schools.com/',
-        ]);
-        
-        DB::table('quizzes')->insert([
-            'university' => 'Concordia University',
-            'coursename' => 'SOEN 246',
-            'quizname' => 'Quiz review #2',
-            'username' => 'Dr. guy',
-            'quizdescription' => 'This quiz helps you undestand the basics of the class, and master the prerequisits in order to reduce the difficulties faced through this class',
-            'resources' => 'https://www.w3schools.com/',
-        ]);
-        
+            $quiz->Questions()->save($question);
+        }
     }
 }
