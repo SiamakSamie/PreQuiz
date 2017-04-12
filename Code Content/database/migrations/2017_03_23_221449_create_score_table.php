@@ -13,11 +13,11 @@ class CreateScoreTable extends Migration
      */
     public function up()
     {
-        Schema::create('score', function (Blueprint $table) {
+        Schema::create('scores', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('quiz_id')->unsigned()->nullable();
             $table->integer('user_id')->unsigned()->nullable();
-            $table->integer('score');
+            $table->integer('score')->unsigned()->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateScoreTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('score');
+        Schema::dropIfExists('scores');
     }
 }

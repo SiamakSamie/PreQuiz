@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::post('/putScore','TakeQuizController@store');
 
 Route::post('/getAllUnis', 'SearchController@getAllUnis');
 

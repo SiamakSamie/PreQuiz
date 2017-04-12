@@ -7,22 +7,28 @@
         <tr>
            <th> Course</th>
            <th> Quiz Name </th>
-           <th> Last Updated </th>
+           <th> Date </th>
            <th> Score </th>
+           <th> Resources </th>
            <th> Link </th>
            
        </tr>
+      
        
- @for ($i = 0; $i <= 3; $i++)
+       @for ( $i=0;$i< count($all_score_data['score']);$i++)
+
        <tr>
-           <td> COMP514 </td>
-           <td> Winter 2017 Section SS </td>
-           <td> January 17, 2017 </td>
-           <td> 100% </td>
-           <td> <button class = "btn btn-primary"> View </button> </td>
+           <td> {{ $all_score_data['course_name'][$i] }}</td>
+           <td> {{ $all_score_data['quiz_name'][$i] }} </td>
+           <td> {{ $all_score_data['date'][$i] }} </td>
+           <td> {{ $all_score_data['score'][$i] }} </td>
+           <td> {{ $all_score_data['resources'][$i] }} </td>
+           <td> <a href="{{ route('take_quiz.show', ['id' => $all_score_data['url'][$i]]) }}" class = "btn btn-primary"> View </a> </td>
        </tr>
-@endfor
+       @endfor
       
     </table>
 
 </div>
+
+
