@@ -10,11 +10,10 @@
  @section('content')
      <div class="container">
          <div class="row">
-             <!--{{ $my_quiz->Questions[0]->id }}-->
              <div class="col-sm-8 col-sm-offset-2">
                 <h1>Editing Quiz</h1>
                 <hr>
-                
+                <!--Http request to get the quiz information from the database, but also resend new updated informtation back to the database-->
                 <form method="POST" action="{{ url('updateQuizInfo') }}">
                     <input type="hidden" name="_method" value="PATCH">
                     <input type="hidden" name="_token" value="{{ Session::token() }}">
@@ -53,45 +52,46 @@
                         <label name="quizresources">Resources:</label>
                         <textarea name="quizresources" rows="3" class="form-control">{{$my_quiz->resources}}</textarea>
                     </div> 
-                    
-                    
-                    @foreach($my_quiz->questions as $index => $question)
-                        
-                        <hr>
-                        
-                        <div class="form-group">
-                            <label name="question">Question {{$index+1}}:</label>
-                            <input id="question" name="question[{{$index}}]" class="form-control"
-                            value="{{$question->question}}" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label name="answer">Correct Answer:</label>
-                            <input id="answer1" name="answer1[{{$index}}]" rows="10" class="form-control"
-                            value="{{$question->answer1}}" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label name="answer">Wrong Answer 1:</label>
-                            <input id="answer2" name="answer2[{{$index}}]" rows="10" class="form-control"
-                            value="{{$question->answer2}}" required>
-                        </div>     
-                        
-                        <div class="form-group">
-                            <label name="answer">Wrong Answer 2:</label>
-                            <input id="answer3" name="answer3[{{$index}}]" rows="10" class="form-control"
-                            value="{{$question->answer3}}" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label name="answer">Wrong Answer 3:</label>
-                            <input id="answer4" name="answer4[{{$index}}]" rows="10" class="form-control"
-                            value="{{$question->answer4}}" required>
-                        </div>
-                    
-                    @endforeach
+
+                        <!--Displays the questions from the database-->
                    
-                   
+                       <div ng-controller = "add-forms" ng-init="initQuizId({{$my_quiz->id}})">
+                           
+                           <fieldset data-ng-repeat= "question in originalQuestions">
+                               
+                               
+                               <!--Allows the deletion of the existing questions in the database-->
+                                <button class="btn btn-info btn-sm" onclick = "return false"  ng-click="removeOriginalQuestion($index)" ><span class="glyphicon glyphicon-minus" ></span></button> 
+                                <br /><br />
+                                  
+                                
+                                
+                                    <div class="form-group">
+                                        <label name="question">Question <span ng-bind="$index+1"></span>:</label>
+                                        <input id="question" ng-model="question.question" name="question[@{{$index}}]" rows='10' class="form-control" required>
+                                    </div>
+        
+                                    <div class="form-group">
+                                        <label name="answer">Correct Answer:</label>
+                                        <input id="answer1" ng-model="question.answer1" name="answer1[@{{$index}}]" rows="10" class="form-control" required>
+                                    </div>
+        
+                                    <div class="form-group">
+                                        <label name="answer">Wrong Answer 1:</label>
+                                        <input id="answer2" ng-model="question.answer2" name="answer2[@{{$index}}]" rows="10" class="form-control" required>
+                                    </div>     
+        
+                                    <div class="form-group">
+                                        <label name="answer">Wrong Answer 2:</label>
+                                        <input id="answer3" ng-model="question.answer3" name="answer3[@{{$index}}]" rows="10" class="form-control" required>
+                                    </div>
+        
+                                    <div class="form-group">
+                                        <label name="answer">Wrong Answer 3:</label>
+                                        <input id="answer4" ng-model="question.answer4" name="answer4[@{{$index}}]" rows="10" class="form-control" required>
+                                    </div>
+    
+                            </fieldset>
                    
                        <div ng-controller = "add-forms" ng-init="initQuizId({{$question->quiz_id}})">
 
