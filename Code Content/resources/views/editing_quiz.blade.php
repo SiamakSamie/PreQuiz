@@ -93,41 +93,41 @@
     
                             </fieldset>
                    
-                       <div ng-controller = "add-forms" ng-init="initQuizId({{$question->quiz_id}})">
+                            <!--Add forms questions dynamically, can also delete the newly added questions-->
+                
+                            <fieldset data-ng-repeat="question in editedQuestions">
+    
+                                <button class="btn btn-info btn-sm" onclick = "return false" ng-show="$last" ng-click="removeEditedQuestion()" ><span class="glyphicon glyphicon-minus" ></span></button> 
+                                <br /><br />
+    
+                                <div class="form-group">
+                                    <label name="question">Question <span ng-bind="$index+fixedOriginalNumOfQuestions+1"></span>:</label>
+                                    <input id="question" ng-model="question.question" name="question[@{{$index + fixedOriginalNumOfQuestions }}]" class="form-control" required>
+                                </div>
+    
+                                <div class="form-group">
+                                    <label name="answer">Correct Answer:</label>
+                                    <input id="answer1" ng-model="question.answer1" name="answer1[@{{$index + fixedOriginalNumOfQuestions}}]" rows="10" class="form-control" required>
+                                </div>
+    
+                                <div class="form-group">
+                                    <label name="answer">Wrong Answer 1:</label>
+                                    <input id="answer2" ng-model="question.answer2" name="answer2[@{{$index + fixedOriginalNumOfQuestions}}]" rows="10" class="form-control" required>
+                                </div>     
+    
+                                <div class="form-group">
+                                    <label name="answer">Wrong Answer 2:</label>
+                                    <input id="answer3" ng-model="question.answer3" name="answer3[@{{$index + fixedOriginalNumOfQuestions}}]" rows="10" class="form-control" required>
+                                </div>
+    
+                                <div class="form-group">
+                                    <label name="answer">Wrong Answer 3:</label>
+                                    <input id="answer4" ng-model="question.answer4" name="answer4[@{{$index + fixedOriginalNumOfQuestions}}]" rows="10" class="form-control" required>
+                                </div>
+    
+                            </fieldset>
 
-                        <fieldset data-ng-repeat="question in editedQuestions">
-
-                            <button class="btn btn-info btn-sm" onclick = "return false" ng-show="$last" ng-click="removeEditedQuestion()" ><span class="glyphicon glyphicon-minus" ></span></button> 
-                            <br /><br />
-
-                            <div class="form-group">
-                                <label name="question">Question <span ng-bind="$index+lengthQuestions+1"></span>:</label>
-                                <input id="question" ng-model="question.question" name="question[@{{$index}}]" class="form-control">
-                            </div>
-
-                            <div class="form-group">
-                                <label name="answer">Correct Answer:</label>
-                                <input id="answer1" ng-model="question.answer1" name="answer1[@{{$index}}]" rows="10" class="form-control">
-                            </div>
-
-                            <div class="form-group">
-                                <label name="answer">Wrong Answer 1:</label>
-                                <input id="answer2" ng-model="question.answer2" name="answer2[@{{$index}}]" rows="10" class="form-control">
-                            </div>     
-
-                            <div class="form-group">
-                                <label name="answer">Wrong Answer 2:</label>
-                                <input id="answer3" ng-model="question.answer3" name="answer3[@{{$index}}]" rows="10" class="form-control">
-                            </div>
-
-                            <div class="form-group">
-                                <label name="answer">Wrong Answer 3:</label>
-                                <input id="answer4" ng-model="question.answer4" name="answer4[@{{$index}}]" rows="10" class="form-control">
-                            </div>
-
-                        </fieldset>
-
-                        <!--<button class="btn btn-info btn-sm" onclick="return false" ng-click="addEditedQuestion()" > <span class="glyphicon glyphicon-plus" > </span> </button>-->
+                   
                         <button class="btn btn-info btn-sm" onclick="return false" ng-click="addEditedQuestion()" > <span class="glyphicon glyphicon-plus" > </span> </button>
                         <br /><br />
 
