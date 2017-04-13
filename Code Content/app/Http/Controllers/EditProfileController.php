@@ -35,11 +35,9 @@ class EditProfileController extends Controller
     
         $user->save();
         
-       $user_info = User::where('id', $id)->get()->first();
+        $user_info = User::where('id', $id)->get()->first();
     
-        return view('profile', [
-          'user_info' => $user_info ,
-        ]);
+        return redirect('profile/0')->with('status', 'Profile information was updated.');
     }
 
 }

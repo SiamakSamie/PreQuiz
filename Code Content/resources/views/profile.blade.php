@@ -8,6 +8,14 @@
  @endsection
  
  @section('content')
+ 
+     @if (session('status'))
+        <div class="alert alert-success">
+            <a class="close" data-dismiss="alert">×</a>
+            <p> <b> Success! </b>{{ session('status') }} </p>
+        </div>
+    @endif
+    
    <div class="container" style = "padding-top:50px">
       <h1>Profile information</h1>
   	  <hr>
