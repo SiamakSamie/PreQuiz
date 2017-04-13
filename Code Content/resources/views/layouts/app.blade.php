@@ -90,7 +90,7 @@
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li><a name='login' href="{{ route('login') }}"><img src = "/img/login.png" style = "height:15px;"></a></li>
-                            <li><a name='register' "href="{{ route('register') }}"><img src = "/img/register.png" style = "height:15px;"></a></li>
+                            <li><a name='register' href="{{ route('register') }}"><img src = "/img/register.png" style = "height:15px;"></a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
