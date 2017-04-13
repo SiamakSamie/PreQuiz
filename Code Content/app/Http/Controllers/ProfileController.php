@@ -30,7 +30,7 @@ class ProfileController extends Controller
          // and then pass it with the view
          
          $user_info = User::where('id', $user_id)->get()->first();
-         $score_info = Score::where('user_id', $user_id)->get();
+         $score_info = Score::where('user_id', $user_id)->orderBy('updated_at', 'DESC')->get();
     
             
         $data = array();

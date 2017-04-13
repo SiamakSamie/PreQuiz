@@ -17,7 +17,6 @@
             <div class="text-center">
               <img src="/img/profile_pic.jpg" class="avatar img-circle" alt="avatar">
               <h6>Default profile picture</h6>
-              
             </div>
           </div>
       
@@ -25,7 +24,7 @@
           <div class="col-sm-9 personal-info">
        
               <h3><b>Personal info</b></h3>
-              @if ($user_info->count() == 0) 
+              @if (count($user_info) == 0) 
                  <h2> Not a user </h2>
               @else
            
@@ -50,10 +49,6 @@
                       <label class="col-sm-3 control-label"></label>
                         <input type="submit" class="btn btn-primary"  value="Edit Profile">
                     </div>
-                    <!--<div class="form-group">-->
-                    <!--  <label class="col-sm-3 control-label"></label>-->
-                    <!--    <a class="btn btn-primary" href="{{ url('password/reset/'.csrf_token() ) }}" > Forgot your password? </a>-->
-                    <!--</div>-->
                   @endif
                   
                 </form>
@@ -61,16 +56,7 @@
               @endif
           </div>
       </div>
-      
-     
-@include('score_list')
-
-
-
-
-            
-      
-      
+      @include('score_list')
     </div>
     <hr>
  @endsection

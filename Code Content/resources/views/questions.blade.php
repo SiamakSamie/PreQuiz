@@ -35,6 +35,7 @@
               <div class="panel-body"> <b> Course name: </b>{{ $quiz->coursename }} </div>
               <div class="panel-body"> <b> Quiz name: </b>{{ $quiz->quizname }} </div>
               <div class="panel-body"> <b> Quiz description: </b> {!! $quiz->quizdescription !!} </div>
+              <div class="panel-body"> <b> Quiz resources: </b> {!! $quiz->resources !!} </div>
             </div>
             
             <form method="POST" action="{{ route('questions.store') }}" >
