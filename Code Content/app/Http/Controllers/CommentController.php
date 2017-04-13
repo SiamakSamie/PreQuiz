@@ -43,7 +43,6 @@ class CommentController extends Controller
         $course_name = request('course_name');
         $user_id = request('user_id');
         $text = trim(nl2br(request('text')));
-        $quiz_id = request('quiz_id');
         
         // making a new comment with requested data
         $comment = new Comment;

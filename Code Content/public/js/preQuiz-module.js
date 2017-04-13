@@ -186,7 +186,7 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
   });
   
   //posting a comment
-  $scope.commentRequest = function($coursename, $user_id, $uni_name, $quiz_id) {
+  $scope.commentRequest = function($coursename, $user_id, $uni_name) {
 
      // we need to go to the route and execute the db insertion
      $http({
@@ -197,7 +197,6 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
             "course_name":$coursename,
             "user_id":$user_id,
             "text": $scope.comment_text,
-            "quiz_id":$quiz_id,
             "mentioned_ids":$scope.user_mentioned_id,
        },
     })
@@ -474,8 +473,14 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
   
 });
 
+
+
+
+
+
+  var count=0  ;        
   prequiz_module.controller('validate-answer', function($scope, $http, $mdDialog, $rootElement, $timeout){
-    $scope.openDialog = function(resources, evt) {
+    $scope.openDialog = function(resources, id, userid, evt) {
         $mdDialog.show({
             template:
                '<md-dialog aria-label="Dialog" style="width:55%; padding: 10px;">'+
@@ -487,18 +492,18 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
                  
                   '<div class="panel panel-primary">'+
                   ' <div class="panel-heading">Your Score</div>'+
-                  '<div class="panel-body">100%</div>'+
+                  '<div class="panel-body">'+count/$scope.data.length*100+'%</div>'+
                   ' </div>'+
                   
                   '<div class="panel panel-info">'+
                   ' <div class="panel-heading">Extra Resources</div>'+
-                  '<div class="panel-body">'+ resources +'</div>'+
+                  '<div class="panel-body">'+ resources + id+'</div>'+
                   ' </div>'+
 
                  '</md-dialog-content>'+
                  '<div class="md-actions" layout="row">'+
                  '<md-button id="btn-close" ng-click="retry()" class="md-accent">Retry</md-button>'+
-                 '<md-button id="btn-close" ng-click="close()" class="md-accent">Save and Close</md-button>'+
+                 '<md-button id="btn-close" ng-click="close('+id+','+ count/$scope.data.length*100 +','+userid+')" class="md-accent">Save and Close</md-button>'+
                  '</div>'+
                  '</md-dialog>',
             targetEvent: evt,
@@ -510,8 +515,32 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
     
   
       function DialogController($scope, $mdDialog) {
-        $scope.close = function() {
-          $mdDialog.hide();
+        $scope.close = function(id, score, userid) {
+          
+          
+        console.log("as");
+        
+        if(userid)
+        {
+            $http({
+                method: 'POST',
+                url: '/putScore',
+                data: {
+                    "quiz_id":id,
+                    "score":score
+                 }
+            })
+            // if it works... do this
+            .then(function(response){
+                $mdDialog.hide();
+              });
+            }
+            
+          else
+          {
+            alert('create an account to save your score');
+            $mdDialog.hide();
+          }
         }
         $scope.retry = function() {
           window.location.reload();
@@ -547,15 +576,23 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
                 $scope.isValid.push(false);
             }
             
+            
             $scope.validation = function(answer, index){
 
               $scope.isValid[index] = true;
-              
+              if (answer == null){
+                $scope.answer[index].answer1 = true;
+                $scope.answer[index].answer2 = false;
+                $scope.answer[index].answer3 = false;
+                $scope.answer[index].answer4 = false;
+              }
               if (answer ==1){
                 $scope.answer[index].answer1 = true;
                 $scope.answer[index].answer2 = false;
                 $scope.answer[index].answer3 = false;
                 $scope.answer[index].answer4 = false;
+                
+                count = count+1;
               }
               if (answer ==2){
                 $scope.answer[index].answer1 = true;
@@ -577,6 +614,7 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
               }
               
             };
+            
        });
     }
  });
