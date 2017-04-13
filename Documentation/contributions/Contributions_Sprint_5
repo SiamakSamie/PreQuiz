@@ -17,7 +17,10 @@ Roy:
 > Fixed bugs...
 
 Ryan:
-> Laravel unit testing
+> Laravel unit testing for viewing profile and create quiz
+> reorganized routes.web.php file
+> edited view for Contact Us page
+> created controller for Contact Us
 
 Dana:
 > Angular unit testing
