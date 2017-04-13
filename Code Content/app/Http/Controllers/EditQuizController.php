@@ -39,7 +39,7 @@ class EditQuizController extends Controller
     // this is called when an edit quiz request is sent
     public function update(Request $request) {
         
-        $this_quiz = Quiz::where('id', $request->quiz_id)->get()->first();
+        $this_quiz = Quiz::findOrFail($request->quiz_id);
         
         // verify quiz info
         
@@ -59,26 +59,29 @@ class EditQuizController extends Controller
         
         $this_quiz->save();
         
-         // for each question, validate the questions
-        foreach($this_quiz->Questions as $i => $question) {
+
+        Questions::where('quiz_id', $this_quiz->id)->delete();
+    
+        for ($i = 0; $i < count($request->question); $i++)
+        {
+          $this->validate($request, array(
+                    'question.'.$i.''=> 'required',
+                    'answer1.'.$i.'' => 'required',
+                    'answer2.'.$i.'' => 'required',
+                    'answer3.'.$i.'' => 'required',
+                    'answer4.'.$i.'' => 'required'
+                ));
             
-            $this->validate($request, array(
-                'question.'.$i.''=> 'required',
-                'answer1.'.$i.'' => 'required',
-                'answer2.'.$i.'' => 'required',
-                'answer3.'.$i.'' => 'required',
-                'answer4.'.$i.'' => 'required'
-            ));
-            // and replace old content with new content for questions
-            $this_quiz->Questions[$i]->question = $request->question[$i];
-            $this_quiz->Questions[$i]->answer1 = $request->answer1[$i];
-            $this_quiz->Questions[$i]->answer2 = $request->answer2[$i];
-            $this_quiz->Questions[$i]->answer3 = $request->answer3[$i];
-            $this_quiz->Questions[$i]->answer4 = $request->answer4[$i];
+            $question = new Questions;
+            $question->question=$request->question[$i];
+            $question->answer1=$request->answer1[$i];
+            $question->answer2=$request->answer2[$i];
+            $question->answer3=$request->answer3[$i];
+            $question->answer4=$request->answer4[$i];
+            $question->save();
             
-            $this_quiz->Questions[$i]->save();
+            $this_quiz->Questions()->save($question);
         }
-           
         return Redirect('edit_quiz')->with('status', 'Quiz updated!');
     }
 }
