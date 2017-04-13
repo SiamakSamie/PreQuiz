@@ -10,7 +10,13 @@
 
 @section('content')
 
-    @if (session('status'))
+    @if(session('status') == 'Your password has been reset!')
+         <div class="alert alert-success">
+            <a class="close" data-dismiss="alert">×</a>
+            <p> {{ session('status') }} </p>
+           
+        </div>
+    @elseif (session('status'))
         <div class="alert alert-danger">
             
             <a class="close" data-dismiss="alert">×</a>

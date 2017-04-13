@@ -40,7 +40,7 @@
                     <md-radio-button ng-class="{'bg-danger':answer[$index].answer4}" name="answer4"  value="4" aria-label="@{{$index}}"> <span ng-bind="input.answer4"> </span> </md-radio-button>
                 </md-radio-group>
                 <md-button ng-click="validation(radio_group, key);nextTab();enableDisableButton=true" ng-disabled="enableDisableButton"  ng-show="!$last" class="md-raised md-primary btn-block">Check Answer</md-button>
-                <md-button ng-click="validation(radio_group, key);openDialog('{{$quiz->resources}}','{{$quiz->id}}', '{{isset(Auth::user()->id) ? 'true' : 'Profile'}}')" ng-show="$last" class="md-raised md-primary btn-block">Finalize Answer</md-button>
+                <md-button ng-click="validation(radio_group, key);openDialog('{{$quiz->resources}}','{{$quiz->id}}', '{{isset(Auth::user()->id) ? 'true' : 'Profile'}}')" ng-disabled="isValid[$index]==true" ng-show="$last" class="md-raised md-primary btn-block">Finalize Answer</md-button>
 
               </md-content>
             </md-tab> 

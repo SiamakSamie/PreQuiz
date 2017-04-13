@@ -12,7 +12,7 @@
    <div class="container panel panel-default">
      <h1>Notifications</h1>
     	<div class="notifications list-group">
-    	 
+
       @foreach($notifs as $notif)	 
       	 <form method="POST" action="/search">
       	  
@@ -43,4 +43,8 @@
      </div>
    </div>
 <hr>
+    	 @if ($notifs->count() == 0)
+    	    <div class="container"> No notifications for this user</div>
+    	 @endif
+    	 
  @endsection
