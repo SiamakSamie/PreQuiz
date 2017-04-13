@@ -89,18 +89,16 @@ var prequiz_module = angular.module('preQuiz-module', ['ngMaterial', 'ngAnimate'
       };
   });
 
-  prequiz_module.controller('add-forms', function($scope, $http){
+// Controller to add or remove forms
+  prequiz_module.controller('add-forms', function($scope, $http, $mdDialog){
    
-    $scope.questions = [{id: 'question1'}];
-    $scope.editedQuestions = [];
-    $scope.numOfQuestions = 0;
+    $scope.questions = [{id: 'question1'}];     //used in creating quiz only
+    $scope.editedQuestions = [];                //used when creating new questions while editing quiz
+    $scope.numOfQuestions = 0;                  //keeps track of how many questions in total in that quiz
+    $scope.fixedOriginalNumOfQuestions = 0;     //gives the number of questions already exisiting in the databse
+    $scope.originalQuestions = [];              //array of already existing questions from the database
     
-    var lengthQuestions=$scope.lengthQuestions;
-    var numOfQuestions=0;
-    
-    var number=0;
-    
-    $scope.initQuizId = function(quiz_id){
+    $scope.initQuizId = function(quiz_id){      //http request to get the existing questions array and the number of questions inside
   
       $http({
           url: '/getQuestions', 
@@ -108,42 +106,63 @@ var prequiz_module = angular.module('preQuiz-module', ['ngMaterial', 'ngAnimate'
           params: {id: quiz_id}
         })
           .then( function(response) {
-              
-            //console.log(response.data);
-            var numOfQuestions = response.data.length;
-            // console.log(numOfQuestions);
-            $scope.lengthQuestions = numOfQuestions;
-            // $scope.numOfQuestions = numOfQuestions;
+            
+          
+            $scope.originalQuestions = response.data;
+            $scope.numOfQuestions = response.data.length;
+            $scope.fixedOriginalNumOfQuestions = response.data.length;
+
           });
       
     };
     
-    $scope.addQuestion= function(){
+    $scope.addQuestion= function(){         // add questions dynamically for creating a new quiz
       var newQuestion = $scope.questions.length + 1;
-      $scope.questions.push({'id':'choice'+newQuestion});
+      $scope.questions.push({'id':'choice'+newQuestion});   //appending new questions in the object
      };
   
-    $scope.removeQuestion = function(){
+    $scope.removeQuestion = function(){     // remove questions for creating a new quiz
       
       var lastQuestion = $scope.questions.length-1;
-      $scope.questions.splice(lastQuestion);
+      $scope.questions.splice(lastQuestion);    //remove the last question
     };
     
-    $scope.addEditedQuestion = function(){
+    $scope.addEditedQuestion = function(){    //add additional questions while editing a quiz
      
-      // console.log($scope.editedQuestions.length);
-      number = $scope.editedQuestions.length;
       $scope.numOfQuestions += 1;
-      numOfQuestions = $scope.numOfQuestions;
-      $scope.editedQuestions.push({'id':'question' + $scope.numOfQuestions});
+      $scope.editedQuestions.push({'id':'question' + $scope.numOfQuestions});   
     
     };
     
-    $scope.removeEditedQuestion = function(){
-      var lastQuestion = $scope.editedQuestions.length - 1;
-      $scope.editedQuestions.splice(lastQuestion);
-    };
+    $scope.removeEditedQuestion = function(){   //remove newly created questions while editing a quiz
 
+      $scope.editedQuestions.pop();//splice(lastQuestion);
+    };
+    
+    $scope.removeOriginalQuestion = function(index){ 
+       
+          // Appending dialog to document.body to cover sidenav in docs app
+          var confirm = $mdDialog.confirm()
+                .title('Deleting Question')
+                .textContent('Are you sure you want to permanently delete this question?')
+                .ariaLabel('Lucky day')
+                .ok('Yes, please!')
+                .cancel('No, go back.');
+      
+          $mdDialog.show(confirm).then(function() {
+            $scope.status = 'You decided to get rid of your debt.';
+                                                             //remove already existing questions while editing a quiz
+            $scope.originalQuestions.splice(index,1);         //index as parameter to keep track of which question is removed
+            $scope.numOfQuestions--;                          //updating the counters to keep track of array object
+            $scope.fixedOriginalNumOfQuestions--;
+      
+          }, function() {
+            $scope.status = 'You decided to keep your debt.';
+          });
+
+
+    };
+    
   });
     
 prequiz_module.controller('mention-feature', function($scope, $http, $window) {
