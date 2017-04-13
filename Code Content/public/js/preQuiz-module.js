@@ -474,13 +474,14 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
 });
 
 
-
-
-
-
   var count=0  ;        
   prequiz_module.controller('validate-answer', function($scope, $http, $mdDialog, $rootElement, $timeout){
     $scope.openDialog = function(resources, id, userid, evt) {
+	    
+       if(resources.indexOf('http') == -1) {
+          resources = 'http://' + resources;
+       }
+	    
         $mdDialog.show({
             template:
                '<md-dialog aria-label="Dialog" style="width:55%; padding: 10px;">'+
@@ -497,7 +498,7 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
                   
                   '<div class="panel panel-info">'+
                   ' <div class="panel-heading">Extra Resources</div>'+
-                  '<div class="panel-body">'+ resources + id+'</div>'+
+                  '<div class="panel-body">' + '<a href='+ resources + '> ' + resources + '</a> </div>'+
                   ' </div>'+
 
                  '</md-dialog-content>'+
