@@ -70,7 +70,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a name='logo' class="navbar-brand" href="{{ url('/') }}">
                         <img src = "/img/LogoMakr.png" >
                     </a>
                 </div>
@@ -89,8 +89,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ route('login') }}"><img src = "/img/login.png" style = "height:15px;"></a></li>
-                            <li><a href="{{ route('register') }}"><img src = "/img/register.png" style = "height:15px;"></a></li>
+                            <li><a name='login' href="{{ route('login') }}"><img src = "/img/login.png" style = "height:15px;"></a></li>
+                            <li><a name='register' "href="{{ route('register') }}"><img src = "/img/register.png" style = "height:15px;"></a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
