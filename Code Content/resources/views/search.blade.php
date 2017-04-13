@@ -93,7 +93,7 @@
 	    }, "fast");
 	}
 </script>
-@elseif ($scroll_to != '' && $db_corr_first->Comments()->count() < 2)
+@elseif ($scroll_to != '' && $db_corr_first->Comments()->count() <= 2)
 <script>
 	$( document ).ready(function() {
 		setTimeout(scrollToComment, 100);

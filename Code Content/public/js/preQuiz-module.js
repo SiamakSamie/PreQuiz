@@ -492,7 +492,7 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
                  
                   '<div class="panel panel-primary">'+
                   ' <div class="panel-heading">Your Score</div>'+
-                  '<div class="panel-body">'+count/$scope.data.length*100+'%</div>'+
+                  '<div class="panel-body">'+parseInt(count/$scope.data.length*100)+'%</div>'+
                   ' </div>'+
                   
                   '<div class="panel panel-info">'+
@@ -552,7 +552,7 @@ prequiz_module.controller('mention-feature', function($scope, $http, $window) {
     $scope.nextTab = function() {
         $timeout( function(){
             $scope.selectedIndex = $scope.selectedIndex+1;
-        }, 1000 );
+        }, 500);
     };
     
     $scope.getAllQuestions = function(quiz_id) {
