@@ -4,14 +4,17 @@
     Welcome Page
 @endsection
 
-
-
 @section('content')
 
-<div class = "container">
+@if (session('status'))
+    <div class="alert alert-success">
+        <a class="close" data-dismiss="alert">×</a>
+        <p> <b> Message sent! </b>{{ session('status') }} </p>
+    </div>
+@endif
 
-    <p>You can call me anytime... </p>
-    <h3>Or fill out this form and we'll get back to you asap</h3>
+<div class = "container">
+    <h3>Fill out this form and we'll get back to you asap</h3>
     
     <form id="contact_form" action="/sendContactUsMail" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}  <!-- needed for laravel security otherwise nothing works-->
