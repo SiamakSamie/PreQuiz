@@ -100,4 +100,37 @@ class AccountTest extends TestCase
             ->see('Get Started')
             ;
     }
+    
+    public function testEditProfile(){
+         $this->visit('/register')//create an account
+            ->see('Register')
+            ->type('1', 'name')
+            ->type('1', 'university')
+            ->type('test@test.test', 'email')
+            ->type('testtesttest', 'password')
+            ->type('testtesttest', 'password_confirmation')
+            
+            ->press('Register')
+            ->seePageIs('/home')
+            ->see('Get Started')
+            ;
+         $this->visit('/profile/0')//visit profile
+             ->see('Profile information')
+             ->press('Edit Profile')
+             
+             ->seePageIs('/edit_profile')//change all possible parameters
+             ->type('Jackie Chan','name')
+             ->type('University of Chicago','university')
+             ->type('test1@test.test','email')
+             ->press('Save Changes')
+             
+             ->seePageIs('/profile/0')//check profile to verify updated info
+             ->see('Profile information')
+        //     ->see('Success! Profile information was updated.')
+             ->see('Jackie Chan')
+             ->see('University of Chicago')
+             ->see('test1@test.test')
+             ;
+    }
+
 }

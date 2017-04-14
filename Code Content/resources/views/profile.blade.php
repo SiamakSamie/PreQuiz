@@ -55,7 +55,7 @@
                   @if ( Auth::user()->id == $user_info->id || $user_info->id == 0)
                     <div class="form-group">
                       <label class="col-sm-3 control-label"></label>
-                        <input type="submit" class="btn btn-primary"  value="Edit Profile">
+                        <input name='Edit Profile' type="submit" class="btn btn-primary"  value="Edit Profile">
                     </div>
                   @endif
                   
