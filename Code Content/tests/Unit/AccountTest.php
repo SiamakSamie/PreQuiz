@@ -6,13 +6,11 @@ use Auth;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
 
 
 class AccountTest extends TestCase
 {
     use DatabaseTransactions;
-    use WithoutMiddleware;
     
     public function testIncorrectRegistration(){
         $this->visit('/register')
