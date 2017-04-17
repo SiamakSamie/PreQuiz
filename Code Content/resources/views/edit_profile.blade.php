@@ -49,7 +49,7 @@
               <div class="form-group">
                 <label class="col-md-3 control-label"></label>
                 <div class="col-md-8">
-                  <input type="submit" class="btn btn-primary" value="Save Changes">
+                  <input name='Save Changes' type="submit" class="btn btn-primary" value="Save Changes">
                   <span></span>
                   <a class="btn btn-default"  href="{{ url(URL::previous()) }}" >Cancel</a>
                 </div>
