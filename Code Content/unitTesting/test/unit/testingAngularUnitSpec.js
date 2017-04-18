@@ -109,15 +109,6 @@ describe('This section contains prequiz module tests', function(){
     
         it('should comment in a comment box as a user', function() {
            scope.new_comments = [];
-           // add a comment for arguments : $coursename, $user_id, $uni_name
-           // the text is taken directly from the HTML file and the function itself does not have an argument for it
-           // because it was not needed
-           
-           // testing this is difficult since inside the function itself, there are two indented
-           // http requests 
-           scope.commentRequest('1','1','1');
-           expect(scope.commentRequest).toBeDefined();
-           expect(scope.comment_text).toBeDefined();
            
            http.post('/addComment', {
             "uni_name" : 'Concordia University',
@@ -127,6 +118,7 @@ describe('This section contains prequiz module tests', function(){
             "mentioned_ids" : '',
            }).then(function(response){
                expect(response).toBeDefined();
+               expect(response).toMatch('holla');
            });
         });
         
@@ -138,8 +130,11 @@ describe('This section contains prequiz module tests', function(){
             expect(scope.mention).toBeDefined();
             scope.mention('@r ');
             expect(scope.results.length).toBe(2);
+            expect(scope.results[0].name).toBe('Roberto');
+            expect(scope.results[1].name).toBe('Ronaldo');
             scope.mention('@rona ');
             expect(scope.results.length).toBe(1);
+            expect(scope.results[0].name).toBe('Ronaldo');
         });
        
     });
